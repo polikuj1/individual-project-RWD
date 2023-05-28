@@ -1,0 +1,221 @@
+$title_color: #F3E4E4;
+$title_border: #8C7878;
+$txt_color: #FAF9F5;
+$txt_border: #DDCB2A;
+$main_bg_color: #0F0F0F;
+$card_bg_color: #1A1919;
+$main_text_font: 'Montserrat', sans-serif;
+$chinese_txt_font: 'Noto Sans TC', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
+@import url(./footer.css);
+@import url(./header.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: $chinese_txt_font;
+}
+body {
+  background-color: $main_bg_color;
+}
+
+
+// 分頁標題
+.about_wrap {
+  padding: 50px 0;
+  width: 80%;
+  margin: auto;
+}
+.logo {
+  position: absolute;
+  left: 50px;
+}
+.about_title {
+  padding: 200px 0 0 0;
+  h2 {
+    font-family: $main_text_font;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 116px;
+    word-spacing: 10px;
+    letter-spacing: 5px;
+    color: $title_color;
+    position: relative;
+    &::after {
+      content: '';
+      width: 100%;
+      height: 5px;
+      background-color: $title_border;
+      position: absolute;
+      bottom: -60px;
+      left: 0;
+    }
+  }
+}
+
+// festival區
+.festival {
+  width: 100%;
+  padding: 50px 0 100px 0;
+  .festival_wrap {
+    width: 80%;
+    margin: auto;
+  }
+  .area_tab {
+    padding-bottom: 50px;
+    .tab_list {
+      width: 700px;
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      cursor: pointer;
+      color: $txt_color;
+      font-size: 24px;
+      font-weight: 700;
+      width: 180px;
+      height: 50px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background-color: rgba(0, 85, 97, 1);
+      box-shadow: 2px 2px 5px #414141;
+    }
+    .active {
+      background-color: #A3A31E;
+      box-shadow: 0 0 0;
+    }
+  }
+  .festival_group {
+    .festival_intro {
+      margin-top: 50px;
+      padding: 30px 0;
+      display: flex;
+      color: $txt_color;
+      border-top: 2px solid $txt_border;
+      border-bottom: 2px solid $txt_border;
+      .poster {
+        width: 30%;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h3 {
+          text-align: center;
+          font-weight: 700;
+          font-size: 48px;
+          line-height: 77px;
+          padding: 60px 0 0;
+        }
+        .pic {
+          width: 100%;
+          height: 500px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      .intro_txt {
+        width: 70%;
+        padding: 0px 50px 0 0;
+        border-left: 1px solid $txt_color;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 2fr 3fr;
+        row-gap: 30px;
+        h4 {
+          font-size: 40px;
+          font-weight: 500;
+          padding-bottom: 40px;
+        }
+        p {
+          font-size: 22px;
+          line-height: 2em;
+        }
+      }
+      .origin {
+        grid-row: 1/2;
+        grid-column: 1/3;
+        padding: 30px 30px 30px 60px;
+        border-bottom: 1px solid $txt_color;
+      }
+      .development {
+        padding: 0 40px 30px 60px;
+        border-right: 1px solid $txt_color;
+        position: relative;
+        &::before {
+          content: '';
+          width: 60px;
+          height: 60px;
+          background-color: $main_bg_color;
+          border-radius: 50%;
+          position: absolute;
+          left: -30px;
+          top: -60px;
+        }
+        &::after {
+          content: '';
+          width: 60px;
+          height: 60px;
+          background-color: $main_bg_color;
+          border-radius: 50%;
+          position: absolute;
+          right: -30px;
+          top: -60px;
+        }
+      }
+      .feature {
+        padding: 0 40px 30px 60px;
+      }
+    }
+    .two {
+      margin-top: 0;
+      border-top: none;
+      .poster {
+        order: 1;
+      }
+      .intro_txt {
+        padding: 0 0 0 60px;
+        border-left: none;
+        border-right: 1px solid $txt_color;
+      }
+      .origin {
+        padding: 30px 30px 30px 40px;
+      }
+      .development {
+        padding: 0 40px 30px 40px;
+      }
+      .feature {
+        padding: 0px 40px 30px 40px;
+        position: relative;
+        &::after {
+          content: '';
+          width: 60px;
+          height: 60px;
+          background-color: $main_bg_color;
+          border-radius: 50%;
+          position: absolute;
+          right: -30px;
+          top: -60px;
+        }
+      }
+    }
+    .three {
+      margin-top: 0;
+      border-top: none;
+    }
+  }
+  .center {
+    display: none;
+  }
+  .south {
+    display: none;
+  }
+}

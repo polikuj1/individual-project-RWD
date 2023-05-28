@@ -1,0 +1,230 @@
+header {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+header .hamburger_menu {
+  font-family: "Montserrat", sans-serif;
+  width: 60px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  z-index: 11;
+  right: 0;
+  top: 0;
+  background: linear-gradient(357.8deg, #57AD6A 19.33%, #84CC47 47.17%, #0bc8e1 93.66%);
+}
+header .hamburger_menu .menu_btn_wrap {
+  flex-grow: 1;
+  padding-top: 30px;
+}
+header .hamburger_menu .menu_btn {
+  width: 45px;
+  height: 45px;
+  display: block;
+  background-color: #FAF9F5;
+  border-radius: 50%;
+  position: relative;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+header .hamburger_menu .menu_btn:before {
+  content: "";
+  width: 60%;
+  height: 2px;
+  background-color: #12c135;
+  position: absolute;
+  display: block;
+  top: 30%;
+  left: 50%;
+  margin-left: -13.5px;
+  transition: top 0.5s 0.5s, rotate 0.5s;
+}
+header .hamburger_menu .menu_btn:after {
+  content: "";
+  width: 60%;
+  height: 2px;
+  background-color: #12c135;
+  position: absolute;
+  display: block;
+  top: 70%;
+  left: 50%;
+  margin-left: -13.5px;
+  transition: top 0.5s 0.5s, rotate 0.5s;
+}
+header .hamburger_menu span {
+  text-align: center;
+  display: block;
+  font-size: 18px;
+  line-height: 29px;
+  color: #FAF9F5;
+  font-weight: 500;
+}
+header .hamburger_menu h2 {
+  writing-mode: vertical-lr;
+  flex-grow: 2;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  text-transform: uppercase;
+  line-height: 29px;
+  color: #FAF9F5;
+  letter-spacing: 3px;
+}
+header #menu:checked ~ nav {
+  right: 60px;
+}
+header #menu:checked ~ .hamburger_menu .menu_btn:before {
+  rotate: 45deg;
+  top: 50%;
+  transition: top 0.5s, rotate 0.5s 0.5s;
+}
+header #menu:checked ~ .hamburger_menu .menu_btn:after {
+  rotate: -45deg;
+  top: 50%;
+  transition: top 0.5s, rotate 0.5s 0.5s;
+}
+header nav {
+  width: 320px;
+  height: 100%;
+  position: fixed;
+  padding: 50px 0 10px 0;
+  right: -360px;
+  transition: 1s;
+  background-color: #FAF9F5;
+  z-index: 10;
+}
+header nav ul {
+  height: 100%;
+  display: flex;
+  padding: 0 30px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+header nav ul .text_linear {
+  background: linear-gradient(180deg, #57AD6A 0%, #84CC47 41.15%, #0DE2FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header nav ul li {
+  font-size: 1.2rem;
+}
+header nav ul .subscribe {
+  background: #FAF9F5;
+  background-clip: padding-box;
+  border-radius: 16px;
+  padding: 0px;
+  border: 1px solid transparent;
+  position: relative;
+  margin-top: 30px;
+}
+header nav ul .subscribe:hover {
+  background-color: rgba(242, 240, 234, 0.6470588235);
+}
+header nav ul .subscribe:hover button {
+  background: linear-gradient(180deg, #16822e 0%, #60aa1e 41.15%, #0e7e8d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header nav ul .subscribe::after {
+  content: "";
+  position: absolute;
+  inset: -1px -1px -1px -1px;
+  background: linear-gradient(180deg, #57AD6A 0%, #84CC47 41.15%, #0DE2FF 100%);
+  border-radius: 16px;
+  display: block;
+  z-index: -1;
+}
+header nav ul .subscribe button {
+  background-color: transparent;
+  border: none;
+  padding: 10px 40px;
+  text-align: center;
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+header nav ul .border_image {
+  -o-border-image: linear-gradient(#57AD6A 0%, #84CC47 40%, #0DE2FF 100%);
+     border-image: linear-gradient(#57AD6A 0%, #84CC47 40%, #0DE2FF 100%);
+  border-image-slice: 1;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  border-radius: 50%;
+}
+header nav ul a {
+  padding: 18px 18px 18px 0;
+  display: inline-block;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+header nav ul a::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -2px;
+  transition: 0.5s;
+  background: linear-gradient(180deg, #57AD6A 0%, #84CC47 41.15%, #0DE2FF 100%);
+}
+header nav ul a:hover::after {
+  width: 100%;
+  left: 0;
+}
+header nav ul .share {
+  margin: 40px 5px;
+  text-align: center;
+  font-weight: 700;
+}
+header nav ul .share span {
+  display: block;
+  margin: 0px 30px 20px;
+}
+header nav ul .share .social_icon {
+  padding: 0px;
+}
+header nav ul .share .social_icon i {
+  display: inline-block;
+  padding: 15px;
+  position: relative;
+  background: #FAF9F5;
+  background-clip: padding-box;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  font-size: 26px;
+  margin-right: 5px;
+  color: #30b19b;
+}
+header nav ul .share .social_icon i:hover {
+  background: rgba(242, 240, 234, 0.6470588235);
+}
+header nav ul .share .social_icon i::after {
+  content: "";
+  position: absolute;
+  inset: -1px -1px -1px -1px;
+  background: linear-gradient(180deg, #57AD6A 0%, #84CC47 41.15%, #0DE2FF 100%);
+  border-radius: 16px;
+  display: block;
+  z-index: -1;
+}
+
+@media screen and (min-width: 1440px) {
+  header nav ul li {
+    font-size: 2rem;
+  }
+}
+@keyframes scroll {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 100%;
+  }
+}
