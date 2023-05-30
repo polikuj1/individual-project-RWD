@@ -830,11 +830,10 @@ header {
 // 海報區
 .poster {
   width: 100%;
-  padding: 60px 0;
+  padding: 30px 0;
   .poster_wrap {
     max-width: 1200px;
     margin: auto;
-    outline: 1px solid red;
   }
   .poster_list {
     display: flex;
@@ -1256,11 +1255,14 @@ header {
       top: -50px;
       &::after {
         content: '';
-        width: 100%;
+        width: 30%;
         height: 1px;
         background-color: $main_txt_color;
         position: absolute;
-        bottom: -20px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 0px;
         display: block;
       }
     }
@@ -1426,7 +1428,7 @@ header {
 
 .interview {
   width: 100%;
-  padding: 60px 0px;
+  padding: 30px 0px;
   .interview_wrap {
     max-width: 1200px;
     margin: auto;
@@ -1435,68 +1437,58 @@ header {
     font-family: $main_text_font;
     color: $main_txt_color;
     display: inline-block;
-    margin-bottom: 60px;
     font-weight: 400;
-    font-size: 82px;
-    line-height: 100px;
+    font-size: 3rem;
+    line-height: 60px;
+    text-align: center;
     position: relative;
+    padding-bottom: 50px;
       &::after {
         content: '';
-        width: 100%;
+        width: 30%;
         height: 1px;
         background-color: $main_txt_color;
         position: absolute;
-        bottom: -20px;
+        bottom: 30px;
+        right: 0;
+        left: 0;
+        margin: auto;
         display: block;
       }
   }
   .interview_list {
     width: 100%;
-    padding: 50px;
+    padding: 0px 25px;
     display: flex;
+    flex-direction: column;
   }
   .interview_card_column {
-    width: 400px;
-    margin: 0 100px 0 20px;
+    width: 100%;
     .pic {
       width: 100%;
+      height: 400px;
       position: relative;
-      &:hover {
-        &::after {
-          height: 100%;
-        }
-      }
       &::before {
         content: '';
-        width: 460px;
-        height: 400px;
+        width: 100%;
+        height: 300px;
         position: absolute;
         right: 0;
-        bottom: -180px;
+        bottom: -130px;
         display: block;
         z-index: 1;
         background-color: rgba(255, 250, 119, 1);
       }
-      &::after {
-        content: '';
-        width: 3px;
-        height: 50%;
-        position: absolute;
-        right: -50px;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: .5s;
-        background-color: $card_color_one;
-      }
       img {
         width: 100%;
-        border-radius: 50px;
+        height: 100%;
+        object-fit: cover;
         position: relative;
         z-index: 2;
       }
     }
     .txt {
-      width: 300px;
+      width: 100%;
       margin: auto;
       position: relative;
       z-index: 3;
@@ -1504,27 +1496,23 @@ header {
       .interview_title {
         color: $main_txt_color;
         text-align: center;
-        padding: 20px 50px;
+        padding: 20px 20px;
+        line-height: 2rem;
         background-color: $card_color_one;
-        &:hover {
-          a {
-            color: $second_bg_color;
-          }
-        }
       }
       a {
         color: $main_txt_color;
         display: block;
         &:nth-of-type(2) {
           span {
-            font-size: 18px;
+            font-size: 1rem;
           }
         }
       }
       span {
         display: inline-block;
-        min-height: 2em;
-        font-size: 24px;
+        min-height: 1.5em;
+        font-size: 1.5rem;
         font-weight: 700;
       }
       .edit {
@@ -1535,78 +1523,54 @@ header {
     }
   }
   .interview_card_row {
-    width: 700px;
-    margin: 0 20px 0 100px;
+    width: 100%;
     .pic {
       width: 100%;
       position: relative;
       .decoration {
-        position: absolute;
-        top: -190px;
-        right: 50px;
-      }
-      &:hover {
-        &::after {
-          height: 100%;
-        }
+        display: none;
       }
       &::before {
         content: '';
-        width: 460px;
-        height: 400px;
+        width: 100%;
+        height: 200px;
         position: absolute;
         right: 0;
-        bottom: -200px;
+        bottom: -160px;
         display: block;
         z-index: 1;
         background-color: rgba(248, 183, 253, 1);
       }
-      &::after {
-        content: '';
-        width: 3px;
-        height: 50%;
-        position: absolute;
-        left: -50px;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: .5s;
-        background-color: $card_color_two;
-      }
       img {
         width: 100%;
-        border-radius: 50px;
         position: relative;
         z-index: 2;
       }
     }
     .txt {
-      width: 300px;
+      width: 100%;
       margin: 0 80px 0 auto;
       position: relative;
       bottom: 50px;
       z-index: 3;
       .interview_title {
         text-align: center;
-        padding: 20px 50px;
+        padding: 20px 20px;
+        line-height: 2rem;
         background-color: $card_color_two;
         color: $main_txt_color;
-        &:hover {
-          a {
-            color: $second_bg_color;
-          }
-        }
         a {
           color: $main_txt_color;
           &:nth-of-type(2) {
             span {
-              font-size: 18px;
+              font-size: 1rem;
             }
           }
         }
         span {
           display: block;
-          min-height: 2em;
-          font-size: 24px;
+          min-height: 1.5rem;
+          font-size: 1.5rem;
           font-weight: 700;
           &:nth-of-type(2) {
             font-size: 22px;
@@ -1621,26 +1585,15 @@ header {
     }
   }
   .card_row {
-    margin: 0 100px 0 20px;
     .pic {
       position: relative;
       .decoration {
-        position: absolute;
-        top: -180px;
-        left: 60%;
-        width: 180px;
-        height: 190px;
-        img {
-          width: 100%;
-        }
+        display: none;
       }
       &::before {
+        bottom: -160px;
         background-color: #FAE2A5;
         left: 0;
-      }
-      &::after {
-        background-color: $card_color_three;
-        left: calc(100% + 50px);
       }
     }
     .txt {
@@ -1648,22 +1601,18 @@ header {
         background-color: $card_color_three;
       }
       .edit {
-        color: $main_txt_color;
+        color: $main_bg_color;
       }
     }
   }
   .card_column {
-    margin: 0 20px 0 100px;
     .pic {
       &::before {
-        width: 500px;
+        width: 100%;
         height: 300px;
-        right: 150px;
+        bottom: -160px;
+        right: 0px;
         background-color: #B7FDBE;
-      }
-      &::after {
-        background-color: $card_color_four;
-        left: -50px;
       }
     }
     .txt {
@@ -1672,25 +1621,299 @@ header {
         background-color: $card_color_four;
       }
       .edit {
-        color: $main_txt_color;
+        color: $main_bg_color;
       }
     }
   }
 }
 
+@media screen and (min-width:768px) {
+  .interview {
+    width: 100%;
+    padding: 60px 0px;
+    .interview_wrap {
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      font-family: $main_text_font;
+      color: $main_txt_color;
+      display: inline-block;
+      margin-bottom: 60px;
+      font-weight: 400;
+      font-size: 82px;
+      line-height: 100px;
+      position: relative;
+        &::after {
+          content: '';
+          width: 100%;
+          height: 1px;
+          background-color: $main_txt_color;
+          position: absolute;
+          bottom: -20px;
+          display: block;
+        }
+    }
+    .interview_list {
+      width: 100%;
+      padding: 50px;
+      display: flex;
+    }
+    .interview_card_column {
+      width: 400px;
+      margin: 0 100px 0 20px;
+      .pic {
+        width: 100%;
+        position: relative;
+        &:hover {
+          &::after {
+            height: 100%;
+          }
+        }
+        &::before {
+          content: '';
+          width: 460px;
+          height: 400px;
+          position: absolute;
+          right: 0;
+          bottom: -180px;
+          display: block;
+          z-index: 1;
+          background-color: rgba(255, 250, 119, 1);
+        }
+        &::after {
+          content: '';
+          width: 3px;
+          height: 50%;
+          position: absolute;
+          right: -50px;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: .5s;
+          background-color: $card_color_one;
+        }
+        img {
+          width: 100%;
+          border-radius: 50px;
+          position: relative;
+          z-index: 2;
+        }
+      }
+      .txt {
+        width: 300px;
+        margin: auto;
+        position: relative;
+        z-index: 3;
+        bottom: 50px;
+        .interview_title {
+          color: $main_txt_color;
+          text-align: center;
+          padding: 20px 50px;
+          background-color: $card_color_one;
+          &:hover {
+            a {
+              color: $second_bg_color;
+            }
+          }
+        }
+        a {
+          color: $main_txt_color;
+          display: block;
+          &:nth-of-type(2) {
+            span {
+              font-size: 18px;
+            }
+          }
+        }
+        span {
+          display: inline-block;
+          min-height: 2em;
+          font-size: 24px;
+          font-weight: 700;
+        }
+        .edit {
+          text-align: right;
+          padding: 20px 20px;
+          color: $main_bg_color;
+        }
+      }
+    }
+    .interview_card_row {
+      width: 700px;
+      margin: 0 20px 0 100px;
+      .pic {
+        width: 100%;
+        position: relative;
+        .decoration {
+          position: absolute;
+          top: -190px;
+          right: 50px;
+        }
+        &:hover {
+          &::after {
+            height: 100%;
+          }
+        }
+        &::before {
+          content: '';
+          width: 460px;
+          height: 400px;
+          position: absolute;
+          right: 0;
+          bottom: -200px;
+          display: block;
+          z-index: 1;
+          background-color: rgba(248, 183, 253, 1);
+        }
+        &::after {
+          content: '';
+          width: 3px;
+          height: 50%;
+          position: absolute;
+          left: -50px;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: .5s;
+          background-color: $card_color_two;
+        }
+        img {
+          width: 100%;
+          border-radius: 50px;
+          position: relative;
+          z-index: 2;
+        }
+      }
+      .txt {
+        width: 300px;
+        margin: 0 80px 0 auto;
+        position: relative;
+        bottom: 50px;
+        z-index: 3;
+        .interview_title {
+          text-align: center;
+          padding: 20px 50px;
+          background-color: $card_color_two;
+          color: $main_txt_color;
+          &:hover {
+            a {
+              color: $second_bg_color;
+            }
+          }
+          a {
+            color: $main_txt_color;
+            &:nth-of-type(2) {
+              span {
+                font-size: 18px;
+              }
+            }
+          }
+          span {
+            display: block;
+            min-height: 2em;
+            font-size: 24px;
+            font-weight: 700;
+            &:nth-of-type(2) {
+              font-size: 22px;
+              font-weight: 500;
+            }
+          }
+        }
+        .edit {
+          text-align: right;
+          padding: 20px 20px;
+        }
+      }
+    }
+    .card_row {
+      margin: 0 100px 0 20px;
+      .pic {
+        position: relative;
+        .decoration {
+          position: absolute;
+          top: -180px;
+          left: 60%;
+          width: 180px;
+          height: 190px;
+          img {
+            width: 100%;
+          }
+        }
+        &::before {
+          background-color: #FAE2A5;
+          left: 0;
+        }
+        &::after {
+          background-color: $card_color_three;
+          left: calc(100% + 50px);
+        }
+      }
+      .txt {
+        .interview_title {
+          background-color: $card_color_three;
+        }
+        .edit {
+          color: $main_txt_color;
+        }
+      }
+    }
+    .card_column {
+      margin: 0 20px 0 100px;
+      .pic {
+        &::before {
+          width: 500px;
+          height: 300px;
+          right: 150px;
+          background-color: #B7FDBE;
+        }
+        &::after {
+          background-color: $card_color_four;
+          left: -50px;
+        }
+      }
+      .txt {
+        margin-right: 0px;
+        .interview_title {
+          background-color: $card_color_four;
+        }
+        .edit {
+          color: $main_txt_color;
+        }
+      }
+    }
+  }
+}
 // 媒體區
-.media {
+.media {  
   width: 100%;
-  padding: 80px 0 60px 0;
+  padding: 40px 0px;
   background-color: $main_bg_color;
   .media_wrap {
     max-width: 1200px;
-    padding-bottom: 90px;
     margin: auto;
+  }
+  h2 {
+    color: $main_txt_color;
+    font-family: $main_text_font;
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 50px;
+    position: relative;
+    &::after {
+      content: '';
+      width: 30%;
+      height: 1px;
+      background-color: $main_txt_color;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: 30px;
+      display: block;
+    }
   }
   .photo_marquee {
     width: 100%;
-    height: 196px;
+    height: 150px;
     overflow: hidden;
     position: relative;
     .tr {
@@ -1701,7 +1924,7 @@ header {
       left: 0;
       display: flex;
       div {
-        width: 288px;
+        width: 240px;
       }
     }
     .photo_re {
@@ -1717,29 +1940,26 @@ header {
   }
   .video_area {
     display: flex;
+    flex-direction: column;
     video {
-      width: 800px;
-      padding: 50px 50px 50px 100px;
+      width: 100%;
+      padding: 50px 30px;
       cursor: pointer;
     }
     .video_txt {
       color: $main_txt_color;
-      padding: 50px 100px 50px 50px;
-      text-align: right;
+      padding: 0 30px 50px 30px;
+      text-align: left;
       h2 {
-        font-family: $main_text_font;
-        font-size: 80px;
-        text-align: right;
-        position: relative;
-        padding-bottom: 50px;
+        display: none;
       }
       span {
         display: block;
-        font-size: 22px;
+        font-size: 1.2rem;
         padding-bottom: 30px;
       }
       button {
-        width: 250px;
+        width: 50%;
         height: 70px;
         padding: 10px;
         background-color: $main_txt_color;
@@ -1749,9 +1969,6 @@ header {
         justify-content: space-between;
         align-items: center;
         margin-left: auto;
-        &:hover {
-          background-color: $strong_color;
-        }
         cursor: pointer;
         a {
           padding: 0 10px;
@@ -1759,7 +1976,7 @@ header {
           color: $main_bg_color;
         }
         i {
-          font-size: 20px;
+          font-size: 1rem;
           width: 40px;
           height: 40px;
           line-height: 40px;
@@ -1772,6 +1989,100 @@ header {
   }
 }
 
+@media screen and (min-width:768px) {
+  .media {
+    width: 100%;
+    padding: 80px 0 60px 0;
+    background-color: $main_bg_color;
+    .media_wrap {
+      max-width: 1200px;
+      padding-bottom: 90px;
+      margin: auto;
+    }
+    .photo_marquee {
+      width: 100%;
+      height: 196px;
+      overflow: hidden;
+      position: relative;
+      .tr {
+        transition: 3s;
+      }
+      .photo_box {
+        position: absolute;
+        left: 0;
+        display: flex;
+        div {
+          width: 240px;
+        }
+      }
+      .photo_re {
+        left: 100%;
+      }
+      #photo_marquee1 {
+        left: -100%;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .video_area {
+      flex-direction: row;
+      video {
+        width: 700px;
+        padding: 50px 50px 50px 100px;
+        cursor: pointer;
+      }
+      .video_txt {
+        color: $main_txt_color;
+        padding: 50px 100px 50px 50px;
+        text-align: right;
+        h2 {
+          font-family: $main_text_font;
+          font-size: 80px;
+          text-align: right;
+          position: relative;
+          padding-bottom: 50px;
+        }
+        span {
+          display: block;
+          font-size: 22px;
+          padding-bottom: 30px;
+        }
+        button {
+          width: 250px;
+          height: 70px;
+          padding: 10px;
+          background-color: $main_txt_color;
+          color: #000;
+          border: none;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-left: auto;
+          &:hover {
+            background-color: $strong_color;
+          }
+          cursor: pointer;
+          a {
+            padding: 0 10px;
+            font-size: 1rem;
+            color: $main_bg_color;
+          }
+          i {
+            font-size: 20px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            color: #fff;
+            background-color: #000000;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
 .modal {
   position: fixed;
   z-index: 11;
@@ -1816,8 +2127,8 @@ header {
 
 // 廣告標語區
 .ad_slogan {
-  margin: 60px 0;
-  padding: 230px 0;
+  margin: 30px 0;
+  padding: 80px 0;
   background: url('../image/ad.jpg') no-repeat center / cover;
   position: relative;
   .black_mask {
@@ -1832,7 +2143,7 @@ header {
     text-align: center;
     span {
       display: block;
-      font-size: 72px;
+      font-size: 2.5rem;
       font-family: $main_text_font;
       font-weight: 500;
       text-shadow: 0 0 3px $strong_color;
@@ -1843,6 +2154,40 @@ header {
       0 0 3px $strong_color,
       0 0 3px $strong_color,
       0 0 3px $strong_color;
+    }
+  }
+}
+
+@media screen and (min-width:768px) {
+  .ad_slogan {
+    margin: 60px 0;
+    padding: 230px 0;
+    background: url('../image/ad.jpg') no-repeat center / cover;
+    position: relative;
+    .black_mask {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(179.77deg, #1a1919 -39.2%, rgba(224, 221, 221, 0) 187.23%);;
+      top: 0;
+    }
+    .ad_wrap {
+      text-align: center;
+      span {
+        display: block;
+        font-size: 72px;
+        font-family: $main_text_font;
+        font-weight: 500;
+        text-shadow: 0 0 3px $strong_color;
+        color: $strong_color;
+        position: relative;
+        z-index: 2;
+        text-shadow: 
+        0 0 3px $strong_color,
+        0 0 3px $strong_color,
+        0 0 3px $strong_color;
+      }
     }
   }
 }
@@ -1866,18 +2211,15 @@ header {
   }
   ul {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 20%);
     grid-template-rows: 1fr;
     li {
       text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       border-right: 1px solid $main_bg_color;
       border-left: 1px solid $main_bg_color;
-      &:hover {
-        background-color: $main_bg_color;
-        i {
-          animation: shake .3s linear 2 alternate;
-        }
-      }
       &:nth-of-type(1) {
         i {
           color: #21a4e5;
@@ -1904,16 +2246,75 @@ header {
         }
       }
     }
-    a {
-      display: block;
-      padding: 30px;
-      font-size: 20px;
-      color: $main_txt_color;
+    span {
+      display: none;
     }
     i {
-      font-size: 50px;
-      display: block;
-      padding-bottom: 20px;
+      font-size: 2rem;
+      padding: 20px 0;
+    }
+  }
+}
+
+@media screen and (min-width:768px) {
+  .social_media {
+    width: 100%;
+    font-family: $main_text_font;
+    background-color: #201F21;
+    .social_wrap {
+      margin: auto;
+    }
+    ul {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 1fr;
+      li {
+        text-align: center;
+        border-right: 1px solid $main_bg_color;
+        border-left: 1px solid $main_bg_color;
+        &:hover {
+          background-color: $main_bg_color;
+          i {
+            animation: shake .3s linear 2 alternate;
+          }
+        }
+        &:nth-of-type(1) {
+          i {
+            color: #21a4e5;
+          }
+        }
+        &:nth-of-type(2) {
+          i {
+            color: #f950f4;
+          }
+        }
+        &:nth-of-type(3) {
+         i {
+          color: #fa2b2b;
+         }
+        }
+        &:nth-of-type(4) {
+          i {
+            color: #23e229;
+          }
+        }
+        &:nth-of-type(5) {
+          i {
+            color: #3953f8;
+          }
+        }
+      }
+      a {
+        display: block;
+        padding: 30px;
+        font-size: 20px;
+        color: $main_txt_color;
+      }
+      i {
+        font-size: 50px;
+        display: block;
+        padding-bottom: 20px;
+      }
     }
   }
 }
@@ -1930,28 +2331,38 @@ header {
 // footer區
 footer {
   width: 100%;
+  padding: 30px 15px;
   color: $main_txt_color;
   font-family: $main_text_font;
   .footer_wrap {
     display: flex;
-    padding: 50px 100px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
   }
   .footer_logo {
+    display: block;
     width: 20%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
   .footer_nav {
-    width: 80%;
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(4, 1fr) 300px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
     span {
-      line-height: 57.5px;
+      width: 50%;
+      text-align: center;
+      line-height: 3rem;
       &:hover {
         a {
           color: $strong_color;
         }
       }
       a {
+        font-size: 1rem;
         color: $main_txt_color;
       }
       &:nth-of-type(10) {
@@ -1961,7 +2372,7 @@ footer {
     }
     button {
       background: #ccc;
-      width: 75px;
+      width: 60px;
       height: 30px;
       color: $main_bg_color;
       border: none;
@@ -1969,8 +2380,8 @@ footer {
     }
     input {
       display: inline-block;
+      width: 130px;
       padding: 15px;
-      width: 100%;
       height: 30px;
       border: none;
       &:focus {
@@ -1983,15 +2394,83 @@ footer {
   }
   .footer_copy {
     width: 100%;
-    padding: 10px 100px 30px 100px;
-    display: flex;
-    justify-content: space-between;
+    padding: 30px 0 0 0;
+    text-align: center;
     a {
-      color: $main_txt_color;
-      padding: 10px;
-      font-weight: 500;
-      border-radius: 10px;
-      background: linear-gradient(180deg, #95D83F 0%, rgba(91, 196, 165, 0.7) 100%);;
+      display: none;
+    }
+    span {
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (min-width:768px) {
+  footer {
+    width: 100%;
+    color: $main_txt_color;
+    font-family: $main_text_font;
+    .footer_wrap {
+      display: flex;
+      padding: 50px 100px;
+    }
+    .footer_logo {
+      width: 20%;
+    }
+    .footer_nav {
+      width: 80%;
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(4, 1fr) 300px;
+      span {
+        line-height: 57.5px;
+        &:hover {
+          a {
+            color: $strong_color;
+          }
+        }
+        a {
+          color: $main_txt_color;
+        }
+        &:nth-of-type(10) {
+          display: flex;
+          align-items: center;
+        }
+      }
+      button {
+        background: #ccc;
+        width: 75px;
+        height: 30px;
+        color: $main_bg_color;
+        border: none;
+        cursor: pointer;
+      }
+      input {
+        display: inline-block;
+        padding: 15px;
+        width: 100%;
+        height: 30px;
+        border: none;
+        &:focus {
+          outline: none;
+          &::placeholder {
+            color: transparent;
+          }
+        }
+      }
+    }
+    .footer_copy {
+      width: 100%;
+      padding: 10px 100px 30px 100px;
+      display: flex;
+      justify-content: space-between;
+      a {
+        color: $main_txt_color;
+        padding: 10px;
+        font-weight: 500;
+        border-radius: 10px;
+        background: linear-gradient(180deg, #95D83F 0%, rgba(91, 196, 165, 0.7) 100%);;
+      }
     }
   }
 }

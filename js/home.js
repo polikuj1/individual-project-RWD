@@ -35,11 +35,11 @@ const photo_re = document.querySelector('.photo_re');
 setInterval(move,5000);
 let distance = 0;
 function move() {
-  distance += -288;
+  distance += -240;
   photo.style.left = distance + 'px';
   const num = photo.style.left;
-  if (num == '-1440px') {
-    distance = 1440;
+  if (num == '-1200px') {
+    distance = 1200;
     setTimeout(function() {
       photo.classList.remove('tr');
       setTimeout(function() {
@@ -53,13 +53,13 @@ function move() {
 }
 
 setInterval(move1,5000);
-let distance_re = 1440;
+let distance_re = 1200;
 function move1() {
-  distance_re += -288;
+  distance_re += -240;
   photo_re.style.left = distance_re + 'px';
   const num = photo_re.style.left;
-  if (num == '-1440px') {
-    distance_re = 1440;
+  if (num == '-1200px') {
+    distance_re = 1200;
     setTimeout(function() {
       photo_re.classList.remove('tr');
       setTimeout(function() {
@@ -82,11 +82,11 @@ const photo_ltr_re = document.querySelector('#photo_marquee1');
 setInterval(ltr,5000);
 let dis = 0;
 function ltr() {
-  dis += 288;
+  dis += 240;
   photo_ltr.style.left = dis + 'px';
   const num = photo_ltr.style.left;
-  if (num == '1440px') {
-    dis = -1440;
+  if (num == '1200px') {
+    dis = -1200;
     setTimeout(function() {
       photo_ltr.classList.remove('tr');
       setTimeout(function() {
@@ -100,13 +100,13 @@ function ltr() {
 }
 
 setInterval(ltr1,5000);
-let dis1 = -1440;
+let dis1 = -1200;
 function ltr1() {
-  dis1 += 288;
+  dis1 += 240;
   photo_ltr_re.style.left = dis1 + 'px';
   const num = photo_ltr_re.style.left;
-  if (num == '1440px') {
-    dis1 = -1440;
+  if (num == '1200px') {
+    dis1 = -1200;
     setTimeout(function() {
       photo_ltr_re.classList.remove('tr');
       setTimeout(function() {
