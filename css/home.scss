@@ -842,7 +842,7 @@ header {
     width: 80%;
     margin: auto;
     .pic {
-      height: 250px;
+      height: 200px;
       position: relative;
       &::after {
         content: '';
@@ -1968,7 +1968,7 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-left: auto;
+        margin-right: auto;
         cursor: pointer;
         a {
           padding: 0 10px;
@@ -2029,11 +2029,12 @@ header {
     .video_area {
       flex-direction: row;
       video {
-        width: 700px;
-        padding: 50px 50px 50px 100px;
+        width: 100%;
+        padding: 50px 20px 50px 20px;
         cursor: pointer;
       }
       .video_txt {
+        width: 40%;
         color: $main_txt_color;
         padding: 50px 100px 50px 50px;
         text-align: right;
@@ -2052,14 +2053,7 @@ header {
         button {
           width: 250px;
           height: 70px;
-          padding: 10px;
-          background-color: $main_txt_color;
-          color: #000;
-          border: none;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-left: auto;
+          margin: 0 0 0 auto;
           &:hover {
             background-color: $strong_color;
           }
@@ -2083,6 +2077,8 @@ header {
     }
   }
 }
+
+
 .modal {
   position: fixed;
   z-index: 11;
@@ -2123,7 +2119,48 @@ header {
     cursor: pointer;
   }
 }
-
+@media screen and (min-width) {
+  .modal {
+    position: fixed;
+    z-index: 11;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    display: none;
+    .youtube {
+      width: 80%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) translateX(-3%);
+      right: 0;
+      left: 0;
+      margin: auto;
+      background-color: #aaa;
+      &::after {
+        content: '';
+        width: 100%;
+        padding-bottom: 56.25%;
+        display: block;
+      }
+    }
+    iframe {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    button {
+      position: absolute;
+      right: -50px;
+      top: -50px;
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      font-size: 40px;
+      cursor: pointer;
+    }
+  }
+}
 
 // 廣告標語區
 .ad_slogan {
@@ -2353,8 +2390,9 @@ footer {
     display: flex;
     flex-wrap: wrap;
     span {
-      width: 50%;
-      text-align: center;
+      width: 100%;
+      display: block;
+      text-align: left;
       line-height: 3rem;
       &:hover {
         a {
@@ -2362,6 +2400,7 @@ footer {
         }
       }
       a {
+        display: block;
         font-size: 1rem;
         color: $main_txt_color;
       }
@@ -2407,30 +2446,27 @@ footer {
 
 @media screen and (min-width:768px) {
   footer {
-    width: 100%;
-    color: $main_txt_color;
-    font-family: $main_text_font;
+    padding: 0;
     .footer_wrap {
-      display: flex;
-      padding: 50px 100px;
+      flex-direction: row;
+      padding: 50px 50px;
     }
     .footer_logo {
-      width: 20%;
+      display: inline-block;
     }
     .footer_nav {
       width: 80%;
+      padding: 0 0 0 60px;
       display: grid;
       grid-template-rows: repeat(2, 1fr);
-      grid-template-columns: repeat(4, 1fr) 300px;
+      grid-template-columns: repeat(4, 1fr) 2fr;
+      gap: 20px;
       span {
-        line-height: 57.5px;
+        line-height: 20px;
         &:hover {
           a {
             color: $strong_color;
           }
-        }
-        a {
-          color: $main_txt_color;
         }
         &:nth-of-type(10) {
           display: flex;
@@ -2493,21 +2529,26 @@ footer {
 
 // 回到頂部按鈕
 .go_top {
-  width: 150px;
-  height: 150px;
   display: none;
-  position: fixed;
-  z-index: 15;
-  bottom: 50px;
-  right: 80px;
-  animation: rotateInfinite 2s linear infinite;
-  &:hover {
-    animation-play-state: paused;
-  }
-  img {
-    width: 100%;
-    // height: 100%;
-    object-fit: fill;
+}
+@media screen and (min-width:1200px) {
+  .go_top {
+    width: 150px;
+    height: 150px;
+    display: block;
+    position: fixed;
+    z-index: 15;
+    bottom: 50px;
+    right: 80px;
+    animation: rotateInfinite 2s linear infinite;
+    &:hover {
+      animation-play-state: paused;
+    }
+    img {
+      width: 100%;
+      // height: 100%;
+      object-fit: fill;
+    }
   }
 }
 
@@ -2529,7 +2570,7 @@ footer {
   z-index: 99;
   background-color: rgb(0, 0, 0, 0.5);
   .success_info {
-    width: 600px;
+    width: 50%;
     margin: auto;
     padding: 50px;
     background-color: $main_txt_color;
@@ -2545,7 +2586,7 @@ footer {
     top: 20px;
   }
   button {
-    font-size: 40px;
+    font-size: 2rem;
     border: none;
     cursor: pointer;
     background: none;
@@ -2564,6 +2605,23 @@ footer {
   span {
     display: block;
     padding-bottom: 30px;
-    font-size: 40px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe_modal {
+    .success_info {
+      width: 50%;
+    }
+    button {
+      font-size: 40px;
+    }
+    i {
+      font-size: 85px;
+    }
+    span {
+      font-size: 40px;
+    }
   }
 }

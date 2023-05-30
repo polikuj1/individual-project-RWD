@@ -796,7 +796,7 @@ header .banner .scroll {
   margin: auto;
 }
 .poster .poster_list .pic {
-  height: 250px;
+  height: 200px;
   position: relative;
 }
 .poster .poster_list .pic::after {
@@ -1870,7 +1870,7 @@ header .banner .scroll {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: auto;
+  margin-right: auto;
   cursor: pointer;
 }
 .media .video_area .video_txt button a {
@@ -1930,11 +1930,12 @@ header .banner .scroll {
     flex-direction: row;
   }
   .media .video_area video {
-    width: 700px;
-    padding: 50px 50px 50px 100px;
+    width: 100%;
+    padding: 50px 20px 50px 20px;
     cursor: pointer;
   }
   .media .video_area .video_txt {
+    width: 40%;
     color: #FAF9F5;
     padding: 50px 100px 50px 50px;
     text-align: right;
@@ -1954,14 +1955,7 @@ header .banner .scroll {
   .media .video_area .video_txt button {
     width: 250px;
     height: 70px;
-    padding: 10px;
-    background-color: #FAF9F5;
-    color: #000;
-    border: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: auto;
+    margin: 0 0 0 auto;
     cursor: pointer;
   }
   .media .video_area .video_txt button:hover {
@@ -2023,6 +2017,48 @@ header .banner .scroll {
   cursor: pointer;
 }
 
+@media screen and (min-width) {
+  .modal {
+    position: fixed;
+    z-index: 11;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    display: none;
+  }
+  .modal .youtube {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-3%);
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: #aaa;
+  }
+  .modal .youtube::after {
+    content: "";
+    width: 100%;
+    padding-bottom: 56.25%;
+    display: block;
+  }
+  .modal iframe {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .modal button {
+    position: absolute;
+    right: -50px;
+    top: -50px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+  }
+}
 .ad_slogan {
   margin: 30px 0;
   padding: 80px 0;
@@ -2217,14 +2253,16 @@ footer .footer_nav {
   flex-wrap: wrap;
 }
 footer .footer_nav span {
-  width: 50%;
-  text-align: center;
+  width: 100%;
+  display: block;
+  text-align: left;
   line-height: 3rem;
 }
 footer .footer_nav span:hover a {
   color: #4EF8EB;
 }
 footer .footer_nav span a {
+  display: block;
   font-size: 1rem;
   color: #FAF9F5;
 }
@@ -2270,31 +2308,28 @@ footer .footer_copy span {
 
 @media screen and (min-width: 768px) {
   footer {
-    width: 100%;
-    color: #FAF9F5;
-    font-family: "Montserrat", sans-serif;
+    padding: 0;
   }
   footer .footer_wrap {
-    display: flex;
-    padding: 50px 100px;
+    flex-direction: row;
+    padding: 50px 50px;
   }
   footer .footer_logo {
-    width: 20%;
+    display: inline-block;
   }
   footer .footer_nav {
     width: 80%;
+    padding: 0 0 0 60px;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(4, 1fr) 300px;
+    grid-template-columns: repeat(4, 1fr) 2fr;
+    gap: 20px;
   }
   footer .footer_nav span {
-    line-height: 57.5px;
+    line-height: 20px;
   }
   footer .footer_nav span:hover a {
     color: #4EF8EB;
-  }
-  footer .footer_nav span a {
-    color: #FAF9F5;
   }
   footer .footer_nav span:nth-of-type(10) {
     display: flex;
@@ -2354,24 +2389,29 @@ footer .footer_copy span {
 }
 
 .go_top {
-  width: 150px;
-  height: 150px;
   display: none;
-  position: fixed;
-  z-index: 15;
-  bottom: 50px;
-  right: 80px;
-  animation: rotateInfinite 2s linear infinite;
-}
-.go_top:hover {
-  animation-play-state: paused;
-}
-.go_top img {
-  width: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
 }
 
+@media screen and (min-width: 1200px) {
+  .go_top {
+    width: 150px;
+    height: 150px;
+    display: block;
+    position: fixed;
+    z-index: 15;
+    bottom: 50px;
+    right: 80px;
+    animation: rotateInfinite 2s linear infinite;
+  }
+  .go_top:hover {
+    animation-play-state: paused;
+  }
+  .go_top img {
+    width: 100%;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+}
 @keyframes rotateInfinite {
   from {
     rotate: 0deg;
@@ -2389,7 +2429,7 @@ footer .footer_copy span {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .subscribe_modal .success_info {
-  width: 600px;
+  width: 50%;
   margin: auto;
   padding: 50px;
   background-color: #FAF9F5;
@@ -2405,7 +2445,7 @@ footer .footer_copy span {
   top: 20px;
 }
 .subscribe_modal button {
-  font-size: 40px;
+  font-size: 2rem;
   border: none;
   cursor: pointer;
   background: none;
@@ -2424,5 +2464,20 @@ footer .footer_copy span {
 .subscribe_modal span {
   display: block;
   padding-bottom: 30px;
-  font-size: 40px;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe_modal .success_info {
+    width: 50%;
+  }
+  .subscribe_modal button {
+    font-size: 40px;
+  }
+  .subscribe_modal i {
+    font-size: 85px;
+  }
+  .subscribe_modal span {
+    font-size: 40px;
+  }
 }/*# sourceMappingURL=home.css.map */
