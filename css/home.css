@@ -10,16 +10,21 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
-  font-size: 16px;
   background-color: #0F0F0F;
 }
 
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 18px;
+  }
+}
 @media screen and (min-width: 768px) {
-  body {
-    font-size: 20px;
+  html {
+    font-size: 18px;
   }
 }
 header {
@@ -297,7 +302,6 @@ header .banner .banner_logo .title::before {
 }
 header .banner .banner_logo .side_logo {
   position: absolute;
-  width: 100%;
   color: #fff;
   display: flex;
   font-size: 0.5rem;
@@ -600,11 +604,12 @@ header .banner .scroll {
     display: flex;
     justify-content: center;
     align-items: center;
-    left: 35%;
+    left: 30%;
     top: 50%;
     transform: translate(-50%, -50%);
   }
   header .banner .banner_logo .logo {
+    width: 30%;
     background-color: #000000;
     text-align: center;
     position: relative;
@@ -616,15 +621,15 @@ header .banner .scroll {
     display: block;
     background-color: #524C4C;
     position: absolute;
-    left: 30px;
-    top: -60px;
+    left: 20px;
+    top: -20px;
     z-index: -1;
   }
   header .banner .banner_logo .title {
     width: 100%;
     height: 100%;
-    padding: 50px;
-    font-size: 110px;
+    padding: 30px;
+    font-size: 4rem;
     text-shadow: 0 0 3px rgb(253, 253, 98);
     color: #fff;
     font-weight: 700;
@@ -639,7 +644,7 @@ header .banner .scroll {
     height: 2px;
     background-color: #fff;
     top: -30px;
-    left: -98px;
+    left: -70px;
   }
   header .banner .banner_logo .title::before {
     content: "";
@@ -656,8 +661,6 @@ header .banner .scroll {
     top: 0;
     color: #fff;
     writing-mode: vertical-lr;
-    top: 0;
-    bottom: 0;
   }
   header .banner .banner_logo .side_logo:nth-of-type(1) {
     right: -1.5em;
@@ -1089,205 +1092,21 @@ header .banner .scroll {
     color: #4EF8EB;
   }
   .timetable .wrap table tr .tag {
-    display: inline-block;
-  }
-  .timetable .wrap table tr .soon {
-    text-decoration: none;
-    background-color: #1bb6c1;
-    color: #FAF9F5;
-  }
-  .timetable .wrap table tr .notyet {
-    text-decoration: none;
-    background-color: rgb(17, 178, 140);
-    color: #FAF9F5;
-  }
-}
-@media screen and (min-width: 768px) {
-  .timetable {
-    width: 100%;
-    padding: 30px 0 60px;
-    color: #FAF9F5;
-  }
-  .timetable .wrap {
-    max-width: 1200px;
-    padding: 30px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-  }
-  .timetable .wrap::after {
-    content: "";
-    width: 100%;
-    height: 100%;
     display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: url("../banner3.jpg") no-repeat center/cover;
-    filter: blur(3px);
-    background-attachment: fixed;
   }
-  .timetable .wrap .title {
-    display: block;
-    position: relative;
-    width: 40%;
-  }
-  .timetable .wrap .title h2 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 65px;
-    line-height: 100px;
-    font-family: "Montserrat";
-    margin-bottom: 30px;
-    text-shadow: 0px 4px 10px #000000;
-    padding-left: 20px;
-    position: relative;
-    z-index: 3;
-  }
-  .timetable .wrap .title h2::after {
-    content: "";
-    display: block;
-    width: 70%;
-    height: 2px;
-    position: absolute;
-    bottom: 0px;
-    background-color: #FAF9F5;
-  }
-  .timetable .wrap .title strong {
-    display: block;
-    padding: 20px 0 0 20px;
-    padding-bottom: 20px;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-    color: #4EF8EB;
-    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.62);
-    position: relative;
-    z-index: 3;
-  }
-  .timetable .wrap .title span {
-    display: inline-block;
-    position: relative;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.62);
-    color: #4EF8EB;
-    font-weight: 700;
-    z-index: 3;
-  }
-  .timetable .wrap .title .countdown_day {
-    padding-left: 20px;
-  }
-  .timetable .wrap table {
-    width: 60%;
-    margin-left: auto;
-    background-color: #201F21;
-    border-radius: 10px;
-    position: relative;
-    z-index: 2;
-    padding: 30px;
-  }
-  .timetable .wrap table caption {
-    display: none;
-  }
-  .timetable .wrap table caption:after {
-    content: "";
-    width: 30%;
-    height: 1px;
-    background-color: #4EF8EB;
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .timetable .wrap table tbody {
-    height: 400px;
-    display: block;
-    overflow: auto;
-  }
-  .timetable .wrap table tbody::-webkit-scrollbar {
-    width: 5px;
-  }
-  .timetable .wrap table tbody::-webkit-scrollbar-track {
-    background: none;
-  }
-  .timetable .wrap table tbody::-webkit-scrollbar-thumb {
-    background: #FAF9F5;
-  }
-  .timetable .wrap table tr {
-    position: relative;
-  }
-  .timetable .wrap table tr::before {
-    content: "";
-    width: 100%;
-    height: 1px;
-    display: block;
-    position: absolute;
-    background-color: #FAF9F5;
-  }
-  .timetable .wrap table tr:nth-of-type(1)::before {
-    width: 0;
-  }
-  .timetable .wrap table tr::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: #0F0F0F;
-    z-index: 1;
-    transform: scaleX(0);
-    transform-origin: top right;
-    transition: transform 0.5s ease;
-  }
-  .timetable .wrap table tr:hover::after {
-    transform: scaleX(1);
-    transform-origin: top left;
-  }
-  .timetable .wrap table tr td {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 31px;
-    position: relative;
-    z-index: 2;
-    padding: 30px 25px;
-  }
-  .timetable .wrap table tr td a {
-    display: block;
-    padding: 30px 100px 30px 40px;
-    color: #FAF9F5;
-  }
-  .timetable .wrap table tr td a:focus {
-    color: red;
-  }
-  .timetable .wrap table tr td:nth-of-type(2) {
-    font-size: 22px;
-    padding: 0;
-  }
-  .timetable .wrap table tr .tag {
-    display: block;
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 0 5px;
+  .timetable .wrap table tr .tag span {
+    padding: 0 10px;
     background-color: #FAF9F5;
     color: #0F0F0F;
-    font-size: 16px;
-    font-weight: 400;
     border-radius: 10px;
     text-decoration: line-through;
   }
-  .timetable .wrap table tr .soon {
+  .timetable .wrap table tr .soon span {
     text-decoration: none;
     background-color: #1bb6c1;
     color: #FAF9F5;
   }
-  .timetable .wrap table tr .notyet {
+  .timetable .wrap table tr .notyet span {
     text-decoration: none;
     background-color: rgb(17, 178, 140);
     color: #FAF9F5;
@@ -1537,6 +1356,8 @@ header .banner .scroll {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
   position: relative;
   z-index: 2;
 }
@@ -1574,6 +1395,7 @@ header .banner .scroll {
 }
 .interview .interview_card_row {
   width: 100%;
+  padding-bottom: 30px;
 }
 .interview .interview_card_row .pic {
   width: 100%;
@@ -1655,6 +1477,10 @@ header .banner .scroll {
   bottom: -160px;
   right: 0px;
   background-color: #B7FDBE;
+}
+.interview .card_column .pic img {
+  -o-object-position: center;
+     object-position: center;
 }
 .interview .card_column .txt {
   margin-right: 0px;
