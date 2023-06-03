@@ -792,7 +792,6 @@ header .banner .scroll {
   width: 100%;
   display: flex;
   gap: 20px;
-  overflow: hidden;
   padding-bottom: 10px;
 }
 .marquee .marquee_hashtag .hashtag_wrap .one_hashtag {
@@ -809,10 +808,10 @@ header .banner .scroll {
   cursor: pointer;
 }
 .marquee .marquee_hashtag .hashtag_wrap .re_hashtag {
-  animation: hashtag1 140s linear -70s infinite;
+  animation: hashtag1 160s linear -80s infinite;
 }
 .marquee .marquee_hashtag .hashtag_wrap .hashtag {
-  animation: hashtag 140s linear infinite;
+  animation: hashtag 160s linear infinite;
 }
 .marquee .marquee_hashtag .hashtag_wrap .re_hashtag1 {
   animation: hashtag1 120s linear -60s infinite;
@@ -857,22 +856,6 @@ header .banner .scroll {
   }
   to {
     transform: translateX(-200%);
-  }
-}
-@keyframes hashtag2 {
-  from {
-    left: 0%;
-  }
-  to {
-    left: -220%;
-  }
-}
-@keyframes hashtag3 {
-  from {
-    left: 0%;
-  }
-  to {
-    left: -220%;
   }
 }
 .poster {
@@ -1955,7 +1938,7 @@ header .banner .scroll {
 .modal button {
   position: absolute;
   right: -50px;
-  top: -50px;
+  top: 0px;
   background-color: transparent;
   border: none;
   color: #fff;
@@ -1997,7 +1980,7 @@ header .banner .scroll {
   .modal button {
     position: absolute;
     right: -50px;
-    top: -50px;
+    top: 0px;
     background-color: transparent;
     border: none;
     color: #fff;

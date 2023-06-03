@@ -6,7 +6,7 @@ const countdown_minutes = document.querySelector('.countdown_minutes');
 const countdown_seconds = document.querySelector('.countdown_seconds');
 
 const now = Math.floor(Date.now()/1000);
-const countdownDay = Math.floor(Date.parse(new Date(2023, 4, 5))) / 1000;
+const countdownDay = Math.floor(Date.parse(new Date(2023, 7, 25))) / 1000;
 const timeGap = countdownDay - now;
 
 function countDown() {
@@ -142,37 +142,18 @@ const random = document.querySelector('.random_pic');
 const random_img = document.querySelector('.random_pic img');
 // console.log(hashtag);
 // console.log(random_img);
-
-
-let num = 5;
-window.addEventListener('mousemove', (e) => {
-  let x = e.pageX;
-  let y = e.pageY;
-  hashtag.forEach((item) => {
-    // item.addEventListener('mouseenter', mouseMove);
-    item.addEventListener('mousemove', mouseMove);
-    item.addEventListener('mouseleave', mouseLeave);
+$('.one_hashtag span').mousemove(function(e) {
+  let x = e.clientX;
+  let y = e.clientY;
+  let id = $(this).attr('data-id');
+  console.log(x,y);
+  $('.random_pic').show().css({
+    left: x + 10,
+    top: y + 350,
   })
-  function mouseMove(e) {
-    // const id = parseInt(e.target.dataset.id);
-    // console.log(id);
-    // hashtag.forEach((item, index) => {
-    //   console.log(index);
-    //   if(id === index+1) {
-    //     item.style.color = 'red';
-        
-    //   }
-    // })
-    random_img.src = `./image/${num}.jpg`;
-    random.style.display = 'block';
-    random.style.top = y + 'px';
-    random.style.left = x + 'px';
-    // hashtag.style.backGround = 'black';
-    // random.style.color = '#fff';
-  }
-  function mouseLeave() {
-    random.style.display = 'none';
-  }
+  $('.random_pic img').attr('src', `../image/${id}.jpg`);
+}).mouseout(function() {
+  $('.random_pic').hide();
 })
 
 // goTop按鈕

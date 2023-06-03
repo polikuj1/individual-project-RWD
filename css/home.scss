@@ -825,7 +825,7 @@ header {
       width: 100%;
       display: flex;
       gap: 20px;
-      overflow: hidden;
+      // overflow: hidden;
       padding-bottom: 10px;
       .one_hashtag {
         flex-shrink: 0;
@@ -842,11 +842,11 @@ header {
       }
       .re_hashtag {
         animation: 
-        hashtag1 140s linear -70s infinite,
+        hashtag1 160s linear -80s infinite,
       }
       .hashtag {
         animation: 
-        hashtag 140s linear infinite;
+        hashtag 160s linear infinite;
       }
       .re_hashtag1 {
         animation: 
@@ -906,22 +906,7 @@ header {
     transform: translateX(-200%);
   }
 }
-@keyframes hashtag2 {
-  from {
-    left: 0%;
-  }
-  to {
-    left: -220%;
-  }
-}
-@keyframes hashtag3 {
-  from {
-    left: 0%;
-  }
-  to {
-    left: -220%;
-  }
-}
+
 
 // 海報區
 .poster {
@@ -2263,7 +2248,7 @@ header {
   button {
     position: absolute;
     right: -50px;
-    top: -50px;
+    top: 0px;
     background-color: transparent;
     border: none;
     color: #fff;
@@ -2304,7 +2289,7 @@ header {
     button {
       position: absolute;
       right: -50px;
-      top: -50px;
+      top: 0px;
       background-color: transparent;
       border: none;
       color: #fff;
