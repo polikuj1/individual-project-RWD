@@ -39,7 +39,7 @@ header {
   .hamburger_menu {
     position: fixed;
     z-index: 999;
-    right: 30px;
+    right: 45px;
     top: 30px;
     .menu_btn_wrap {
     }
@@ -316,6 +316,7 @@ header {
         }
       }
       .side_logo {
+        width: 100%;
         position: absolute;
         color: #fff;
         display: flex;
@@ -374,9 +375,7 @@ header {
   }
 }
 
-
-
-@media screen and (min-width:768px) { 
+@media screen and (min-width:1200px) { 
   header {
     width: 100%;
     height: 100vh;
@@ -385,13 +384,13 @@ header {
     .hamburger_menu {
       font-family: $main_text_font;
       width: 60px;
-      height: 100vh;
+      height: 115vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       position: fixed;
       z-index: 11;
-      right: 0;
+      right: 60px;
       top: 0;
       background: linear-gradient(357.8deg, #57AD6A 19.33%, #84CC47 47.17%, #0bc8e1 93.66%);
       .menu_btn_wrap {
@@ -1571,7 +1570,7 @@ header {
   h2 {
     font-family: $main_text_font;
     color: $main_txt_color;
-    display: inline-block;
+    display: block;
     font-weight: 400;
     font-size: 3rem;
     line-height: 60px;
@@ -1593,7 +1592,7 @@ header {
   }
   .interview_list {
     width: 100%;
-    padding: 0px 25px;
+    padding: 0px 50px;
     display: flex;
     flex-direction: column;
   }
@@ -1603,17 +1602,17 @@ header {
       width: 100%;
       height: 400px;
       position: relative;
-      &::before {
-        content: '';
-        width: 100%;
-        height: 300px;
-        position: absolute;
-        right: 0;
-        bottom: -130px;
-        display: block;
-        z-index: 1;
-        background-color: rgba(255, 250, 119, 1);
-      }
+      // &::before {
+      //   content: '';
+      //   width: 100%;
+      //   height: 300px;
+      //   position: absolute;
+      //   right: 0;
+      //   bottom: -130px;
+      //   display: block;
+      //   z-index: 1;
+      //   background-color: rgba(255, 250, 119, 1);
+      // }
       img {
         width: 100%;
         height: 100%;
@@ -1655,29 +1654,30 @@ header {
         text-align: right;
         padding: 20px 20px;
         color: $main_bg_color;
+        background-color: rgba(255, 250, 119, 1);
       }
     }
   }
   .interview_card_row {
     width: 100%;
-    padding-bottom: 30px;
+    // padding-bottom: 30px;
     .pic {
       width: 100%;
       position: relative;
       .decoration {
         display: none;
       }
-      &::before {
-        content: '';
-        width: 100%;
-        height: 200px;
-        position: absolute;
-        right: 0;
-        bottom: -160px;
-        display: block;
-        z-index: 1;
-        background-color: rgba(248, 183, 253, 1);
-      }
+      // &::before {
+      //   content: '';
+      //   width: 100%;
+      //   height: 200px;
+      //   position: absolute;
+      //   right: 0;
+      //   bottom: -160px;
+      //   display: block;
+      //   z-index: 1;
+      //   background-color: rgba(248, 183, 253, 1);
+      // }
       img {
         width: 100%;
         position: relative;
@@ -1686,7 +1686,7 @@ header {
     }
     .txt {
       width: 100%;
-      margin: 0 80px 0 auto;
+      margin: auto;
       position: relative;
       bottom: 50px;
       z-index: 3;
@@ -1718,6 +1718,7 @@ header {
       .edit {
         text-align: right;
         padding: 20px 20px;
+        background-color: rgba(248, 183, 253, 1);
       }
     }
   }
@@ -1727,11 +1728,11 @@ header {
       .decoration {
         display: none;
       }
-      &::before {
-        bottom: -160px;
-        background-color: #FAE2A5;
-        left: 0;
-      }
+      // &::before {
+      //   bottom: -160px;
+      //   background-color: #FAE2A5;
+      //   left: 0;
+      // }
     }
     .txt {
       .interview_title {
@@ -1739,18 +1740,19 @@ header {
       }
       .edit {
         color: $main_bg_color;
+        background-color: #FAE2A5;
       }
     }
   }
   .card_column {
     .pic {
-      &::before {
-        width: 100%;
-        height: 300px;
-        bottom: -160px;
-        right: 0px;
-        background-color: #B7FDBE;
-      }
+      // &::before {
+      //   width: 100%;
+      //   height: 300px;
+      //   bottom: -160px;
+      //   right: 0px;
+      //   background-color: #B7FDBE;
+      // }
       img {
         object-position: center;
       }
@@ -1762,6 +1764,7 @@ header {
       }
       .edit {
         color: $main_bg_color;
+        background-color: #B7FDBE;
       }
     }
   }
@@ -1769,29 +1772,150 @@ header {
 
 @media screen and (min-width:768px) {
   .interview {
-    width: 100%;
-    padding: 60px 0px;
-    .interview_wrap {
-      max-width: 1200px;
-      margin: auto;
-    }
     h2 {
-      font-family: $main_text_font;
-      color: $main_txt_color;
-      display: inline-block;
-      margin-bottom: 60px;
-      font-weight: 400;
-      font-size: 82px;
+      display: block;
+      font-size: 4rem;
       line-height: 100px;
-      position: relative;
         &::after {
+          display: none;
+        }
+    }
+    .interview_list {
+      padding: 0px 60px;
+    }
+    .interview_card_column {
+      .pic {
+        height: 450px;
+        &::before {
           content: '';
           width: 100%;
-          height: 1px;
-          background-color: $main_txt_color;
+          height: 400px;
           position: absolute;
-          bottom: -20px;
+          bottom: -140px;
           display: block;
+          z-index: 1;
+          background-color: rgba(255, 250, 119, 1);
+        }
+        &::after {
+        }
+        img {
+          border-radius: 50px;
+        }
+      }
+      .txt {
+        width: 80%;
+        .interview_title {
+          color: $main_txt_color;
+          text-align: center;
+          padding: 20px 50px;
+          background-color: $card_color_one;
+        }
+        span {
+          min-height: 2em;
+        }
+        .edit {
+          background-color: transparent;
+        }
+      }
+    }
+    .interview_card_row {
+      .pic {
+        &::before {
+          content: '';
+          width: 100%;
+          height: 400px;
+          position: absolute;
+          bottom: -140px;
+          display: block;
+          z-index: 1;
+          background-color: rgba(248, 183, 253, 1);
+        }
+        &::after {
+          display: none;
+        }
+        img {
+          border-radius: 50px;
+        }
+      }
+      .txt {
+        width: 80%;
+        .interview_title {
+          span {
+            min-height: 2em;
+          }
+        }
+        .edit {
+          background-color: transparent;
+        }
+      }
+    }
+    .card_row {
+      margin: 0 100px 0 20px;
+      .pic {
+        position: relative;
+        .decoration {
+          position: absolute;
+          top: -180px;
+          left: 60%;
+          width: 180px;
+          height: 190px;
+          img {
+            width: 100%;
+          }
+        }
+        &::before {
+          background-color: #FAE2A5;
+          left: 0;
+        }
+        &::after {
+          background-color: $card_color_three;
+          left: calc(100% + 50px);
+        }
+      }
+      .txt {
+        .interview_title {
+          background-color: $card_color_three;
+        }
+        .edit {
+          color: $main_txt_color;
+        }
+      }
+    }
+    .card_column {
+      margin: 0 20px 0 100px;
+      .pic {
+        &::before {
+          width: 500px;
+          height: 300px;
+          right: 150px;
+          background-color: #B7FDBE;
+        }
+        &::after {
+          background-color: $card_color_four;
+          left: -50px;
+        }
+      }
+      .txt {
+        margin-right: 0px;
+        .interview_title {
+          background-color: $card_color_four;
+        }
+        .edit {
+          color: $main_txt_color;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .interview {
+    h2 {
+      display: block;
+      font-size: 4rem;
+      line-height: 100px;
+        &::after {
+          display: none;
         }
     }
     .interview_list {
@@ -1875,6 +1999,7 @@ header {
           text-align: right;
           padding: 20px 20px;
           color: $main_bg_color;
+          background-color: transparent;
         }
       }
     }
@@ -1961,6 +2086,7 @@ header {
         .edit {
           text-align: right;
           padding: 20px 20px;
+          background-color: transparent;
         }
       }
     }
@@ -2022,6 +2148,7 @@ header {
     }
   }
 }
+
 // 媒體區
 .media {  
   width: 100%;

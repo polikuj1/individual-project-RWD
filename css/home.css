@@ -33,7 +33,7 @@ header {
 header .hamburger_menu {
   position: fixed;
   z-index: 999;
-  right: 30px;
+  right: 45px;
   top: 30px;
 }
 header .hamburger_menu .menu_btn {
@@ -301,6 +301,7 @@ header .banner .banner_logo .title::before {
   left: 0px;
 }
 header .banner .banner_logo .side_logo {
+  width: 100%;
   position: absolute;
   color: #fff;
   display: flex;
@@ -356,7 +357,7 @@ header .banner .scroll {
   display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   header {
     width: 100%;
     height: 100vh;
@@ -366,13 +367,13 @@ header .banner .scroll {
   header .hamburger_menu {
     font-family: "Montserrat", sans-serif;
     width: 60px;
-    height: 100vh;
+    height: 115vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: fixed;
     z-index: 11;
-    right: 0;
+    right: 60px;
     top: 0;
     background: linear-gradient(357.8deg, #57AD6A 19.33%, #84CC47 47.17%, #0bc8e1 93.66%);
   }
@@ -1289,7 +1290,7 @@ header .banner .scroll {
 .interview h2 {
   font-family: "Montserrat", sans-serif;
   color: #FAF9F5;
-  display: inline-block;
+  display: block;
   font-weight: 400;
   font-size: 3rem;
   line-height: 60px;
@@ -1311,7 +1312,7 @@ header .banner .scroll {
 }
 .interview .interview_list {
   width: 100%;
-  padding: 0px 25px;
+  padding: 0px 50px;
   display: flex;
   flex-direction: column;
 }
@@ -1322,17 +1323,6 @@ header .banner .scroll {
   width: 100%;
   height: 400px;
   position: relative;
-}
-.interview .interview_card_column .pic::before {
-  content: "";
-  width: 100%;
-  height: 300px;
-  position: absolute;
-  right: 0;
-  bottom: -130px;
-  display: block;
-  z-index: 1;
-  background-color: rgb(255, 250, 119);
 }
 .interview .interview_card_column .pic img {
   width: 100%;
@@ -1375,10 +1365,10 @@ header .banner .scroll {
   text-align: right;
   padding: 20px 20px;
   color: #0F0F0F;
+  background-color: rgb(255, 250, 119);
 }
 .interview .interview_card_row {
   width: 100%;
-  padding-bottom: 30px;
 }
 .interview .interview_card_row .pic {
   width: 100%;
@@ -1387,17 +1377,6 @@ header .banner .scroll {
 .interview .interview_card_row .pic .decoration {
   display: none;
 }
-.interview .interview_card_row .pic::before {
-  content: "";
-  width: 100%;
-  height: 200px;
-  position: absolute;
-  right: 0;
-  bottom: -160px;
-  display: block;
-  z-index: 1;
-  background-color: rgb(248, 183, 253);
-}
 .interview .interview_card_row .pic img {
   width: 100%;
   position: relative;
@@ -1405,7 +1384,7 @@ header .banner .scroll {
 }
 .interview .interview_card_row .txt {
   width: 100%;
-  margin: 0 80px 0 auto;
+  margin: auto;
   position: relative;
   bottom: 50px;
   z-index: 3;
@@ -1436,6 +1415,7 @@ header .banner .scroll {
 .interview .interview_card_row .txt .edit {
   text-align: right;
   padding: 20px 20px;
+  background-color: rgb(248, 183, 253);
 }
 .interview .card_row .pic {
   position: relative;
@@ -1443,23 +1423,12 @@ header .banner .scroll {
 .interview .card_row .pic .decoration {
   display: none;
 }
-.interview .card_row .pic::before {
-  bottom: -160px;
-  background-color: #FAE2A5;
-  left: 0;
-}
 .interview .card_row .txt .interview_title {
   background-color: #F89C13;
 }
 .interview .card_row .txt .edit {
   color: #0F0F0F;
-}
-.interview .card_column .pic::before {
-  width: 100%;
-  height: 300px;
-  bottom: -160px;
-  right: 0px;
-  background-color: #B7FDBE;
+  background-color: #FAE2A5;
 }
 .interview .card_column .pic img {
   -o-object-position: center;
@@ -1473,35 +1442,138 @@ header .banner .scroll {
 }
 .interview .card_column .txt .edit {
   color: #0F0F0F;
+  background-color: #B7FDBE;
 }
 
 @media screen and (min-width: 768px) {
-  .interview {
-    width: 100%;
-    padding: 60px 0px;
-  }
-  .interview .interview_wrap {
-    max-width: 1200px;
-    margin: auto;
-  }
   .interview h2 {
-    font-family: "Montserrat", sans-serif;
-    color: #FAF9F5;
-    display: inline-block;
-    margin-bottom: 60px;
-    font-weight: 400;
-    font-size: 82px;
+    display: block;
+    font-size: 4rem;
     line-height: 100px;
-    position: relative;
   }
   .interview h2::after {
+    display: none;
+  }
+  .interview .interview_list {
+    padding: 0px 60px;
+  }
+  .interview .interview_card_column .pic {
+    height: 450px;
+  }
+  .interview .interview_card_column .pic::before {
     content: "";
     width: 100%;
-    height: 1px;
-    background-color: #FAF9F5;
+    height: 400px;
     position: absolute;
-    bottom: -20px;
+    bottom: -140px;
     display: block;
+    z-index: 1;
+    background-color: rgb(255, 250, 119);
+  }
+  .interview .interview_card_column .pic img {
+    border-radius: 50px;
+  }
+  .interview .interview_card_column .txt {
+    width: 80%;
+  }
+  .interview .interview_card_column .txt .interview_title {
+    color: #FAF9F5;
+    text-align: center;
+    padding: 20px 50px;
+    background-color: rgb(188, 172, 24);
+  }
+  .interview .interview_card_column .txt span {
+    min-height: 2em;
+  }
+  .interview .interview_card_column .txt .edit {
+    background-color: transparent;
+  }
+  .interview .interview_card_row .pic::before {
+    content: "";
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    bottom: -140px;
+    display: block;
+    z-index: 1;
+    background-color: rgb(248, 183, 253);
+  }
+  .interview .interview_card_row .pic::after {
+    display: none;
+  }
+  .interview .interview_card_row .pic img {
+    border-radius: 50px;
+  }
+  .interview .interview_card_row .txt {
+    width: 80%;
+  }
+  .interview .interview_card_row .txt .interview_title span {
+    min-height: 2em;
+  }
+  .interview .interview_card_row .txt .edit {
+    background-color: transparent;
+  }
+  .interview .card_row {
+    margin: 0 100px 0 20px;
+  }
+  .interview .card_row .pic {
+    position: relative;
+  }
+  .interview .card_row .pic .decoration {
+    position: absolute;
+    top: -180px;
+    left: 60%;
+    width: 180px;
+    height: 190px;
+  }
+  .interview .card_row .pic .decoration img {
+    width: 100%;
+  }
+  .interview .card_row .pic::before {
+    background-color: #FAE2A5;
+    left: 0;
+  }
+  .interview .card_row .pic::after {
+    background-color: #F89C13;
+    left: calc(100% + 50px);
+  }
+  .interview .card_row .txt .interview_title {
+    background-color: #F89C13;
+  }
+  .interview .card_row .txt .edit {
+    color: #FAF9F5;
+  }
+  .interview .card_column {
+    margin: 0 20px 0 100px;
+  }
+  .interview .card_column .pic::before {
+    width: 500px;
+    height: 300px;
+    right: 150px;
+    background-color: #B7FDBE;
+  }
+  .interview .card_column .pic::after {
+    background-color: #30B335;
+    left: -50px;
+  }
+  .interview .card_column .txt {
+    margin-right: 0px;
+  }
+  .interview .card_column .txt .interview_title {
+    background-color: #30B335;
+  }
+  .interview .card_column .txt .edit {
+    color: #FAF9F5;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .interview h2 {
+    display: block;
+    font-size: 4rem;
+    line-height: 100px;
+  }
+  .interview h2::after {
+    display: none;
   }
   .interview .interview_list {
     width: 100%;
@@ -1580,6 +1652,7 @@ header .banner .scroll {
     text-align: right;
     padding: 20px 20px;
     color: #0F0F0F;
+    background-color: transparent;
   }
   .interview .interview_card_row {
     width: 700px;
@@ -1660,6 +1733,7 @@ header .banner .scroll {
   .interview .interview_card_row .txt .edit {
     text-align: right;
     padding: 20px 20px;
+    background-color: transparent;
   }
   .interview .card_row {
     margin: 0 100px 0 20px;
