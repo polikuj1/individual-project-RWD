@@ -18,11 +18,26 @@ $chinese_txt_font: 'Noto Sans TC', sans-serif;
   text-decoration: none;
   font-family: $chinese_txt_font;
 }
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
 body {
   background-color: $main_bg_color;
 }
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 22px;
+  }
+}
 // 滑鼠移動
 .pointer {
+  display: none;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -37,24 +52,34 @@ body {
 .pointer1 {
   transition: 0.05s;
 }
-
+@media screen and (min-width:1200px) {
+  .pointer {
+    display: block;
+  }
+}
 
 // 分頁標題
 .about_wrap {
-  padding: 50px 0;
+  padding: 30px 0;
   width: 80%;
   margin: auto;
 }
 .logo {
+  width: 100px;
+  height: 60px;
   position: absolute;
   left: 50px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 .about_title {
-  padding: 200px 0 0 0;
+  padding: 100px 0 0 0;
   h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 96px;
+    font-size: 3.5rem;
     line-height: 116px;
     word-spacing: 10px;
     letter-spacing: 5px;
@@ -66,70 +91,88 @@ body {
       height: 5px;
       background-color: $title_border;
       position: absolute;
-      bottom: -60px;
+      bottom: -30px;
       left: 0;
     }
   }
 }
 
+@media screen and (min-width:768px) {
+  .logo {
+    width: 130px;
+  height: 80px;
+  }
+}
+@media screen and (min-width:768px) {
+  .logo {
+    width: 150px;
+  height: 90px;
+  }
+}
+
+
 // 關於我們的介紹
 .intro_us {
   width: 100%;
-  padding: 200px 0 100px 0;
+  padding: 60px 0 0 0;
   overflow: hidden;
+  > h3 {
+    text-align: center;
+    width: 200px;
+    padding: 10px 0;
+    margin: 0 auto 30px 50px;
+    font-size: 2.8rem;
+    line-height: 70px;
+    color: $txt_color;
+    background-color: #7ECD50;
+    position: relative;  
+    &::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-top: 30px solid #436D2B;
+      border-bottom: 30px solid transparent;
+      border-left: 30px solid transparent;
+      position: absolute;
+      left: -30px;
+      bottom: -30px;
+    }
+  }
   .intro_wrap {
-    width: 80%;
+    width: 90%;
     margin: auto;
-    display: flex;
     .txt {
-      width: 44%;
-      margin: 0 3%;
-      padding: 4%;
+      width: 100%;
+      height: 500px;
+      overflow: auto;
+      padding: 20px;
       color: $txt_color;
       background-color: #000;
       border: 1px solid $txt_border;
       position: relative;
       &::after {
+        display: none;
         content: '';
         width: 120%;
         height: 110%;
         background-color: $card_bg_color;
         position: absolute;
-        left: -70px;
-        top: -50px;
+        left: 0px;
+        right: 0;
+        margin: auto;
+        bottom: 0px;
         z-index: -1;
       }
-      h3 {
-        font-size: 48px;
-        line-height: 70px;
-        position: absolute;
-        top: -106px;
-        left: -40px;
-        padding: 3% 6%;
-        background-color: #7ECD50;
-        z-index: 2;
-        &::after {
-          content: '';
-          width: 0;
-          height: 0;
-          border-top: 40px solid #436D2B;
-          border-bottom: 40px solid transparent;
-          border-left: 40px solid transparent;
-          position: absolute;
-          left: -40px;
-          bottom: -40px;
-        }
-      }
       p {
-        font-size: 22px;
-        line-height: 2em;
+        font-size: 1.1rem;
+        line-height: 40px;
         position: relative;
         z-index: 2;
       }
     }
     .pic {
-      width: 44%;
-      margin: 0 0 0 6%;
+      width: 100%;
+      margin-top: 20px;
       img {
         width: 100%;
         height: 100%;
@@ -137,17 +180,37 @@ body {
       }
     }
   }
+  .our_idea {
+    width: 250px;
+    margin: 100px 50px 0;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 2.8rem;
+    line-height: 70px;
+    background-color: rgba(91, 175, 104, 1);
+    position: relative;
+    &::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-top: 30px solid rgba(38, 75, 44, 1);
+      border-bottom: 30px solid transparent;
+      border-left: 30px solid transparent;
+      position: absolute;
+      left: -30px;
+      bottom: -30px;
+    }
+  }
   .philosophy {
-    width: 80%;
-    padding: 200px 0 0 0;
+    width: 90%;
     margin: auto;
-    display: flex;
     color: $txt_color;
     .idea {
-      width: 45%;
-      padding: 50px;
+      width: 100%;
+      margin-top: 30px;
       position: relative;
       &::after {
+        display: none;
         content: '';
         width: 500px;
         height: 475px;
@@ -158,53 +221,29 @@ body {
         top: -55px;
         z-index: -1;
       }
-      h3 {
-        padding: 3% 6%;
-        position: absolute;
-        top: -55px;
-        left: 5px;
-        font-size: 48px;
-        line-height: 70px;
-        background-color: rgba(91, 175, 104, 1);
-        &::after {
-          content: '';
-          width: 0;
-          height: 0;
-          border-top: 40px solid rgba(38, 75, 44, 1);
-          border-bottom: 40px solid transparent;
-          border-left: 40px solid transparent;
-          position: absolute;
-          left: -40px;
-          bottom: -40px;
-        }
-      }
       .txt {
         width: 100%;
         height: 100%;
         background-color: $card_bg_color;
         border: 1px solid $txt_border;
-        padding: 8%;
+        padding: 30px;
       }
       h4 {
-        font-size: 48px;
+        font-size: 3rem;
         line-height: 58px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         display: inline-block;
         border-bottom: 5px solid #fff;
       }
       p {
-        font-size: 22px;
-        line-height: 2em;
+        font-size: 1.3rem;
+        line-height: 50px;
       }
     }
     .pic {
-      width: 55%;
+      margin-top: 30px;
+      width: 100%;
       overflow: hidden;
-      &:hover {
-        img {
-          transform: scale(1.2);
-        }
-      }
       img {
         width: 100%;
         height: 100%;
@@ -216,12 +255,93 @@ body {
     }
   }
   .one {
-    padding: 0;
     .idea {
       order: 1;
     }
   }
   .two {
-    padding: 0;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .intro_us {
+    h3 {
+      width: 400px;
+      &::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 30px solid #436D2B;
+        border-bottom: 30px solid transparent;
+        border-left: 30px solid transparent;
+        position: absolute;
+        left: -30px;
+        bottom: -30px;
+      }
+    }
+    .intro_wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .txt {
+        width: 48%;
+        height: 800px;
+        &::after {
+          display: none;
+          content: '';
+          width: 120%;
+          height: 110%;
+          background-color: $card_bg_color;
+          position: absolute;
+          left: 0px;
+          right: 0;
+          margin: auto;
+          bottom: 0px;
+          z-index: -1;
+        }
+        p {
+          
+        }
+      }
+      .pic {
+        width: 48%;
+        margin-top: 0;
+      }
+    }
+    .our_idea {
+      width: 400px;
+    }
+    .philosophy {
+      margin: 0 80px 0 auto;
+      display: flex;
+      .idea {
+        &::after {
+          display: block;
+        }
+      }
+      .pic {
+        padding: 20px;
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 5px;
+          transform: scale(1);
+          transition: .5s;
+        }
+      }
+    }
+    .one {
+      .idea {
+        order: 1;
+      }
+    }
+    .two {
+    }
   }
 }

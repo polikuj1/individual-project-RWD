@@ -2167,6 +2167,7 @@ footer {
       display: block;
       margin-bottom: 10px;
       line-height: 3rem;
+      padding-bottom: 10px;
       border-bottom: 1px solid #777;
       &:nth-of-type(9) {
         border: none;
@@ -2211,7 +2212,7 @@ footer {
   }
   .footer_copy {
     width: 100%;
-    padding: 30px 0 0;
+    padding: 15px 0 0;
     text-align: left;
     a {
       display: none;
@@ -2224,6 +2225,7 @@ footer {
 
 @media screen and (min-width:768px) {
   footer {
+    padding: 30px 60px;
     .footer_logo {
       padding-bottom: 30px;
     }
@@ -2250,6 +2252,7 @@ footer {
       flex-direction: row;
       .footer_logo {
         width: 150px;
+        margin-left: 0;
       }
     }
     .footer_nav {
@@ -2294,7 +2297,7 @@ footer {
     }
     .footer_copy {
       width: 100%;
-      padding: 10px 80px;
+      padding: 10px 60px 0 0;
       display: flex;
       justify-content: space-between;
       align-items: center;

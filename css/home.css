@@ -1874,6 +1874,7 @@ footer .footer_nav span {
   display: block;
   margin-bottom: 10px;
   line-height: 3rem;
+  padding-bottom: 10px;
   border-bottom: 1px solid #777;
 }
 footer .footer_nav span:nth-of-type(9) {
@@ -1920,7 +1921,7 @@ footer .footer_nav input:focus::placeholder {
 }
 footer .footer_copy {
   width: 100%;
-  padding: 30px 0 0;
+  padding: 15px 0 0;
   text-align: left;
 }
 footer .footer_copy a {
@@ -1931,6 +1932,9 @@ footer .footer_copy span {
 }
 
 @media screen and (min-width: 768px) {
+  footer {
+    padding: 30px 60px;
+  }
   footer .footer_logo {
     padding-bottom: 30px;
   }
@@ -1955,6 +1959,7 @@ footer .footer_copy span {
   }
   footer .footer_wrap .footer_logo {
     width: 150px;
+    margin-left: 0;
   }
   footer .footer_nav {
     width: 80%;
@@ -1999,7 +2004,7 @@ footer .footer_copy span {
   }
   footer .footer_copy {
     width: 100%;
-    padding: 10px 80px;
+    padding: 10px 60px 0 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
