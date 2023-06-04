@@ -11,7 +11,7 @@ const timeGap = countdownDay - now;
 
 function countDown() {
   const now = Math.floor(Date.now()/1000);
-  const countdownDay = Math.floor(Date.parse(new Date(2023, 4, 27))) / 1000;
+  const countdownDay = Math.floor(Date.parse(new Date(2023, 7, 27))) / 1000;
   const timeGap = countdownDay - now;
   const count = {
     day: Math.floor(timeGap / 24 / 3600),
