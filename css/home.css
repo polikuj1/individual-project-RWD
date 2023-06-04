@@ -822,6 +822,7 @@ header .banner .scroll {
   }
   .timetable .wrap table tr .tag {
     display: block;
+    margin-right: 10px;
   }
   .timetable .wrap table tr .tag span {
     padding: 5px;
@@ -1105,28 +1106,27 @@ header .banner .scroll {
 
 @media screen and (min-width: 768px) {
   .latest_news .news_wrap h2 {
-    font-size: 3.5rem;
     font-weight: 700;
   }
   .latest_news .news_wrap h2::after {
     bottom: -10px;
   }
-  .latest_news .news_wrap .news_card {
-    width: 70%;
-    margin: auto;
-  }
-  .latest_news .news_wrap .news_card .txt span {
-    font-size: 1.5rem;
-  }
   .latest_news .news_wrap .news_box table tr {
-    grid-template-columns: 2fr 3fr;
     text-align: left;
-  }
-  .latest_news .news_wrap .news_box table td {
-    font-size: 1.5rem;
   }
   .latest_news .news_wrap .news_box table td:nth-of-type(1) {
     display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .latest_news .news_wrap h2 {
+    display: block;
+    text-align: left;
+  }
+  .latest_news .news_wrap h2::after {
+    width: 50%;
+    bottom: -10px;
+    right: auto;
   }
 }
 .interview {
@@ -1301,9 +1301,6 @@ header .banner .scroll {
     font-size: 3.5rem;
     line-height: 100px;
   }
-  .interview .interview_list {
-    padding: 0px 60px;
-  }
   .interview .interview_card_column .pic {
     height: 450px;
   }
@@ -1382,53 +1379,44 @@ header .banner .scroll {
 }
 @media screen and (min-width: 800px) {
   .interview .interview_card_row .pic::before {
-    bottom: -145px;
+    bottom: -200px;
   }
   .interview .interview_card_column .pic::before {
-    bottom: -145px;
+    bottom: -165px;
   }
   .interview .card_row .pic::before {
-    bottom: -180px;
+    bottom: -200px;
   }
   .interview .card_column .pic::before {
-    bottom: -180px;
+    bottom: -200px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
+  .interview .interview_list {
+    padding: 60px;
+  }
   .interview h2 {
-    display: block;
-    font-size: 4rem;
-    line-height: 100px;
+    text-align: right;
+    margin-right: 60px;
   }
   .interview h2::after {
-    display: none;
+    width: 50%;
+    left: auto;
   }
   .interview .interview_list {
-    width: 100%;
-    padding: 50px;
-    display: flex;
+    flex-direction: row;
   }
   .interview .interview_card_column {
     width: 400px;
-    margin: 0 100px 0 20px;
-  }
-  .interview .interview_card_column .pic {
-    width: 100%;
-    position: relative;
   }
   .interview .interview_card_column .pic:hover::after {
     height: 100%;
   }
   .interview .interview_card_column .pic::before {
-    content: "";
     width: 460px;
     height: 400px;
-    position: absolute;
+    bottom: -160px;
     right: 0;
-    bottom: -180px;
-    display: block;
-    z-index: 1;
-    background-color: rgb(255, 250, 119);
   }
   .interview .interview_card_column .pic::after {
     content: "";
@@ -1441,59 +1429,28 @@ header .banner .scroll {
     transition: 0.5s;
     background-color: rgb(188, 172, 24);
   }
-  .interview .interview_card_column .pic img {
-    width: 100%;
-    border-radius: 50px;
-    position: relative;
-    z-index: 2;
-  }
-  .interview .interview_card_column .txt {
-    width: 300px;
-    margin: auto;
-    position: relative;
-    z-index: 3;
-    bottom: 50px;
-  }
-  .interview .interview_card_column .txt .interview_title {
-    color: #FAF9F5;
-    text-align: center;
-    padding: 20px 50px;
-    background-color: rgb(188, 172, 24);
-  }
   .interview .interview_card_column .txt .interview_title:hover a {
     color: #201F21;
-  }
-  .interview .interview_card_column .txt a {
-    color: #FAF9F5;
-    display: block;
   }
   .interview .interview_card_column .txt a:nth-of-type(2) span {
     font-size: 18px;
   }
   .interview .interview_card_column .txt span {
-    display: inline-block;
-    min-height: 2em;
     font-size: 24px;
-    font-weight: 700;
   }
   .interview .interview_card_column .txt .edit {
-    text-align: right;
-    padding: 20px 20px;
-    color: #0F0F0F;
-    background-color: transparent;
+    padding: 20px 0px 20px;
   }
   .interview .interview_card_row {
-    width: 700px;
+    width: 600px;
     margin: 0 20px 0 100px;
   }
-  .interview .interview_card_row .pic {
-    width: 100%;
-    position: relative;
-  }
   .interview .interview_card_row .pic .decoration {
+    display: block;
     position: absolute;
     top: -190px;
-    right: 50px;
+    left: calc(-100% + 100px);
+    z-index: -1;
   }
   .interview .interview_card_row .pic:hover::after {
     height: 100%;
@@ -1501,119 +1458,80 @@ header .banner .scroll {
   .interview .interview_card_row .pic::before {
     content: "";
     width: 460px;
-    height: 400px;
-    position: absolute;
-    right: 0;
-    bottom: -200px;
-    display: block;
-    z-index: 1;
-    background-color: rgb(248, 183, 253);
+    right: -100px;
+    bottom: -230px;
   }
   .interview .interview_card_row .pic::after {
+    display: block;
     content: "";
     width: 3px;
     height: 50%;
     position: absolute;
-    left: -50px;
+    right: -50px;
     top: 50%;
     transform: translateY(-50%);
     transition: 0.5s;
     background-color: rgb(179, 27, 182);
-  }
-  .interview .interview_card_row .pic img {
-    width: 100%;
-    border-radius: 50px;
-    position: relative;
-    z-index: 2;
+    z-index: 1;
   }
   .interview .interview_card_row .txt {
-    width: 300px;
-    margin: 0 80px 0 auto;
-    position: relative;
-    bottom: 50px;
-    z-index: 3;
-  }
-  .interview .interview_card_row .txt .interview_title {
-    text-align: center;
-    padding: 20px 50px;
-    background-color: rgb(179, 27, 182);
-    color: #FAF9F5;
+    margin-right: 0;
   }
   .interview .interview_card_row .txt .interview_title:hover a {
     color: #201F21;
-  }
-  .interview .interview_card_row .txt .interview_title a {
-    color: #FAF9F5;
   }
   .interview .interview_card_row .txt .interview_title a:nth-of-type(2) span {
     font-size: 18px;
   }
   .interview .interview_card_row .txt .interview_title span {
-    display: block;
-    min-height: 2em;
     font-size: 24px;
-    font-weight: 700;
   }
   .interview .interview_card_row .txt .interview_title span:nth-of-type(2) {
     font-size: 22px;
-    font-weight: 500;
   }
   .interview .interview_card_row .txt .edit {
-    text-align: right;
-    padding: 20px 20px;
-    background-color: transparent;
+    padding: 20px 0px 20px;
   }
   .interview .card_row {
-    margin: 0 100px 0 20px;
-  }
-  .interview .card_row .pic {
-    position: relative;
+    width: 600px;
+    margin: 0;
   }
   .interview .card_row .pic .decoration {
-    position: absolute;
     top: -180px;
     left: 60%;
     width: 180px;
     height: 190px;
   }
-  .interview .card_row .pic .decoration img {
-    width: 100%;
-  }
   .interview .card_row .pic::before {
-    background-color: #FAE2A5;
-    left: 0;
+    right: 100px;
   }
   .interview .card_row .pic::after {
     background-color: #F89C13;
     left: calc(100% + 50px);
   }
-  .interview .card_row .txt .interview_title {
-    background-color: #F89C13;
-  }
   .interview .card_row .txt .edit {
-    color: #FAF9F5;
+    text-align: left;
   }
   .interview .card_column {
+    width: 400px;
     margin: 0 20px 0 100px;
   }
   .interview .card_column .pic::before {
-    width: 500px;
+    width: 460px;
     height: 300px;
-    right: 150px;
+    right: 0px;
+    bottom: -250px;
     background-color: #B7FDBE;
   }
   .interview .card_column .pic::after {
     background-color: #30B335;
-    left: -50px;
-  }
-  .interview .card_column .txt {
-    margin-right: 0px;
+    left: calc(100% + 50px);
   }
   .interview .card_column .txt .interview_title {
     background-color: #30B335;
   }
   .interview .card_column .txt .edit {
-    color: #FAF9F5;
+    text-align: left;
   }
 }
 .media {
@@ -1751,40 +1669,23 @@ header .banner .scroll {
 }
 @media screen and (min-width: 1200px) {
   .media h2 {
-    font-size: 3.5rem;
+    display: none;
   }
-  .media .video_area {
-    flex-direction: row;
-  }
-  .media .video_area video {
-    height: 100%;
+  .media h2::after {
+    display: none;
   }
   .media .video_area .video_txt {
-    width: 40%;
-    padding: 50px 100px 50px 50px;
+    padding: 50px 25px 50px 50px;
+  }
+  .media .video_area .video_txt h2 {
+    display: block;
+    text-align: right;
   }
   .media .video_area .video_txt button {
-    width: 250px;
-    height: 70px;
-    margin: 0 0 0 auto;
     cursor: pointer;
   }
   .media .video_area .video_txt button:hover {
     background-color: #4EF8EB;
-  }
-  .media .video_area .video_txt button a {
-    padding: 0 10px;
-    font-size: 1rem;
-    color: #0F0F0F;
-  }
-  .media .video_area .video_txt button i {
-    font-size: 20px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    color: #fff;
-    background-color: #000000;
-    border-radius: 50%;
   }
 }
 .modal {
@@ -1828,50 +1729,8 @@ header .banner .scroll {
   cursor: pointer;
 }
 
-@media screen and (min-width: 1200px) {
-  .modal {
-    position: fixed;
-    z-index: 11;
-    width: 100vw;
-    height: 100vh;
-    background-color: #000;
-    display: none;
-  }
-  .modal .youtube {
-    width: 80%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) translateX(-3%);
-    right: 0;
-    left: 0;
-    margin: auto;
-    background-color: #aaa;
-  }
-  .modal .youtube::after {
-    content: "";
-    width: 100%;
-    padding-bottom: 56.25%;
-    display: block;
-  }
-  .modal iframe {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .modal button {
-    position: absolute;
-    right: -50px;
-    top: 0px;
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    font-size: 40px;
-    cursor: pointer;
-  }
-}
 .ad_slogan {
-  margin: 30px 0;
+  margin: 60px 0;
   padding: 80px 0;
   background: url("../image/ad.jpg") no-repeat center/cover;
   position: relative;
@@ -1906,37 +1765,10 @@ header .banner .scroll {
 }
 @media screen and (min-width: 1200px) {
   .ad_slogan {
-    margin: 60px 0;
     padding: 230px 0;
-    background: url("../image/ad.jpg") no-repeat center/cover;
-    position: relative;
-  }
-  .ad_slogan .black_mask {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(179.77deg, #1a1919 -39.2%, rgba(224, 221, 221, 0) 187.23%);
-    top: 0;
-  }
-  .ad_slogan .ad_wrap {
-    text-align: center;
   }
   .ad_slogan .ad_wrap span {
-    display: block;
-    font-size: 72px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    text-shadow: 0 0 3px #4EF8EB;
-    color: #4EF8EB;
-    position: relative;
-    z-index: 2;
-    text-shadow: 0 0 3px #4EF8EB, 0 0 3px #4EF8EB, 0 0 3px #4EF8EB;
-  }
-}
-@keyframes type {
-  from {
-    left: 0;
+    font-size: 4rem;
   }
 }
 .social_media {
@@ -1986,6 +1818,23 @@ header .banner .scroll {
 @media screen and (min-width: 768px) {
   .social_media ul a {
     padding: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .social_media ul li:hover {
+    background-color: #0F0F0F;
+  }
+  .social_media ul li:hover i {
+    animation: shake 0.3s linear 2 alternate;
+  }
+  .social_media ul a {
+    color: #FAF9F5;
+  }
+  .social_media ul a span {
+    display: block;
+  }
+  .social_media ul i {
+    font-size: 50px;
   }
 }
 @keyframes shake {
@@ -2087,9 +1936,13 @@ footer .footer_copy span {
 }
 @media screen and (min-width: 1200px) {
   footer .footer_wrap {
+    padding: 50px 0;
     display: flex;
     gap: 60px;
     flex-direction: row;
+  }
+  footer .footer_wrap .footer_logo {
+    width: 150px;
   }
   footer .footer_nav {
     width: 80%;
@@ -2120,7 +1973,7 @@ footer .footer_copy span {
   footer .footer_nav input {
     display: inline-block;
     padding: 15px;
-    width: 100%;
+    width: 250px;
     height: 30px;
     border: none;
   }

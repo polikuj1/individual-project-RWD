@@ -877,6 +877,7 @@ header {
           }
           .tag {
             display: block;
+            margin-right: 10px;
             span {
               padding: 5px;
               background-color: $main_txt_color;
@@ -1179,33 +1180,41 @@ header {
   .latest_news {
     .news_wrap {
       h2 {
-        font-size: 3.5rem;
         font-weight: 700;
         &::after {
           bottom: -10px;
         }
       }
-      .news_card {
-        width: 70%;
-        margin: auto;
-        .txt {
-          span {
-            font-size: 1.5rem;
-          }
-        }
-      }
       .news_box {
         table {
           tr {
-            grid-template-columns: 2fr 3fr ;
             text-align: left;
           }
           td {
-            font-size: 1.5rem;
             &:nth-of-type(1) {
               display: none;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .latest_news {
+    .news_wrap {
+      h2 {
+        display: block;
+        text-align: left;
+        &::after {
+          width: 50%;          bottom: -10px;
+          right: auto;
+        }
+      }
+      .news_box {
+        .more_news {
+          // margin-right: 60px;
         }
       }
     }
@@ -1434,9 +1443,6 @@ header {
           
         }
     }
-    .interview_list {
-      padding: 0px 60px;
-    }
     .interview_card_column {
       .pic {
         height: 450px;
@@ -1538,64 +1544,55 @@ header {
   .interview {
     .interview_card_row {
       .pic::before {
-        bottom: -145px;
+        bottom: -200px;
       }
     }
     .interview_card_column {
       .pic::before {
-        bottom: -145px;
+        bottom: -165px;
       }
     }
     .card_row {
       .pic::before {
-        bottom: -180px;
+        bottom: -200px;
       }
     }
     .card_column {
       .pic::before {
-        bottom: -180px;
+        bottom: -200px;
       }
     }
   } 
 }
-
-
-@media screen and (min-width:1200px) {
+@media screen and (min-width:1024px) {
   .interview {
+    .interview_list {
+      padding: 60px;
+    }
     h2 {
-      display: block;
-      font-size: 4rem;
-      line-height: 100px;
+      text-align: right;
+      margin-right: 60px;
         &::after {
-          display: none;
+          width: 50%;
+          left: auto;
         }
     }
     .interview_list {
-      width: 100%;
-      padding: 50px;
-      display: flex;
+      flex-direction: row;
     }
     .interview_card_column {
       width: 400px;
-      margin: 0 100px 0 20px;
       .pic {
-        width: 100%;
-        position: relative;
         &:hover {
           &::after {
             height: 100%;
           }
         }
         &::before {
-          content: '';
           width: 460px;
           height: 400px;
-          position: absolute;
+          bottom: -160px;
           right: 0;
-          bottom: -180px;
-          display: block;
-          z-index: 1;
-          background-color: rgba(255, 250, 119, 1);
         }
         &::after {
           content: '';
@@ -1608,24 +1605,9 @@ header {
           transition: .5s;
           background-color: $card_color_one;
         }
-        img {
-          width: 100%;
-          border-radius: 50px;
-          position: relative;
-          z-index: 2;
-        }
       }
       .txt {
-        width: 300px;
-        margin: auto;
-        position: relative;
-        z-index: 3;
-        bottom: 50px;
         .interview_title {
-          color: $main_txt_color;
-          text-align: center;
-          padding: 20px 50px;
-          background-color: $card_color_one;
           &:hover {
             a {
               color: $second_bg_color;
@@ -1633,8 +1615,6 @@ header {
           }
         }
         a {
-          color: $main_txt_color;
-          display: block;
           &:nth-of-type(2) {
             span {
               font-size: 18px;
@@ -1642,29 +1622,23 @@ header {
           }
         }
         span {
-          display: inline-block;
-          min-height: 2em;
           font-size: 24px;
-          font-weight: 700;
         }
         .edit {
-          text-align: right;
-          padding: 20px 20px;
-          color: $main_bg_color;
-          background-color: transparent;
+          padding: 20px 0px 20px;
         }
       }
     }
     .interview_card_row {
-      width: 700px;
+      width: 600px;
       margin: 0 20px 0 100px;
       .pic {
-        width: 100%;
-        position: relative;
         .decoration {
+          display: block;
           position: absolute;
           top: -190px;
-          right: 50px;
+          left: calc( -100% + 100px);
+          z-index: -1;
         }
         &:hover {
           &::after {
@@ -1674,50 +1648,32 @@ header {
         &::before {
           content: '';
           width: 460px;
-          height: 400px;
-          position: absolute;
-          right: 0;
-          bottom: -200px;
-          display: block;
-          z-index: 1;
-          background-color: rgba(248, 183, 253, 1);
+          right: -100px;
+          bottom: -230px;
         }
         &::after {
+          display: block;
           content: '';
           width: 3px;
           height: 50%;
           position: absolute;
-          left: -50px;
+          right: -50px;
           top: 50%;
           transform: translateY(-50%);
           transition: .5s;
           background-color: $card_color_two;
-        }
-        img {
-          width: 100%;
-          border-radius: 50px;
-          position: relative;
-          z-index: 2;
+          z-index: 1;
         }
       }
       .txt {
-        width: 300px;
-        margin: 0 80px 0 auto;
-        position: relative;
-        bottom: 50px;
-        z-index: 3;
+        margin-right: 0;
         .interview_title {
-          text-align: center;
-          padding: 20px 50px;
-          background-color: $card_color_two;
-          color: $main_txt_color;
           &:hover {
             a {
               color: $second_bg_color;
             }
           }
           a {
-            color: $main_txt_color;
             &:nth-of-type(2) {
               span {
                 font-size: 18px;
@@ -1725,40 +1681,29 @@ header {
             }
           }
           span {
-            display: block;
-            min-height: 2em;
             font-size: 24px;
-            font-weight: 700;
             &:nth-of-type(2) {
               font-size: 22px;
-              font-weight: 500;
             }
           }
         }
         .edit {
-          text-align: right;
-          padding: 20px 20px;
-          background-color: transparent;
+          padding: 20px 0px 20px;
         }
       }
     }
     .card_row {
-      margin: 0 100px 0 20px;
+      width: 600px;
+      margin: 0;
       .pic {
-        position: relative;
         .decoration {
-          position: absolute;
           top: -180px;
           left: 60%;
           width: 180px;
           height: 190px;
-          img {
-            width: 100%;
-          }
         }
         &::before {
-          background-color: #FAE2A5;
-          left: 0;
+          right: 100px;
         }
         &::after {
           background-color: $card_color_three;
@@ -1766,35 +1711,33 @@ header {
         }
       }
       .txt {
-        .interview_title {
-          background-color: $card_color_three;
-        }
         .edit {
-          color: $main_txt_color;
+          text-align: left;
         }
       }
     }
     .card_column {
+      width: 400px;
       margin: 0 20px 0 100px;
       .pic {
         &::before {
-          width: 500px;
+          width: 460px;
           height: 300px;
-          right: 150px;
+          right: 0px;
+          bottom: -250px;
           background-color: #B7FDBE;
         }
         &::after {
           background-color: $card_color_four;
-          left: -50px;
+          left: calc(100% + 50px);
         }
       }
       .txt {
-        margin-right: 0px;
         .interview_title {
           background-color: $card_color_four;
         }
         .edit {
-          color: $main_txt_color;
+          text-align: left;
         }
       }
     }
@@ -1941,38 +1884,23 @@ header {
 @media screen and (min-width:1200px) {
   .media {
     h2 {
-      font-size: 3.5rem;
+      display: none;
+      &::after {
+        display: none;
+      }
     }
     .video_area {
-      flex-direction: row;
-      video {
-        height: 100%;
-      }
       .video_txt {
-        width: 40%;
-        padding: 50px 100px 50px 50px;
+        padding: 50px 25px 50px 50px;
+        h2 {
+          display: block;
+          text-align: right;
+        }
         button {
-          width: 250px;
-          height: 70px;
-          margin: 0 0 0 auto;
           &:hover {
             background-color: $strong_color;
           }
           cursor: pointer;
-          a {
-            padding: 0 10px;
-            font-size: 1rem;
-            color: $main_bg_color;
-          }
-          i {
-            font-size: 20px;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            color: #fff;
-            background-color: #000000;
-            border-radius: 50%;
-          }
         }
       }
     }
@@ -2019,52 +1947,52 @@ header {
     cursor: pointer;
   }
 }
-@media screen and (min-width:1200px) {
-  .modal {
-    position: fixed;
-    z-index: 11;
-    width: 100vw;
-    height: 100vh;
-    background-color: #000;
-    display: none;
-    .youtube {
-      width: 80%;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%) translateX(-3%);
-      right: 0;
-      left: 0;
-      margin: auto;
-      background-color: #aaa;
-      &::after {
-        content: '';
-        width: 100%;
-        padding-bottom: 56.25%;
-        display: block;
-      }
-    }
-    iframe {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 100%;
-    }
-    button {
-      position: absolute;
-      right: -50px;
-      top: 0px;
-      background-color: transparent;
-      border: none;
-      color: #fff;
-      font-size: 40px;
-      cursor: pointer;
-    }
-  }
-}
+// @media screen and (min-width:1200px) {
+//   .modal {
+//     position: fixed;
+//     z-index: 11;
+//     width: 100vw;
+//     height: 100vh;
+//     background-color: #000;
+//     display: none;
+//     .youtube {
+//       width: 80%;
+//       position: absolute;
+//       top: 50%;
+//       transform: translateY(-50%) translateX(-3%);
+//       right: 0;
+//       left: 0;
+//       margin: auto;
+//       background-color: #aaa;
+//       &::after {
+//         content: '';
+//         width: 100%;
+//         padding-bottom: 56.25%;
+//         display: block;
+//       }
+//     }
+//     iframe {
+//       position: absolute;
+//       top: 0;
+//       width: 100%;
+//       height: 100%;
+//     }
+//     button {
+//       position: absolute;
+//       right: -50px;
+//       top: 0px;
+//       background-color: transparent;
+//       border: none;
+//       color: #fff;
+//       font-size: 40px;
+//       cursor: pointer;
+//     }
+//   }
+// }
 
 // 廣告標語區
 .ad_slogan {
-  margin: 30px 0;
+  margin: 60px 0;
   padding: 80px 0;
   background: url('../image/ad.jpg') no-repeat center / cover;
   position: relative;
@@ -2102,46 +2030,15 @@ header {
 }
 @media screen and (min-width:1200px) {
   .ad_slogan {
-    margin: 60px 0;
     padding: 230px 0;
-    background: url('../image/ad.jpg') no-repeat center / cover;
-    position: relative;
-    .black_mask {
-      position: absolute;
-      z-index: 1;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(179.77deg, #1a1919 -39.2%, rgba(224, 221, 221, 0) 187.23%);;
-      top: 0;
-    }
     .ad_wrap {
-      text-align: center;
       span {
-        display: block;
-        font-size: 72px;
-        font-family: $main_text_font;
-        font-weight: 500;
-        text-shadow: 0 0 3px $strong_color;
-        color: $strong_color;
-        position: relative;
-        z-index: 2;
-        text-shadow: 
-        0 0 3px $strong_color,
-        0 0 3px $strong_color,
-        0 0 3px $strong_color;
+        font-size: 4rem;
       }
     }
   }
 }
 
-@keyframes type {
-  from {
-    left: 0;
-  }
-  to {
-
-  }
-}
 
 // 社群媒體區
 .social_media {
@@ -2207,68 +2104,29 @@ header {
     }
   }
 }
-// @media screen and (min-width: 1200px) {
-//   .social_media {
-//     width: 100%;
-//     font-family: $main_text_font;
-//     background-color: #201F21;
-//     .social_wrap {
-//       margin: auto;
-//     }
-//     ul {
-//       display: grid;
-//       grid-template-columns: repeat(5, 1fr);
-//       grid-template-rows: 1fr;
-//       li {
-//         text-align: center;
-//         border-right: 1px solid $main_bg_color;
-//         border-left: 1px solid $main_bg_color;
-//         &:hover {
-//           background-color: $main_bg_color;
-//           i {
-//             animation: shake .3s linear 2 alternate;
-//           }
-//         }
-//         &:nth-of-type(1) {
-//           i {
-//             color: #21a4e5;
-//           }
-//         }
-//         &:nth-of-type(2) {
-//           i {
-//             color: #f950f4;
-//           }
-//         }
-//         &:nth-of-type(3) {
-//          i {
-//           color: #fa2b2b;
-//          }
-//         }
-//         &:nth-of-type(4) {
-//           i {
-//             color: #23e229;
-//           }
-//         }
-//         &:nth-of-type(5) {
-//           i {
-//             color: #3953f8;
-//           }
-//         }
-//       }
-//       a {
-//         display: block;
-//         padding: 30px;
-//         font-size: 20px;
-//         color: $main_txt_color;
-//       }
-//       i {
-//         font-size: 50px;
-//         display: block;
-//         padding-bottom: 20px;
-//       }
-//     }
-//   }
-// }
+@media screen and (min-width: 1200px) {
+  .social_media {
+    ul {
+      li {
+        &:hover {
+          background-color: $main_bg_color;
+          i {
+            animation: shake .3s linear 2 alternate;
+          }
+        }
+      }
+      a {
+        color: $main_txt_color;
+        span {
+          display: block;
+        }
+      }
+      i {
+        font-size: 50px;
+      }
+    }
+  }
+}
 
 
 @keyframes shake {
@@ -2374,9 +2232,13 @@ footer {
 @media screen and (min-width:1200px) {
   footer {
     .footer_wrap {
+      padding: 50px 0;
       display: flex;
       gap: 60px;
       flex-direction: row;
+      .footer_logo {
+        width: 150px;
+      }
     }
     .footer_nav {
       width: 80%;
@@ -2408,7 +2270,7 @@ footer {
       input {
         display: inline-block;
         padding: 15px;
-        width: 100%;
+        width: 250px;
         height: 30px;
         border: none;
         &:focus {
