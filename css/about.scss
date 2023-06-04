@@ -124,10 +124,9 @@ body {
   overflow: hidden;
   > h3 {
     text-align: center;
-    width: 200px;
-    padding: 10px 0;
-    margin: 0 auto 30px 50px;
-    font-size: 2.8rem;
+    padding: 10px;
+    margin: 0 auto 30px 0px;
+    font-size: 2.2rem;
     line-height: 70px;
     color: $txt_color;
     background-color: #7ECD50;
@@ -182,11 +181,10 @@ body {
     }
   }
   .our_idea {
-    width: 250px;
-    margin: 100px 50px 0;
-    padding: 10px 0;
+    margin: 60px 0 0;
+    padding: 10px;
     text-align: center;
-    font-size: 2.8rem;
+    font-size: 2.3rem;
     line-height: 70px;
     background-color: rgba(91, 175, 104, 1);
     position: relative;
@@ -230,7 +228,7 @@ body {
         padding: 30px;
       }
       h4 {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
         line-height: 58px;
         margin-bottom: 50px;
         display: inline-block;
@@ -276,7 +274,8 @@ body {
 @media screen and (min-width:1024px) {
   .intro_us {
     h3 {
-      width: 400px;
+      width: 300px;
+      margin-left: 30px;
       &::after {
         content: '';
         width: 0;
@@ -303,7 +302,8 @@ body {
       }
     }
     .our_idea {
-      width: 400px;
+      margin-left: 30px;
+      width: 300px;
     }
     .philosophy {
       width: 100%;
