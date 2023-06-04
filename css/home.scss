@@ -841,7 +841,7 @@ header {
         }
         td {
           width: 50%;
-          padding: 10px;
+          padding: 30px 10px;
           font-weight: 400;
           line-height: 2rem;
           position: relative;
@@ -878,7 +878,7 @@ header {
           .tag {
             display: block;
             span {
-              padding: 5px 10px;
+              padding: 5px;
               background-color: $main_txt_color;
               color: $main_bg_color;
               border-radius: 10px;
@@ -905,7 +905,7 @@ header {
   }
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1200px) {
   .timetable {
     padding: 60px 0px;
     .wrap {
@@ -965,6 +965,7 @@ header {
       }
       table {
         width: 60%;
+        margin-right: 30px;
         caption {
           display: none;
           &:after {
@@ -997,10 +998,9 @@ header {
             line-height: 31px;
             position: relative;
             z-index: 2;
-            padding: 30px 25px;
             a {
               display: block;
-              padding: 30px 100px 30px 40px;
+              padding: 30px 40px;
               color: $main_txt_color;
               &:focus {
                 color: red;
@@ -1008,6 +1008,8 @@ header {
             }
           }
           td:nth-of-type(2) {
+            width: 300px;
+            flex-shrink: 0;
             padding: 0;
             // padding: 30px 100px 30px 70px;
           }
