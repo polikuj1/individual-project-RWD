@@ -414,6 +414,8 @@ header .banner .scroll {
   }
   header nav {
     transition: 1s;
+    width: 360px;
+    right: -360px;
   }
   header .banner .website_logo {
     width: 120px;
@@ -971,7 +973,7 @@ header .banner .scroll {
   font-family: "Montserrat", sans-serif;
   display: inline-block;
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 3.5rem;
   line-height: 100px;
   color: #FAF9F5;
   position: relative;
@@ -1105,9 +1107,6 @@ header .banner .scroll {
 }
 
 @media screen and (min-width: 768px) {
-  .latest_news .news_wrap h2 {
-    font-weight: 700;
-  }
   .latest_news .news_wrap h2::after {
     bottom: -10px;
   }
@@ -1546,7 +1545,7 @@ header .banner .scroll {
 .media h2 {
   color: #FAF9F5;
   font-family: "Montserrat", sans-serif;
-  font-size: 3rem;
+  font-size: 3.5rem;
   text-align: center;
   padding-bottom: 60px;
   position: relative;
@@ -1669,6 +1668,7 @@ header .banner .scroll {
 }
 @media screen and (min-width: 1200px) {
   .media h2 {
+    font-size: 3.5rem;
     display: none;
   }
   .media h2::after {
@@ -1885,6 +1885,7 @@ footer .footer_nav span:last-child {
 footer .footer_nav span a {
   display: block;
   font-size: 1rem;
+  line-height: 1.5rem;
   color: #FAF9F5;
 }
 footer .footer_nav span:nth-of-type(10) {
@@ -1926,10 +1927,21 @@ footer .footer_copy a {
   display: none;
 }
 footer .footer_copy span {
-  font-size: 12px;
+  font-size: 0.8rem;
 }
 
 @media screen and (min-width: 768px) {
+  footer .footer_logo {
+    padding-bottom: 30px;
+  }
+  footer .footer_nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer .footer_nav span {
+    width: 46%;
+    margin: 2%;
+  }
   footer .footer_nav input {
     width: 300px;
   }
@@ -1959,8 +1971,7 @@ footer .footer_copy span {
     color: #4EF8EB;
   }
   footer .footer_nav span:nth-of-type(10) {
-    display: flex;
-    align-items: center;
+    width: 100%;
   }
   footer .footer_nav button {
     background: #ccc;
@@ -1988,11 +1999,13 @@ footer .footer_copy span {
   }
   footer .footer_copy {
     width: 100%;
-    padding: 10px 100px 30px 100px;
+    padding: 10px 80px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   footer .footer_copy a {
+    display: block;
     color: #FAF9F5;
     padding: 10px;
     font-weight: 500;

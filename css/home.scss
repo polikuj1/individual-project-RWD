@@ -432,6 +432,8 @@ header {
     }
     nav {
       transition: 1s;
+      width: 360px;
+      right: -360px;
     }
     .banner {
       .website_logo {
@@ -1040,7 +1042,7 @@ header {
       font-family: $main_text_font;
       display: inline-block;
       font-weight: 400;
-      font-size: 3rem;
+      font-size: 3.5rem;
       line-height: 100px;
       color: $main_txt_color;
       position: relative;
@@ -1180,7 +1182,6 @@ header {
   .latest_news {
     .news_wrap {
       h2 {
-        font-weight: 700;
         &::after {
           bottom: -10px;
         }
@@ -1756,7 +1757,7 @@ header {
   h2 {
     color: $main_txt_color;
     font-family: $main_text_font;
-    font-size: 3rem;
+    font-size: 3.5rem;
     text-align: center;
     padding-bottom: 60px;
     position: relative;
@@ -1884,6 +1885,7 @@ header {
 @media screen and (min-width:1200px) {
   .media {
     h2 {
+      font-size: 3.5rem;
       display: none;
       &::after {
         display: none;
@@ -2175,6 +2177,7 @@ footer {
       a {
         display: block;
         font-size: 1rem;
+        line-height: 1.5rem;
         color: $main_txt_color;
       }
       &:nth-of-type(10) {
@@ -2214,14 +2217,23 @@ footer {
       display: none;
     }
     span {
-      font-size: 12px;
+      font-size: 0.8rem;
     }
   }
 }
 
 @media screen and (min-width:768px) {
   footer {
+    .footer_logo {
+      padding-bottom: 30px;
+    }
     .footer_nav {
+      display: flex;
+      flex-wrap: wrap;
+      span {
+        width: 46%;
+        margin: 2%;
+      }
       input {
         width: 300px;
       }
@@ -2255,8 +2267,7 @@ footer {
           }
         }
         &:nth-of-type(10) {
-          display: flex;
-          align-items: center;
+          width: 100%;
         }
       }
       button {
@@ -2283,10 +2294,12 @@ footer {
     }
     .footer_copy {
       width: 100%;
-      padding: 10px 100px 30px 100px;
+      padding: 10px 80px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       a {
+        display: block;
         color: $main_txt_color;
         padding: 10px;
         font-weight: 500;
