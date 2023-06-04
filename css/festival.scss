@@ -21,24 +21,44 @@ $chinese_txt_font: 'Noto Sans TC', sans-serif;
 body {
   background-color: $main_bg_color;
 }
-
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 22px;
+  }
+}
 
 // 分頁標題
 .about_wrap {
-  padding: 50px 0;
+  padding: 30px 0;
   width: 80%;
   margin: auto;
 }
 .logo {
+  width: 100px;
+  height: 60px;
   position: absolute;
   left: 50px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 .about_title {
-  padding: 200px 0 0 0;
+  padding: 100px 0 0 0;
   h2 {
-    font-family: $main_text_font;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 96px;
+    font-size: 3.5rem;
     line-height: 116px;
     word-spacing: 10px;
     letter-spacing: 5px;
@@ -50,26 +70,71 @@ body {
       height: 5px;
       background-color: $title_border;
       position: absolute;
-      bottom: -60px;
+      bottom: -30px;
       left: 0;
     }
+  }
+}
+
+@media screen and (min-width:768px) {
+  .logo {
+    width: 130px;
+  height: 80px;
+  }
+}
+@media screen and (min-width:768px) {
+  .logo {
+    width: 150px;
+  height: 90px;
   }
 }
 
 // festival區
 .festival {
   width: 100%;
-  padding: 50px 0 100px 0;
+  padding: 50px 0 50px 0;
   .festival_wrap {
     width: 80%;
     margin: auto;
   }
   .area_tab {
-    padding-bottom: 50px;
+    .tab_select {
+      color: $main_bg_color;
+      font-size: 1.4rem;
+      .select_title {
+        width: 200px;
+        margin-right: auto;
+        background-color: $txt_color;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        position: relative;
+        .arrow {
+          transition: .2s linear;
+        }
+      }
+      .option {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        background-color: $txt_color;
+        span {
+          cursor: pointer;
+          padding: 10px;
+          display: block;
+          border-top: 1px solid #0F0F0F;
+          &:hover {
+            background-color: $txt_border;
+          }
+        }
+      }
+    }
     .tab_list {
       width: 700px;
-      display: flex;
-      justify-content: space-between;
+      display: none;
     }
     button {
       cursor: pointer;
@@ -95,62 +160,53 @@ body {
     .festival_intro {
       margin-top: 50px;
       padding: 30px 0;
-      display: flex;
       color: $txt_color;
       border-top: 2px solid $txt_border;
       border-bottom: 2px solid $txt_border;
       .poster {
-        width: 30%;
+        width: 100%;
         padding: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         h3 {
           text-align: center;
           font-weight: 700;
-          font-size: 48px;
-          line-height: 77px;
+          font-size: 3rem;
+          line-height: 4.2rem;
           padding: 60px 0 0;
         }
         .pic {
           width: 100%;
-          height: 500px;
+          height: 300px;
           img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: top;
           }
         }
       }
       .intro_txt {
-        width: 70%;
-        padding: 0px 50px 0 0;
-        border-left: 1px solid $txt_color;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 2fr 3fr;
-        row-gap: 30px;
+        width: 100%;
+        border-top: 1px solid $txt_color;
         h4 {
-          font-size: 40px;
+          font-size: 2.5rem;
           font-weight: 500;
           padding-bottom: 40px;
         }
         p {
-          font-size: 22px;
-          line-height: 2em;
+          font-size: 1.4rem;
+          line-height: 3rem;
         }
       }
       .origin {
-        grid-row: 1/2;
-        grid-column: 1/3;
-        padding: 30px 30px 30px 60px;
+        padding: 30px 0;
         border-bottom: 1px solid $txt_color;
       }
       .development {
-        padding: 0 40px 30px 60px;
-        border-right: 1px solid $txt_color;
+        padding: 30px 0;
+        border-bottom: 1px solid $txt_color;
         position: relative;
         &::before {
+          display: none;
           content: '';
           width: 60px;
           height: 60px;
@@ -161,6 +217,7 @@ body {
           top: -60px;
         }
         &::after {
+          display: none;
           content: '';
           width: 60px;
           height: 60px;
@@ -172,44 +229,17 @@ body {
         }
       }
       .feature {
-        padding: 0 40px 30px 60px;
+        padding: 30px 0;
       }
     }
     .two {
       margin-top: 0;
-      border-top: none;
       .poster {
         order: 1;
-      }
-      .intro_txt {
-        padding: 0 0 0 60px;
-        border-left: none;
-        border-right: 1px solid $txt_color;
-      }
-      .origin {
-        padding: 30px 30px 30px 40px;
-      }
-      .development {
-        padding: 0 40px 30px 40px;
-      }
-      .feature {
-        padding: 0px 40px 30px 40px;
-        position: relative;
-        &::after {
-          content: '';
-          width: 60px;
-          height: 60px;
-          background-color: $main_bg_color;
-          border-radius: 50%;
-          position: absolute;
-          right: -30px;
-          top: -60px;
-        }
       }
     }
     .three {
       margin-top: 0;
-      border-top: none;
     }
   }
   .center {
@@ -217,5 +247,170 @@ body {
   }
   .south {
     display: none;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .festival {
+    width: 100%;
+    padding: 50px 0 100px 0;
+    .festival_wrap {
+      width: 80%;
+      margin: auto;
+    }
+    .area_tab {
+      padding-bottom: 50px;
+      .tab_list {
+        width: 700px;
+        display: flex;
+        justify-content: space-between;
+      }
+      button {
+        cursor: pointer;
+        color: $txt_color;
+        font-size: 24px;
+        font-weight: 700;
+        width: 180px;
+        height: 50px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background-color: rgba(0, 85, 97, 1);
+        box-shadow: 2px 2px 5px #414141;
+      }
+      .active {
+        background-color: #A3A31E;
+        box-shadow: 0 0 0;
+      }
+    }
+    .festival_group {
+      .festival_intro {
+        margin-top: 50px;
+        padding: 30px 0;
+        display: flex;
+        color: $txt_color;
+        border-top: 2px solid $txt_border;
+        border-bottom: 2px solid $txt_border;
+        .poster {
+          width: 30%;
+          padding: 50px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          h3 {
+            text-align: center;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 77px;
+            padding: 60px 0 0;
+          }
+          .pic {
+            width: 100%;
+            height: 500px;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+        .intro_txt {
+          width: 70%;
+          padding: 0px 50px 0 0;
+          border-left: 1px solid $txt_color;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: 2fr 3fr;
+          row-gap: 30px;
+          h4 {
+            font-size: 40px;
+            font-weight: 500;
+            padding-bottom: 40px;
+          }
+          p {
+            font-size: 22px;
+            line-height: 2em;
+          }
+        }
+        .origin {
+          grid-row: 1/2;
+          grid-column: 1/3;
+          padding: 30px 30px 30px 60px;
+          border-bottom: 1px solid $txt_color;
+        }
+        .development {
+          padding: 0 40px 30px 60px;
+          border-right: 1px solid $txt_color;
+          position: relative;
+          &::before {
+            content: '';
+            width: 60px;
+            height: 60px;
+            background-color: $main_bg_color;
+            border-radius: 50%;
+            position: absolute;
+            left: -30px;
+            top: -60px;
+          }
+          &::after {
+            content: '';
+            width: 60px;
+            height: 60px;
+            background-color: $main_bg_color;
+            border-radius: 50%;
+            position: absolute;
+            right: -30px;
+            top: -60px;
+          }
+        }
+        .feature {
+          padding: 0 40px 30px 60px;
+        }
+      }
+      .two {
+        margin-top: 0;
+        border-top: none;
+        .poster {
+          order: 1;
+        }
+        .intro_txt {
+          padding: 0 0 0 60px;
+          border-left: none;
+          border-right: 1px solid $txt_color;
+        }
+        .origin {
+          padding: 30px 30px 30px 40px;
+        }
+        .development {
+          padding: 0 40px 30px 40px;
+        }
+        .feature {
+          padding: 0px 40px 30px 40px;
+          position: relative;
+          &::after {
+            content: '';
+            width: 60px;
+            height: 60px;
+            background-color: $main_bg_color;
+            border-radius: 50%;
+            position: absolute;
+            right: -30px;
+            top: -60px;
+          }
+        }
+      }
+      .three {
+        margin-top: 0;
+        border-top: none;
+      }
+    }
+    .center {
+      display: none;
+    }
+    .south {
+      display: none;
+    }
   }
 }
