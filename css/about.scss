@@ -113,7 +113,8 @@ body {
 
 // 關於我們的介紹
 .intro_us {
-  width: 100%;
+  width: 80%;
+  margin: auto;
   padding: 60px 0 0 0;
   overflow: hidden;
   > h3 {
@@ -139,29 +140,24 @@ body {
     }
   }
   .intro_wrap {
-    width: 90%;
-    margin: auto;
+    width: 100%;
     .txt {
       width: 100%;
       height: 500px;
       overflow: auto;
       padding: 20px;
       color: $txt_color;
-      background-color: #000;
+      background-color: $card_bg_color;
       border: 1px solid $txt_border;
       position: relative;
-      &::after {
-        display: none;
-        content: '';
-        width: 120%;
-        height: 110%;
-        background-color: $card_bg_color;
-        position: absolute;
-        left: 0px;
-        right: 0;
-        margin: auto;
-        bottom: 0px;
-        z-index: -1;
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+      &::-webkit-scrollbar-track {
+        background: none;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $txt_color;
       }
       p {
         font-size: 1.1rem;
@@ -229,14 +225,23 @@ body {
         padding: 30px;
       }
       h4 {
-        font-size: 3rem;
+        font-size: 2.5rem;
         line-height: 58px;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         display: inline-block;
-        border-bottom: 5px solid #fff;
+        position: relative;
+        &::after {
+          content: '';
+          width: 100%;
+          height: 5px;
+          background-color: #fff;
+          position: absolute;
+          bottom: -30px;
+          left: 0;
+        }
       }
       p {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         line-height: 50px;
       }
     }
@@ -286,22 +291,6 @@ body {
       .txt {
         width: 48%;
         height: 800px;
-        &::after {
-          display: none;
-          content: '';
-          width: 120%;
-          height: 110%;
-          background-color: $card_bg_color;
-          position: absolute;
-          left: 0px;
-          right: 0;
-          margin: auto;
-          bottom: 0px;
-          z-index: -1;
-        }
-        p {
-          
-        }
       }
       .pic {
         width: 48%;
@@ -312,15 +301,20 @@ body {
       width: 400px;
     }
     .philosophy {
-      margin: 0 80px 0 auto;
+      width: 100%;
+      margin: 50px 80px 50px auto;
       display: flex;
       .idea {
+        width: 40%;
+        margin-top: 0;
         &::after {
           display: block;
+          top: -100px;
         }
       }
       .pic {
-        padding: 20px;
+        width: 60%;
+        margin: 30px;
         &:hover {
           img {
             transform: scale(1.1);
@@ -341,7 +335,15 @@ body {
         order: 1;
       }
     }
-    .two {
+  }
+}
+
+@media screen and (min-width:1440px) {
+  .intro_us {
+    .intro_wrap {
+      .txt {
+        height: 850px;
+      }
     }
   }
 }
