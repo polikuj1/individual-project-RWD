@@ -25,11 +25,22 @@ body {
   padding: 60px 0 0;
 }
 .faq .faq_wrap {
+  position: relative;
   width: 80%;
   margin: auto;
 }
 .faq .separate_side_wrap {
-  display: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  opacity: 0.3;
+}
+.faq .separate_side_wrap .side_pic {
+  background: url("../image/ticketsbanner.jpg") no-repeat center center/cover;
+  height: 100%;
 }
 .faq .faq_block_group {
   color: #FAF9F5;
@@ -44,7 +55,7 @@ body {
   border-radius: 5px;
 }
 .faq .faq_block_group .faq_block li {
-  padding: 20px 0;
+  padding: 20px 8px;
   font-size: 1.8rem;
   border-bottom: 1px solid #c5c5c5;
 }
@@ -54,7 +65,7 @@ body {
 .faq .faq_block_group .faq_block h4 {
   color: #FEF8E0;
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 .faq .faq_block_group .faq_block .faq_question i {
@@ -75,7 +86,7 @@ body {
   padding: 10px 0 0 0;
   top: 0;
   transition: 0.5s;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -84,11 +95,10 @@ body {
     justify-content: space-between;
   }
   .faq .separate_side_wrap {
-    display: block;
     width: 40%;
     height: 100vh;
     position: sticky;
-    top: 0;
+    opacity: 1;
   }
   .faq .separate_side_wrap .side_pic {
     background: url("../image/ticketsbanner.jpg") no-repeat center center/cover;
