@@ -1,61 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap");
 @import url(./footer.css);
 @import url(./header.css);
+@import url(./pageTitle.css);
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  font-family: "Montserrat", sans-serif, "Noto Sans TC", sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 body {
   background-color: #0F0F0F;
 }
 
+@media screen and (min-width: 500px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 22px;
+  }
+}
 img {
   width: 100%;
   height: 100%;
 }
 
-.about_wrap {
-  padding: 50px 0;
-  width: 80%;
-  margin: auto;
-}
-
-.logo {
-  position: absolute;
-  left: 50px;
-}
-
-.about_title {
-  padding: 200px 0 0 0;
-}
-.about_title h2 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 96px;
-  line-height: 116px;
-  word-spacing: 10px;
-  letter-spacing: 5px;
-  color: #F3E4E4;
-  position: relative;
-}
-.about_title h2::after {
-  content: "";
-  width: 100%;
-  height: 5px;
-  background-color: #8C7878;
-  position: absolute;
-  bottom: -60px;
-  left: 0;
-}
-
 .tickets {
   width: 100%;
-  padding: 100px 0;
+  padding: 100px 0 20px;
 }
 .tickets .tickets_wrap {
   width: 80%;
@@ -64,24 +46,21 @@ img {
 .tickets .tickets_wrap h3 {
   color: #FAF9F5;
   font-weight: 400;
-  font-size: 50px;
-  line-height: 77px;
+  font-size: 3.1rem;
+  line-height: 4.5rem;
   padding-bottom: 50px;
 }
 .tickets .tickets_wrap .popular_tickets {
-  padding-bottom: 100px;
-}
-.tickets .tickets_wrap .popular_tickets .tickets_card_list {
-  display: flex;
-  justify-content: space-between;
+  padding-bottom: 50px;
 }
 .tickets .tickets_wrap .popular_tickets .tickets_card_list a {
-  width: 23%;
+  max-width: 90%;
+  margin: auto;
   display: block;
+  padding-bottom: 50px;
 }
 .tickets .tickets_wrap .popular_tickets .tickets_card_list .pic {
   width: 100%;
-  height: 250px;
 }
 .tickets .tickets_wrap .popular_tickets .tickets_card_list .pic img {
   width: 100%;
@@ -92,7 +71,7 @@ img {
 }
 .tickets .tickets_wrap .popular_tickets .tickets_card_list .txt {
   color: #FAF9F5;
-  font-size: 28px;
+  font-size: 1.8rem;
   padding: 20px 0;
   text-align: center;
   background-color: #5F5F5F;
@@ -103,16 +82,10 @@ img {
 .tickets .tickets_wrap .popular_tickets .tickets_card_list .txt span:nth-of-type(1) {
   font-weight: 700;
 }
-.tickets .tickets_wrap .all_tickets .tickets_card_list {
-  display: flex;
-  padding-top: 100px;
-  flex-wrap: wrap;
-  gap: 100px;
-}
 .tickets .tickets_wrap .all_tickets .tickets_card {
-  width: 40%;
-  height: 350px;
-  margin: auto;
+  width: 100%;
+  height: 250px;
+  margin: 0px auto 50px;
   display: flex;
   background: linear-gradient(90.72deg, #6BE686 -12.34%, rgba(132, 204, 71, 0.703125) 58.86%, rgba(13, 226, 255, 0.4) 114.25%);
   border-radius: 30px;
@@ -134,11 +107,12 @@ img {
   background: linear-gradient(90deg, rgba(171, 236, 214, 0.6156862745), rgba(251, 237, 150, 0.6274509804));
 }
 .tickets .tickets_wrap .all_tickets .tickets_card:first-child::before {
+  display: none;
   content: "TICKETS";
   color: rgba(255, 255, 255, 0.7);
   font-size: 120px;
-  left: -250px;
-  top: 110px;
+  left: -260px;
+  top: 180px;
   position: absolute;
   z-index: -1;
   transform: rotate(270deg);
@@ -160,19 +134,19 @@ img {
   top: 0;
   z-index: -1;
 }
-.tickets .tickets_wrap .all_tickets .title .logo {
-  width: 100px;
-  height: 60px;
+.tickets .tickets_wrap .all_tickets .title .logo_inline {
+  width: 60px;
+  height: 40px;
 }
 .tickets .tickets_wrap .all_tickets .title h4 {
   margin-top: auto;
-  font-size: 48px;
+  font-size: 2rem;
   font-weight: 700;
   color: #FAF9F5;
 }
 .tickets .tickets_wrap .all_tickets .tickets_info {
   width: 35%;
-  padding: 30px 7%;
+  padding: 30px 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -200,24 +174,102 @@ img {
   bottom: -25px;
 }
 .tickets .tickets_wrap .all_tickets .qrcode {
-  width: 80px;
-  height: 75px;
+  width: 40px;
+  height: 35px;
 }
 .tickets .tickets_wrap .all_tickets span {
   color: #FAF9F5;
-  font-size: 18px;
+  font-size: 0.8rem;
   cursor: pointer;
 }
 .tickets .tickets_wrap .all_tickets span:nth-of-type(3) span {
-  font-size: 24px;
+  font-size: 1.2rem;
   color: #DDCB2A;
+  padding-left: 10px;
 }
 .tickets .tickets_wrap .all_tickets span:nth-of-type(3) img {
-  width: 27px;
-  height: 29px;
-  margin-right: 20px;
+  width: 15px;
+  height: 17px;
 }
 
+@media screen and (min-width: 768px) {
+  .tickets .tickets_wrap .popular_tickets .tickets_card_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .tickets .tickets_wrap .popular_tickets .tickets_card_list a {
+    width: 46%;
+    display: block;
+  }
+  .tickets .tickets_wrap .popular_tickets .tickets_card_list .pic {
+    height: 250px;
+  }
+  .tickets .tickets_wrap .all_tickets .tickets_card {
+    max-width: 90%;
+    height: 350px;
+  }
+  .tickets .tickets_wrap .all_tickets .tickets_card:first-child::before {
+    display: block;
+  }
+  .tickets .tickets_wrap .all_tickets .title .logo_inline {
+    width: 110px;
+    height: 60px;
+  }
+  .tickets .tickets_wrap .all_tickets .tickets_info {
+    padding: 30px;
+  }
+  .tickets .tickets_wrap .all_tickets .qrcode {
+    width: 80px;
+    height: 75px;
+  }
+  .tickets .tickets_wrap .all_tickets span {
+    font-size: 1rem;
+  }
+  .tickets .tickets_wrap .all_tickets span:nth-of-type(3) span {
+    font-size: 1.5rem;
+  }
+  .tickets .tickets_wrap .all_tickets span:nth-of-type(3) img {
+    width: 27px;
+    height: 29px;
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .tickets .tickets_wrap .all_tickets .tickets_card_list {
+    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  .tickets .tickets_wrap .all_tickets .tickets_card {
+    width: 46%;
+    margin: auto;
+  }
+  .tickets .tickets_wrap .all_tickets .tickets_info {
+    padding: 30px 20px;
+  }
+  .tickets .tickets_wrap .all_tickets span:nth-of-type(3) span {
+    font-size: 1.2rem;
+  }
+  .tickets .tickets_wrap .all_tickets span:nth-of-type(3) img {
+    width: 20px;
+    height: 22px;
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tickets .tickets_wrap .popular_tickets .tickets_card_list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .tickets .tickets_wrap .popular_tickets .tickets_card_list a {
+    width: 23%;
+  }
+  .tickets .tickets_wrap .all_tickets .tickets_card_list {
+    gap: 100px;
+  }
+}
 .footer_logo img {
   width: auto;
   height: auto;
