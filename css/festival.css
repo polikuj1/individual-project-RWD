@@ -91,7 +91,7 @@ body {
 }
 .festival .area_tab .tab_select {
   color: #0F0F0F;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 .festival .area_tab .tab_select .select_title {
   width: 200px;
@@ -124,7 +124,6 @@ body {
   background-color: #DDCB2A;
 }
 .festival .area_tab .tab_list {
-  width: 700px;
   display: none;
 }
 .festival .area_tab button {
@@ -145,6 +144,12 @@ body {
 .festival .area_tab .active {
   background-color: #A3A31E;
   box-shadow: 0 0 0;
+}
+.festival .current_area {
+  display: block;
+  padding: 20px 0 0;
+  font-size: 2rem;
+  color: #FAF9F5;
 }
 .festival .festival_group .festival_intro {
   margin-top: 50px;
@@ -181,12 +186,12 @@ body {
   border-top: 1px solid #FAF9F5;
 }
 .festival .festival_group .festival_intro .intro_txt h4 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 500;
   padding-bottom: 30px;
 }
 .festival .festival_group .festival_intro .intro_txt p {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   line-height: 3rem;
 }
 .festival .festival_group .festival_intro .origin {
@@ -207,7 +212,7 @@ body {
   border-radius: 50%;
   position: absolute;
   left: -30px;
-  top: -60px;
+  top: -30px;
 }
 .festival .festival_group .festival_intro .development::after {
   display: none;
@@ -218,7 +223,7 @@ body {
   border-radius: 50%;
   position: absolute;
   right: -30px;
-  top: -60px;
+  top: -30px;
 }
 .festival .festival_group .festival_intro .feature {
   padding: 30px 0;
@@ -240,65 +245,29 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .festival {
-    width: 100%;
-    padding: 50px 0 100px 0;
-  }
-  .festival .festival_wrap {
-    width: 80%;
-    margin: auto;
-  }
-  .festival .area_tab {
-    padding-bottom: 50px;
+  .festival .area_tab .tab_select {
+    display: none;
   }
   .festival .area_tab .tab_list {
-    width: 700px;
     display: flex;
     justify-content: space-between;
   }
-  .festival .area_tab button {
-    cursor: pointer;
-    color: #FAF9F5;
-    font-size: 24px;
-    font-weight: 700;
-    width: 180px;
-    height: 50px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    background-color: rgb(0, 85, 97);
-    box-shadow: 2px 2px 5px #414141;
+  .festival .current_area {
+    display: none;
   }
-  .festival .area_tab .active {
-    background-color: #A3A31E;
-    box-shadow: 0 0 0;
-  }
+}
+@media screen and (min-width: 1024px) {
   .festival .festival_group .festival_intro {
-    margin-top: 50px;
-    padding: 30px 0;
     display: flex;
-    color: #FAF9F5;
-    border-top: 2px solid #DDCB2A;
-    border-bottom: 2px solid #DDCB2A;
+    flex-wrap: wrap;
+    border-bottom: none;
   }
   .festival .festival_group .festival_intro .poster {
-    width: 30%;
-    padding: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  .festival .festival_group .festival_intro .poster h3 {
-    text-align: center;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 77px;
-    padding: 60px 0 0;
-  }
   .festival .festival_group .festival_intro .poster .pic {
-    width: 100%;
     height: 500px;
   }
   .festival .festival_group .festival_intro .poster .pic img {
@@ -308,80 +277,36 @@ body {
        object-fit: cover;
   }
   .festival .festival_group .festival_intro .intro_txt {
-    width: 70%;
-    padding: 0px 50px 0 0;
-    border-left: 1px solid #FAF9F5;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 2fr 3fr;
-    row-gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #FAF9F5;
   }
   .festival .festival_group .festival_intro .intro_txt h4 {
-    font-size: 40px;
-    font-weight: 500;
-    padding-bottom: 40px;
-  }
-  .festival .festival_group .festival_intro .intro_txt p {
-    font-size: 22px;
-    line-height: 2em;
+    padding-bottom: 30px;
   }
   .festival .festival_group .festival_intro .origin {
-    grid-row: 1/2;
-    grid-column: 1/3;
+    width: 100%;
     padding: 30px 30px 30px 60px;
-    border-bottom: 1px solid #FAF9F5;
   }
   .festival .festival_group .festival_intro .development {
-    padding: 0 40px 30px 60px;
+    width: 50%;
+    padding: 30px 40px 30px 60px;
     border-right: 1px solid #FAF9F5;
-    position: relative;
-  }
-  .festival .festival_group .festival_intro .development::before {
-    content: "";
-    width: 60px;
-    height: 60px;
-    background-color: #0F0F0F;
-    border-radius: 50%;
-    position: absolute;
-    left: -30px;
-    top: -60px;
-  }
-  .festival .festival_group .festival_intro .development::after {
-    content: "";
-    width: 60px;
-    height: 60px;
-    background-color: #0F0F0F;
-    border-radius: 50%;
-    position: absolute;
-    right: -30px;
-    top: -60px;
+    border-bottom: none;
   }
   .festival .festival_group .festival_intro .feature {
-    padding: 0 40px 30px 60px;
+    width: 50%;
+    padding: 30px 40px 30px 60px;
   }
   .festival .festival_group .two {
     margin-top: 0;
     border-top: none;
   }
   .festival .festival_group .two .poster {
-    order: 1;
-  }
-  .festival .festival_group .two .intro_txt {
-    padding: 0 0 0 60px;
-    border-left: none;
-    border-right: 1px solid #FAF9F5;
-  }
-  .festival .festival_group .two .origin {
-    padding: 30px 30px 30px 40px;
-  }
-  .festival .festival_group .two .development {
-    padding: 0 40px 30px 40px;
-  }
-  .festival .festival_group .two .feature {
-    padding: 0px 40px 30px 40px;
-    position: relative;
+    order: -1;
   }
   .festival .festival_group .two .feature::after {
+    display: none;
     content: "";
     width: 60px;
     height: 60px;
@@ -389,16 +314,48 @@ body {
     border-radius: 50%;
     position: absolute;
     right: -30px;
-    top: -60px;
+    top: -30px;
   }
   .festival .festival_group .three {
-    margin-top: 0;
     border-top: none;
   }
-  .festival .center {
-    display: none;
+}
+@media screen and (min-width: 1200px) {
+  .festival .area_tab .tab_list {
+    justify-content: flex-start;
+    gap: 50px;
   }
-  .festival .south {
-    display: none;
+  .festival .festival_group .festival_intro {
+    border-bottom: 2px solid #DDCB2A;
+  }
+  .festival .festival_group .festival_intro .poster {
+    width: 30%;
+    padding: 0 60px 0 0;
+  }
+  .festival .festival_group .festival_intro .intro_txt {
+    width: 70%;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+  }
+  .festival .festival_group .festival_intro .development::before {
+    display: block;
+  }
+  .festival .festival_group .festival_intro .development::after {
+    display: block;
+  }
+  .festival .festival_group .two .poster {
+    order: 1;
+    padding: 0 0 0 60px;
+  }
+  .festival .festival_group .two .intro_txt {
+    border-left: none;
+    border-right: 1px solid #FAF9F5;
+  }
+  .festival .festival_group .two .feature {
+    position: relative;
+  }
+  .festival .festival_group .two .feature::after {
+    display: block;
   }
 }/*# sourceMappingURL=festival.css.map */
