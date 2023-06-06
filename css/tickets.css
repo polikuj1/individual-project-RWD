@@ -182,7 +182,7 @@ img {
   font-size: 0.8rem;
   cursor: pointer;
 }
-.tickets .tickets_wrap .all_tickets span:nth-of-type(3) span {
+.tickets .tickets_wrap .all_tickets span:nth-of-type(3) a {
   font-size: 1.2rem;
   color: #DDCB2A;
   padding-left: 10px;
@@ -226,7 +226,7 @@ img {
   .tickets .tickets_wrap .all_tickets span {
     font-size: 1rem;
   }
-  .tickets .tickets_wrap .all_tickets span:nth-of-type(3) span {
+  .tickets .tickets_wrap .all_tickets span:nth-of-type(3) a {
     font-size: 1.5rem;
   }
   .tickets .tickets_wrap .all_tickets span:nth-of-type(3) img {
@@ -249,7 +249,7 @@ img {
   .tickets .tickets_wrap .all_tickets .tickets_info {
     padding: 30px 20px;
   }
-  .tickets .tickets_wrap .all_tickets span:nth-of-type(3) span {
+  .tickets .tickets_wrap .all_tickets span:nth-of-type(3) a {
     font-size: 1.2rem;
   }
   .tickets .tickets_wrap .all_tickets span:nth-of-type(3) img {
@@ -265,9 +265,6 @@ img {
   }
   .tickets .tickets_wrap .popular_tickets .tickets_card_list a {
     width: 23%;
-  }
-  .tickets .tickets_wrap .all_tickets .tickets_card_list {
-    gap: 100px;
   }
 }
 .footer_logo img {

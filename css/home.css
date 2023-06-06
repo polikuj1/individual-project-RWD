@@ -29,7 +29,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   html {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 header {
@@ -950,6 +950,9 @@ header .banner .scroll {
     flex-shrink: 0;
     padding: 0;
   }
+  .timetable .wrap table tr .soon {
+    padding: 30px 0;
+  }
 }
 .latest_news {
   width: 100%;
@@ -1210,6 +1213,7 @@ header .banner .scroll {
   font-weight: 700;
 }
 .interview .interview_card_column .txt .edit {
+  font-size: 0.8rem;
   text-align: right;
   padding: 20px 20px;
   color: #0F0F0F;
@@ -1261,6 +1265,7 @@ header .banner .scroll {
   font-weight: 500;
 }
 .interview .interview_card_row .txt .edit {
+  font-size: 0.8rem;
   text-align: right;
   padding: 20px 20px;
   background-color: rgb(248, 183, 253);
@@ -1890,12 +1895,11 @@ footer .footer_nav span a {
 }
 footer .footer_nav span:nth-of-type(10) {
   display: flex;
-  align-items: center;
 }
 footer .footer_nav button {
   background: #ccc;
   width: 100px;
-  height: 30px;
+  height: 40px;
   margin-left: -5px;
   color: #0F0F0F;
   border: none;
@@ -1906,8 +1910,9 @@ footer .footer_nav input {
   display: inline-block;
   width: 200px;
   padding: 15px;
-  height: 30px;
+  height: 40px;
   border: none;
+  flex-grow: 1;
 }
 footer .footer_nav input:focus {
   outline: none;
@@ -1943,10 +1948,6 @@ footer .footer_copy span {
   }
   footer .footer_nav span {
     width: 46%;
-    margin: 2%;
-  }
-  footer .footer_nav input {
-    width: 300px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1979,30 +1980,11 @@ footer .footer_copy span {
   }
   footer .footer_nav button {
     background: #ccc;
-    width: 75px;
-    height: 30px;
     color: #0F0F0F;
     border: none;
     cursor: pointer;
   }
-  footer .footer_nav input {
-    display: inline-block;
-    padding: 15px;
-    width: 250px;
-    height: 30px;
-    border: none;
-  }
-  footer .footer_nav input:focus {
-    outline: none;
-  }
-  footer .footer_nav input:focus::-moz-placeholder {
-    color: transparent;
-  }
-  footer .footer_nav input:focus::placeholder {
-    color: transparent;
-  }
   footer .footer_copy {
-    width: 100%;
     padding: 10px 60px 0 0;
     display: flex;
     justify-content: space-between;
@@ -2035,15 +2017,10 @@ footer .footer_copy span {
 .go_top {
   display: none;
 }
-.go_top img {
-  display: none;
-}
-
 @media screen and (min-width: 1200px) {
   .go_top {
     width: 150px;
     height: 150px;
-    display: block;
     position: fixed;
     z-index: 15;
     bottom: 50px;

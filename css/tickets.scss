@@ -192,7 +192,7 @@ img {
         font-size: 0.8rem;
         cursor: pointer;
         &:nth-of-type(3) {
-          span {
+          a {
             font-size: 1.2rem;
             color: $txt_border;
             padding-left: 10px;
@@ -249,7 +249,7 @@ img {
         span {
           font-size: 1rem;
           &:nth-of-type(3) {
-            span {
+            a {
               font-size: 1.5rem;
             }
             img {
@@ -282,7 +282,7 @@ img {
         }
         span {
           &:nth-of-type(3) {
-            span {
+            a {
               font-size: 1.2rem;
             }
             img {
@@ -308,15 +308,9 @@ img {
           }
         }
       }
-      .all_tickets {
-        .tickets_card_list {
-          gap: 100px;
-        }
-      }
     }
   }
 }
-
 
 .footer_logo img {
   width: auto;

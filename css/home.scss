@@ -35,7 +35,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   html {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
@@ -1015,6 +1015,9 @@ header {
             padding: 0;
             // padding: 30px 100px 30px 70px;
           }
+          .soon {
+            padding: 30px 0;
+          }
         }
       }
     }
@@ -1314,6 +1317,7 @@ header {
         font-weight: 700;
       }
       .edit {
+        font-size: 0.8rem;
         text-align: right;
         padding: 20px 20px;
         color: $main_bg_color;
@@ -1379,6 +1383,7 @@ header {
         }
       }
       .edit {
+        font-size: 0.8rem;
         text-align: right;
         padding: 20px 20px;
         background-color: rgba(248, 183, 253, 1);
@@ -2182,13 +2187,12 @@ footer {
       }
       &:nth-of-type(10) {
         display: flex;
-        align-items: center;
       }
     }
     button {
       background: #ccc;
       width: 100px;
-      height: 30px;
+      height: 40px;
       margin-left: -5px;
       color: $main_bg_color;
       border: none;
@@ -2199,8 +2203,9 @@ footer {
       display: inline-block;
       width: 200px;
       padding: 15px;
-      height: 30px;
+      height: 40px;
       border: none;
+      flex-grow: 1;
       &:focus {
         outline: none;
         &::placeholder {
@@ -2233,10 +2238,6 @@ footer {
       flex-wrap: wrap;
       span {
         width: 46%;
-        margin: 2%;
-      }
-      input {
-        width: 300px;
       }
     }
   }
@@ -2274,28 +2275,12 @@ footer {
       }
       button {
         background: #ccc;
-        width: 75px;
-        height: 30px;
         color: $main_bg_color;
         border: none;
         cursor: pointer;
       }
-      input {
-        display: inline-block;
-        padding: 15px;
-        width: 250px;
-        height: 30px;
-        border: none;
-        &:focus {
-          outline: none;
-          &::placeholder {
-            color: transparent;
-          }
-        }
-      }
     }
     .footer_copy {
-      width: 100%;
       padding: 10px 60px 0 0;
       display: flex;
       justify-content: space-between;
@@ -2333,14 +2318,13 @@ footer {
 .go_top {
   display: none;
   img {
-    display: none;
+    // display: none;
   }
 }
 @media screen and (min-width:1200px) {
   .go_top {
     width: 150px;
     height: 150px;
-    display: block;
     position: fixed;
     z-index: 15;
     bottom: 50px;
@@ -2351,7 +2335,7 @@ footer {
     }
     img {
       width: 100%;
-      // height: 100%;
+      // display: block;
       object-fit: fill;
     }
   }
