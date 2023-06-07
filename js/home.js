@@ -164,10 +164,14 @@ const subscribe_txt = document.querySelector('.footer_nav .subscribe');
 // console.log(subscribe_txt);
 window.addEventListener("scroll", function(){
  let scrollY = this.scrollY;
- if(scrollY > 1200) {
-  topBtn.style.display = 'block';
- } else {
-  topBtn.style.display = 'none';
+ let windowWidth = this.innerWidth;
+ console.log(typeof windowWidth);
+ if(windowWidth > 1200) {
+   if(scrollY > 1200) {
+    topBtn.style.display = 'block';
+   } else {
+    topBtn.style.display = 'none';
+   }
  }
 });
 
