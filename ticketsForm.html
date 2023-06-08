@@ -60,7 +60,7 @@
     <div class="form_wrap">
       <h3>浪人季</h3>
       <div class="detail_info">
-        <span>顯示活動詳細資料</span>
+        <span>顯示活動詳細資料<i class="fa-solid fa-caret-down"></i></span>
         <ul>
           <li>
             <h4>活動時間</h4>
@@ -93,11 +93,11 @@
         </ul>
       </div>
       <div class="ticketing_process">
-        <button class="active">
+        <button class="actived">
           <span>1</span>
           <span>選擇票種</span>
         </button>
-        <button>
+        <button class="active">
           <span>2</span>
           <span>填寫表單</span>
         </button>
@@ -111,34 +111,41 @@
           <li>
             <span>票種</span>
             <span>數量</span>
-            <span>單價</span>
-            <span>總計</span>
+            <span>金額</span>
           </li>
           <li>
             <span>預售票</span>
-            <span>兩張</span>
+            <span>1</span>
             <span>TWD$2600</span>
-            <span>TWD$5200</span>
+          </li>
+          <li>
+            <span>早鳥票</span>
+            <span>1</span>
+            <span>TWD$2400</span>
+          </li>
+          <li>
+            <span>總金額</span>
+            <span>TWD$5000</span>
           </li>
         </ul>
       </div>
       <form action="">
-        <label for="name">聯絡人資料</label>
-        <input type="text" id="name">
-        <label for="email">Email</label>
-        <input type="text" id="email">
-        <label for="tel">手機</label>
-        <input type="text" id="tel">
+        <label for="name">*姓名</label>
+        <input type="text" id="name" required>
+        <label for="email">*信箱</label>
+        <input type="text" id="email" required>
+        <label for="tel">*手機</label>
+        <input type="text" id="tel" required>
         <div class="btn_group">
-          <button class="cancel_btn" type="button">
+          <a href="tickets.html" class="cancel_btn" type="button">
             <span>X</span>
             <span>取消購票</span>
-          </button>
-          <button class="submit_btn" type="submit">
-            <span>確認表單資料</span>
-          </button>
-        </div> 
+          </a>
+        </div>
       </form>
+      <button class="submit_btn" type="submit" disabled>
+        <span>確認表單資料</span>
+      </button>
     </div>
   </section>
 

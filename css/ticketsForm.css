@@ -56,12 +56,29 @@ body {
   font-size: 2.5rem;
   padding-bottom: 20px;
 }
+.ticket_form .detail_info > span {
+  font-size: 1rem;
+  color: #888;
+  display: inline-block;
+  padding-bottom: 20px;
+}
+.ticket_form .detail_info > span i {
+  margin-left: 10px;
+}
 .ticket_form .detail_info ul {
   width: 100%;
   padding-bottom: 20px;
+  display: none;
 }
 .ticket_form .detail_info li {
   padding: 3px 0;
+}
+.ticket_form .detail_info li h4 {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+.ticket_form .detail_info li span {
+  font-size: 1rem;
 }
 .ticket_form .detail_info li a {
   color: #888;
@@ -72,10 +89,190 @@ body {
   display: inline-block;
   padding-right: 5px;
 }
-.ticket_form .detail_info h4 {
-  font-size: 1.2rem;
-  color: #ffffff;
+.ticket_form .ticketing_process {
+  padding-bottom: 30px;
 }
-.ticket_form .detail_info span {
+.ticket_form .ticketing_process button {
+  width: 100%;
+  display: block;
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  gap: 20px;
+  border: none;
+}
+.ticket_form .ticketing_process span {
   font-size: 1rem;
+}
+.ticket_form .ticketing_process span:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  background-color: #0F0F0F;
+  padding: 5px;
+  border-radius: 50%;
+  color: #FAF9F5;
+}
+.ticket_form .ticketing_process .active {
+  background-color: #DDCB2A;
+}
+.ticket_form .ticketing_process .actived {
+  background-color: #f6eea2;
+}
+.ticket_form .total_price {
+  padding-bottom: 30px;
+}
+.ticket_form .total_price ul {
+  width: 100%;
+  border: 1px solid #FAF9F5;
+}
+.ticket_form .total_price li {
+  display: flex;
+  padding: 10px 8px;
+}
+.ticket_form .total_price li:first-child {
+  background-color: #828282;
+}
+.ticket_form .total_price li:first-child span {
+  font-size: 1.2rem;
+}
+.ticket_form .total_price li:not(:last-child) {
+  border-bottom: 1px solid #888;
+}
+.ticket_form .total_price li:nth-child(2), .ticket_form .total_price li:nth-child(3) {
+  background-color: #FAF9F5;
+  color: #0F0F0F;
+}
+.ticket_form .total_price li span {
+  font-size: 1rem;
+  display: inline-block;
+}
+.ticket_form .total_price li span:nth-of-type(1) {
+  width: 40%;
+}
+.ticket_form .total_price li span:nth-of-type(3) {
+  flex-grow: 1;
+  text-align: right;
+}
+.ticket_form .total_price li:nth-child(4) {
+  background-color: #FCF7E0;
+  color: #0F0F0F;
+}
+.ticket_form .total_price li:nth-child(4) span {
+  font-weight: bold;
+}
+.ticket_form .total_price li:nth-child(4) span:nth-child(2) {
+  flex-grow: 1;
+  text-align: right;
+}
+.ticket_form form {
+  background-color: #fff;
+  color: #0F0F0F;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+.ticket_form form label, .ticket_form form input {
+  display: block;
+  margin-bottom: 10px;
+}
+.ticket_form form input {
+  width: 100%;
+  font-size: 1.4rem;
+  height: 40px;
+  padding: 10px 5px;
+}
+.ticket_form form .btn_group {
+  padding-top: 20px;
+  text-align: center;
+}
+.ticket_form form .btn_group a {
+  width: 100px;
+  margin-left: auto;
+  display: block;
+  cursor: pointer;
+  background-color: #fff;
+  color: #424242;
+  padding: 5px 10px;
+}
+.ticket_form form .btn_group a:nth-child(1) {
+  background-color: rgb(231, 150, 150);
+}
+.ticket_form .submit_btn {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  font-size: 1.2rem;
+  background-color: #FAF9F5;
+  border: none;
+  cursor: not-allowed;
+}
+
+@media screen and (min-width: 768px) {
+  .ticket_form .form_wrap {
+    width: 70%;
+  }
+  .ticket_form .detail_info > span {
+    font-size: 1rem;
+    color: #888;
+    display: inline-block;
+    padding-bottom: 20px;
+  }
+  .ticket_form .detail_info > span i {
+    margin-left: 10px;
+  }
+  .ticket_form .detail_info ul {
+    width: 100%;
+    padding-bottom: 20px;
+    display: none;
+  }
+  .ticket_form .detail_info li {
+    padding: 3px 0;
+  }
+  .ticket_form .detail_info li h4 {
+    font-size: 1.2rem;
+    color: #ffffff;
+  }
+  .ticket_form .detail_info li span {
+    font-size: 1rem;
+  }
+  .ticket_form .detail_info li a {
+    color: #888;
+    display: inline-block;
+    padding-left: 5px;
+  }
+  .ticket_form .detail_info li i {
+    display: inline-block;
+    padding-right: 5px;
+  }
+  .ticket_form .ticketing_process {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .ticket_form .ticketing_process button {
+    width: 30%;
+    position: relative;
+  }
+  .ticket_form .ticketing_process button:nth-of-type(1)::after, .ticket_form .ticketing_process button:nth-of-type(2)::after {
+    content: "";
+    width: 50%;
+    height: 5px;
+    background-color: #ccc;
+    position: absolute;
+    right: -50%;
+    z-index: -1;
+  }
+  .ticket_form .total_price li {
+    padding: 20px 8px;
+  }
+  .ticket_form form input {
+    height: 50px;
+  }
+  .ticket_form form .btn_group a {
+    width: 200px;
+  }
+  .ticket_form .submit_btn {
+    width: 50%;
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=ticketsForm.css.map */

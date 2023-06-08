@@ -55,7 +55,6 @@ img {
 }
 .tickets .tickets_wrap .popular_tickets .tickets_card_list a {
   max-width: 90%;
-  margin: auto;
   display: block;
   padding-bottom: 50px;
 }
