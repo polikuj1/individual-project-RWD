@@ -2235,6 +2235,7 @@ footer {
     }
     .footer_nav {
       display: flex;
+      justify-content: space-between;
       flex-wrap: wrap;
       span {
         width: 46%;

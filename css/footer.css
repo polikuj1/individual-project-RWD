@@ -93,6 +93,7 @@ footer .footer_copy span {
   }
   footer .footer_nav {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
   }
   footer .footer_nav span {
