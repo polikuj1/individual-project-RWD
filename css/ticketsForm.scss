@@ -188,6 +188,9 @@ body {
     padding: 10px;
     margin-bottom: 30px;
     border-radius: 5px;
+    span {
+      color: red;
+    }
     label, input {
       display: block;
       margin-bottom: 10px;
@@ -201,6 +204,9 @@ body {
     .btn_group {
       padding-top: 20px;
       text-align: center;
+      // span {
+
+      // }
       a {
         width: 100px;
         margin-left: auto;
