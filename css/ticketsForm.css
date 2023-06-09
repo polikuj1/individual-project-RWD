@@ -46,6 +46,7 @@ body {
 
 .ticket_form {
   width: 100%;
+  padding-top: 30px;
   color: #FAF9F5;
 }
 .ticket_form .form_wrap {
@@ -57,13 +58,17 @@ body {
   padding-bottom: 20px;
 }
 .ticket_form .detail_info > span {
+  cursor: pointer;
   font-size: 1rem;
   color: #888;
   display: inline-block;
   padding-bottom: 20px;
 }
 .ticket_form .detail_info > span i {
+  font-size: 1.2rem;
   margin-left: 10px;
+  transition: 0.3s;
+  transform: rotate(0deg);
 }
 .ticket_form .detail_info ul {
   width: 100%;
@@ -88,6 +93,12 @@ body {
 .ticket_form .detail_info li i {
   display: inline-block;
   padding-right: 5px;
+}
+.ticket_form .detail_info .show {
+  display: block;
+}
+.ticket_form .detail_info .rotate {
+  transform: rotate(180deg);
 }
 .ticket_form .ticketing_process {
   padding-bottom: 30px;
@@ -165,24 +176,26 @@ body {
   text-align: right;
 }
 .ticket_form form {
-  background-color: #fff;
-  color: #0F0F0F;
   padding: 10px;
   margin-bottom: 30px;
   border-radius: 5px;
-}
-.ticket_form form span {
-  color: red;
 }
 .ticket_form form label, .ticket_form form input {
   display: block;
   margin-bottom: 10px;
 }
+.ticket_form form label {
+  font-size: 1.2rem;
+}
 .ticket_form form input {
   width: 100%;
   font-size: 1.4rem;
   height: 40px;
-  padding: 10px 5px;
+  padding: 10px;
+}
+.ticket_form form .name, .ticket_form form .email, .ticket_form form .tel {
+  color: rgb(218, 54, 54);
+  padding-bottom: 5px;
 }
 .ticket_form form .btn_group {
   padding-top: 20px;
@@ -193,12 +206,9 @@ body {
   margin-left: auto;
   display: block;
   cursor: pointer;
-  background-color: #fff;
+  background-color: rgb(233, 173, 173);
   color: #424242;
   padding: 5px 10px;
-}
-.ticket_form form .btn_group a:nth-child(1) {
-  background-color: rgb(231, 150, 150);
 }
 .ticket_form .submit_btn {
   width: 100%;

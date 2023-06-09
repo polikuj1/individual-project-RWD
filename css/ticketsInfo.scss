@@ -140,7 +140,8 @@ body {
       }
     }
     .ticket_type {
-      padding-bottom: 20px;
+      position: relative;
+      padding-bottom: 30px;
       .title {
         display: none;
       }
@@ -175,6 +176,12 @@ body {
           }
         }
       }
+    }
+    .warn_txt {
+      position: absolute;
+      bottom: 0;
+      right: 10px;
+      color: rgb(218, 54, 54);
     }
   }
   .policy {

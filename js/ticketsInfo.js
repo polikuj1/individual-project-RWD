@@ -47,6 +47,9 @@ buttons.forEach((item,index) => {
         }
       })
     }
+    if(count !== 0) {
+      document.querySelector('.warn_txt').textContent = '';
+    }
   })
 })
 
@@ -65,15 +68,16 @@ next_btn.onclick = function() {
     }
   })
   if(!txt[0] && !txt[1] && !txt[2]) {
-    alert('請選擇票券數量');
+    document.querySelector('.warn_txt').textContent = '請選擇票券數量';
   } else {
     ticketsInput.forEach(item => {
       item.value = '0';
     })
+    document.querySelector('.warn_txt').textContent = '';
     policy.checked = false;
     next_btn.textContent = '查詢空位中，請勿關閉頁面...';
     setTimeout(function() {
       location.href= "ticketsForm.html";
-    },1500)
+    },1000)
   }
 }

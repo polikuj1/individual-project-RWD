@@ -123,7 +123,8 @@ body {
   background-color: #DDCB2A;
 }
 .tickets_info .info_detail .ticket_type {
-  padding-bottom: 20px;
+  position: relative;
+  padding-bottom: 30px;
 }
 .tickets_info .info_detail .ticket_type .title {
   display: none;
@@ -155,6 +156,12 @@ body {
   width: 50px;
   height: 30px;
   padding-left: 20px;
+}
+.tickets_info .info_detail .warn_txt {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  color: rgb(218, 54, 54);
 }
 .tickets_info .policy {
   padding-bottom: 20px;
