@@ -35,6 +35,20 @@ img {
   height: 100%;
 }
 
+.about_wrap .about_title h2::after {
+  bottom: -60px;
+}
+.about_wrap .about_title .login {
+  text-align: right;
+}
+.about_wrap .about_title .login a {
+  color: #FAF9F5;
+  font-size: 1.2rem;
+}
+.about_wrap .about_title .login a:nth-child(1) {
+  padding-right: 30px;
+}
+
 .tickets {
   width: 100%;
   padding: 100px 0 20px;

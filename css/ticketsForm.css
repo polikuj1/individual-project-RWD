@@ -210,14 +210,30 @@ body {
   color: #424242;
   padding: 5px 10px;
 }
+.ticket_form .pre_btn {
+  display: inline-block;
+  min-width: 10%;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2rem;
+  background-color: #FAF9F5;
+  border: none;
+  cursor: pointer;
+  margin-right: auto;
+}
 .ticket_form .submit_btn {
-  width: 100%;
-  display: block;
+  float: right;
+  min-width: 30%;
   padding: 10px;
   font-size: 1.2rem;
   background-color: #FAF9F5;
   border: none;
   cursor: not-allowed;
+}
+.ticket_form .submit_btn::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 @media screen and (min-width: 768px) {
@@ -250,9 +266,5 @@ body {
   }
   .ticket_form form .btn_group a {
     width: 200px;
-  }
-  .ticket_form .submit_btn {
-    width: 50%;
-    margin: 0 auto;
   }
 }/*# sourceMappingURL=ticketsForm.css.map */

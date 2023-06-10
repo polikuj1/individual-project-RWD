@@ -40,7 +40,26 @@ img {
   width: 100%;
   height: 100%;
 }
-
+// 分頁標題、註冊登入
+.about_wrap {
+  .about_title {
+    h2 {
+      &::after {
+        bottom: -60px;
+      }
+    }
+    .login {
+      text-align: right;
+      a {
+        color: $txt_color;
+        font-size: 1.2rem;
+        &:nth-child(1) {
+          padding-right: 30px;
+        }
+      }
+    }
+  }
+}
 // tickets區
 .tickets {
   width: 100%;

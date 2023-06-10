@@ -17,13 +17,14 @@ submit.onclick = function(e) {
   form.children[1].value = '';
   form.children[4].value = '';
   form.children[7].value = '';
-  location.href = 'ticketPay.html';
+  submit.textContent = '頁面跳轉中...';
+    setTimeout(function() {
+      location.href= "ticketPay.html";
+    },500)
 }
 let userName = '';
 let email = '';
 let tel = '';
-
-
 form.children[1].addEventListener('blur', (e) => {
   if(e.target.value !== '') {
     userName = e.target.value;

@@ -230,14 +230,30 @@ body {
       }
     }
   }
+  .pre_btn {
+    display: inline-block;
+    min-width: 10%;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: $txt_color;
+    border: none;
+    cursor: pointer;
+    margin-right: auto;
+  }
   .submit_btn {
-    width: 100%;
-    display: block;
+    float: right;
+    min-width: 30%;
     padding: 10px;
     font-size: 1.2rem;
     background-color: $txt_color;
     border: none;
     cursor: not-allowed;
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
   }
 }
 
@@ -280,10 +296,6 @@ body {
           width: 200px;
         }
       }
-    }
-    .submit_btn {
-      width: 50%;
-      margin: 0 auto;
     }
   }
 }

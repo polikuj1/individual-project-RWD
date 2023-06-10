@@ -31,17 +31,19 @@ body {
   }
 }
 .about_wrap .about_title h2::after {
-  bottom: -60px;
+  bottom: -100px;
 }
 .about_wrap .about_title .login {
+  padding-top: 20px;
   text-align: right;
+  position: relative;
 }
 .about_wrap .about_title .login a {
   color: #FAF9F5;
   font-size: 1.2rem;
 }
 .about_wrap .about_title .login a:nth-child(1) {
-  padding-right: 30px;
+  margin-right: 30px;
 }
 
 .banner {
@@ -175,14 +177,30 @@ body {
 .tickets_info .policy a {
   color: #888;
 }
+.tickets_info .pre_btn {
+  display: inline-block;
+  min-width: 10%;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2rem;
+  background-color: #FAF9F5;
+  border: none;
+  cursor: pointer;
+  margin-right: auto;
+}
 .tickets_info .next_btn {
-  display: block;
-  width: 100%;
+  float: right;
+  min-width: 30%;
   padding: 10px;
   font-size: 1.2rem;
   background-color: #FAF9F5;
   border: none;
   cursor: not-allowed;
+}
+.tickets_info .next_btn::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 @media screen and (min-width: 768px) {
@@ -212,9 +230,5 @@ body {
   }
   .tickets_info .info_detail .ticket_type .content .minus, .tickets_info .info_detail .ticket_type .content .plus {
     line-height: 30px;
-  }
-  .tickets_info .next_btn {
-    width: 50%;
-    margin: 30px auto;
   }
 }/*# sourceMappingURL=ticketsInfo.css.map */
