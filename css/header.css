@@ -74,6 +74,7 @@ header nav {
   background-color: #FAF9F5;
   z-index: 10;
 }
+
 header nav ul {
   height: 100%;
   display: flex;
