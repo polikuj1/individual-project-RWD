@@ -27,7 +27,7 @@ header .hamburger_menu .menu_btn:before {
   top: 30%;
   left: 50%;
   margin-left: -9px;
-  transition: top 0.5s 0.5s, rotate 0.5s;
+  transition: top 0.2s 0.2s, rotate 0.2s;
 }
 header .hamburger_menu .menu_btn:after {
   content: "";
@@ -39,7 +39,7 @@ header .hamburger_menu .menu_btn:after {
   top: 70%;
   left: 50%;
   margin-left: -9px;
-  transition: top 0.5s 0.5s, rotate 0.5s;
+  transition: top 0.2s 0.2s, rotate 0.2s;
 }
 header .hamburger_menu span {
   display: none;
@@ -56,19 +56,18 @@ header #menu:checked ~ .hamburger_menu .menu_btn {
 header #menu:checked ~ .hamburger_menu .menu_btn:before {
   rotate: 45deg;
   top: 50%;
-  transition: top 0.5s, rotate 0.5s 0.5s;
+  transition: top 0.2s, rotate 0.2s 0.2s;
 }
 header #menu:checked ~ .hamburger_menu .menu_btn:after {
   rotate: -45deg;
   top: 50%;
-  transition: top 0.5s, rotate 0.5s 0.5s;
+  transition: top 0.2s, rotate 0.2s 0.2s;
 }
 header nav {
-  width: 300px;
+  width: 260px;
   height: 100vh;
   position: fixed;
   top: 0;
-  right: 0;
   right: -300px;
   transition: 0.5s ease-in;
   background-color: #FAF9F5;
@@ -78,7 +77,7 @@ header nav {
 header nav ul {
   height: 100%;
   display: flex;
-  padding: 0 30px;
+  padding: 20px 30px;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
