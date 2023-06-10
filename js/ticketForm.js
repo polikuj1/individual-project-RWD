@@ -17,8 +17,7 @@ submit.onclick = function(e) {
   form.children[1].value = '';
   form.children[4].value = '';
   form.children[7].value = '';
-  alert('預定成功');
-  location.href = 'tickets.html';
+  location.href = 'ticketPay.html';
 }
 let userName = '';
 let email = '';
