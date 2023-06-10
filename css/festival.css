@@ -15,9 +15,16 @@ body {
   background-color: #0F0F0F;
 }
 
-@media screen and (min-width: 1024px) {
+.about_wrap .about_title h2 {
+  font-size: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
   html {
     font-size: 18px;
+  }
+  .about_wrap .about_title h2 {
+    font-size: 3rem;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -153,7 +160,7 @@ body {
 }
 .festival .festival_group .festival_intro .intro_txt p {
   font-size: 1.1rem;
-  line-height: 3rem;
+  line-height: 2rem;
 }
 .festival .festival_group .festival_intro .origin {
   padding: 30px 0;
