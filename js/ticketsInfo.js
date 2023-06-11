@@ -26,21 +26,47 @@ const buttons = document.querySelectorAll('.content span:nth-of-type(3)');
 // console.log(buttons);
 const ticketsInput = document.querySelectorAll('.content input');
 // console.log(ticketsInput);
+let allCount = {
+  one: '',
+  two: '',
+  three: '',
+};
+let tkType = {
+  one: '',
+  two: '',
+  three: '',
+}
 buttons.forEach((item,index) => {
   let count = 0;
   item.addEventListener('click', (e) => {
-    let obj = {
-      type: [],
-      num: [],
-    };
     let ticketType = e.target.parentNode.parentNode.firstElementChild.textContent;
-    obj.type.push(ticketType);
+    switch (ticketType) {
+      case '預售票':
+        tkType.one = ticketType;
+        break;
+      case '早鳥票':
+        tkType.two = ticketType;
+        break;
+      case '愛心票':
+        tkType.three = ticketType;
+        break;
+    }
     if(e.target.className === 'plus') {
       ticketsInput.forEach((item, id) => {
         if(id === index) {
           count++
           item.value = count;
-          obj.num.push(count);
+          switch (ticketType) {
+            case '預售票':
+              allCount.one = count;
+              break;
+            case '早鳥票':
+              allCount.two = count;
+              break;
+            case '愛心票':
+              allCount.three = count;
+              break;
+          }
         }
       })
     }
@@ -56,7 +82,9 @@ buttons.forEach((item,index) => {
     if(count !== 0) {
       document.querySelector('.warn_txt').textContent = '';
     }
-    console.log(obj);
+    console.log(allCount);
+    localStorage.setItem('allCount', JSON.stringify(allCount));
+    localStorage.setItem('ticketType', JSON.stringify(tkType));
   })
 })
 

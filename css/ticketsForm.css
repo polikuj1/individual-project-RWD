@@ -136,22 +136,30 @@ body {
   width: 100%;
   border: 1px solid #FAF9F5;
 }
+.ticket_form .total_price ul .title {
+  background-color: #828282;
+  color: #FAF9F5;
+}
+.ticket_form .total_price ul .title span {
+  font-size: 1.2rem;
+}
+.ticket_form .total_price ul .li_total {
+  background-color: #FCF7E0;
+  color: #0F0F0F;
+}
+.ticket_form .total_price ul .li_total span {
+  font-weight: bold;
+}
+.ticket_form .total_price ul .li_total span:nth-child(2) {
+  flex-grow: 1;
+  text-align: right;
+}
 .ticket_form .total_price li {
   display: flex;
   padding: 10px 8px;
-}
-.ticket_form .total_price li:first-child {
-  background-color: #828282;
-}
-.ticket_form .total_price li:first-child span {
-  font-size: 1.2rem;
-}
-.ticket_form .total_price li:not(:last-child) {
-  border-bottom: 1px solid #888;
-}
-.ticket_form .total_price li:nth-child(2), .ticket_form .total_price li:nth-child(3) {
   background-color: #FAF9F5;
   color: #0F0F0F;
+  border-bottom: 1px solid #888;
 }
 .ticket_form .total_price li span {
   font-size: 1rem;
@@ -161,17 +169,6 @@ body {
   width: 40%;
 }
 .ticket_form .total_price li span:nth-of-type(3) {
-  flex-grow: 1;
-  text-align: right;
-}
-.ticket_form .total_price li:nth-child(4) {
-  background-color: #FCF7E0;
-  color: #0F0F0F;
-}
-.ticket_form .total_price li:nth-child(4) span {
-  font-weight: bold;
-}
-.ticket_form .total_price li:nth-child(4) span:nth-child(2) {
   flex-grow: 1;
   text-align: right;
 }

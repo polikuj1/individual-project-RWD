@@ -131,3 +131,71 @@ function formFinish() {
     submit.style.cursor = 'not-allowed';
   }
 }
+
+window.onload = function() {
+  let allCount = JSON.parse(localStorage.getItem('allCount'));
+  let ticketType = JSON.parse(localStorage.getItem('ticketType'));
+  console.log(allCount, ticketType);
+  let total = 0;
+  let type = [];
+  let tkName = [];
+  let count = [];
+  let price = [2800, 2200, 1800];
+  let sum = 0;
+  for (const key in ticketType) {
+    // console.log(ticketType[key]);
+    switch (ticketType[key]) {
+      case '預售票':
+        type.push(true);
+        tkName.push('預售票');
+        break;
+      case '早鳥票':
+        type.push(true);
+        tkName.push('早鳥票');
+        break;
+      case '愛心票':
+        type.push(true);
+        tkName.push('愛心票');
+        break;
+      default :
+        type.push(false);
+        tkName.push('');
+    }
+  }
+  for (const key in allCount) {
+    count.push(allCount[key]);
+  }
+  console.log(count);
+  console.log(type);
+  let str = '';
+  for (let index = 0; index < 3; index++) {
+    if(tkName[index] !== '') {
+      str += `<li>
+        <span>${tkName[index]}</span>
+        <span>${count[index]}</span>
+        <span>TWD$${price[index]}</span>
+        </li>
+      `;
+    }
+  }
+
+  console.log(str);
+  // 計算票券數量與金額的迴圈
+  type.forEach((item,index) => {
+    if(index === 0 && item === true) {
+      sum += 2800 * count[0];
+    }
+    if(index === 1 && item === true) {
+      sum += 2200 * count[1];
+    }
+    if(index === 2 && item === true) {
+      sum += 1800 * count[2];
+    }
+  })
+  let newElement = document.createElement('div');
+  newElement.innerHTML = str;
+  let ul = document.querySelector('.totalPrice').parentNode.parentNode;
+  ul.insertBefore(newElement, document.querySelector('.totalPrice').parentNode);
+  document.querySelector('.totalPrice').textContent = `TWD$${sum}`;
+}
+
