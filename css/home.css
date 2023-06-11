@@ -1381,6 +1381,12 @@ header .banner .scroll {
   }
 }
 @media screen and (min-width: 800px) {
+  .interview .interview_list {
+    padding: 30px;
+  }
+  .interview .interview_card_row {
+    padding-bottom: 30px;
+  }
   .interview .interview_card_row .pic::before {
     bottom: -200px;
   }

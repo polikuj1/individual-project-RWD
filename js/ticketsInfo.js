@@ -23,18 +23,24 @@ policy.onclick = function(e) {
 
 // 購票數量
 const buttons = document.querySelectorAll('.content span:nth-of-type(3)');
-console.log(buttons);
+// console.log(buttons);
 const ticketsInput = document.querySelectorAll('.content input');
-console.log(ticketsInput);
+// console.log(ticketsInput);
 buttons.forEach((item,index) => {
   let count = 0;
   item.addEventListener('click', (e) => {
-    console.log(e.target);
+    let obj = {
+      type: [],
+      num: [],
+    };
+    let ticketType = e.target.parentNode.parentNode.firstElementChild.textContent;
+    obj.type.push(ticketType);
     if(e.target.className === 'plus') {
       ticketsInput.forEach((item, id) => {
         if(id === index) {
           count++
           item.value = count;
+          obj.num.push(count);
         }
       })
     }
@@ -50,6 +56,7 @@ buttons.forEach((item,index) => {
     if(count !== 0) {
       document.querySelector('.warn_txt').textContent = '';
     }
+    console.log(obj);
   })
 })
 

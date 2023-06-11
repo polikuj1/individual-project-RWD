@@ -1546,7 +1546,11 @@ header {
 }
 @media screen and (min-width:800px) {
   .interview {
+    .interview_list {
+      padding: 30px;
+    }
     .interview_card_row {
+      padding-bottom: 30px;
       .pic::before {
         bottom: -200px;
       }

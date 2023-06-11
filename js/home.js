@@ -140,17 +140,20 @@ youtubeModal_btn.addEventListener('click', () => {
 const hashtag = document.querySelectorAll('.one_hashtag span');
 const random = document.querySelector('.random_pic');
 const random_img = document.querySelector('.random_pic img');
-// console.log(hashtag);
-// console.log(random_img);
+let scrollTop = 0;
+$(function () {
+  $(window).scroll(function () {
+    scrollTop = $(this).scrollTop();
+    console.log(scrollTop);
+  });
+});
 $('.one_hashtag span').mousemove(function(e) {
-  // let x = w
-  // let x = e.clientX;
-  // let y = e.clientY;
+  let x = e.clientX;
+  let y = e.clientY;
   let id = $(this).attr('data-id');
-  console.log(x,y);
   $('.random_pic').show().css({
     left: x + 10,
-    top: y ,
+    top: y + scrollTop ,
   })
   $('.random_pic img').attr('src', `../image/${id}.jpg`);
 }).mouseout(function() {
@@ -166,7 +169,7 @@ const subscribe_txt = document.querySelector('.footer_nav .subscribe');
 window.addEventListener("scroll", function(){
  let scrollY = this.scrollY;
  let windowWidth = this.innerWidth;
- console.log(typeof windowWidth);
+//  console.log(typeof windowWidth);
  if(windowWidth > 1200) {
    if(scrollY > 1200) {
     topBtn.style.display = 'block';

@@ -153,21 +153,21 @@
                   </div>
                   <div class="user_data">
                     <label>有效期限</label>
-                    <select name="month" id="">
-                      <option value="" label="01">01</option>
-                      <option value="" label="02">02</option>
-                      <option value="" label="03">03</option>
-                      <option value="" label="04">04</option>
-                      <option value="" label="05">05</option>
-                      <option value="" label="06">06</option>
-                      <option value="" label="07">07</option>
-                      <option value="" label="08">08</option>
-                      <option value="" label="09">09</option>
-                      <option value="" label="10">10</option>
-                      <option value="" label="11">11</option>
-                      <option value="" label="12">12</option>
+                    <select name="month" id="expired_month">
+                      <option value="01" label="01">01</option>
+                      <option value="02" label="02">02</option>
+                      <option value="03" label="03">03</option>
+                      <option value="04" label="04">04</option>
+                      <option value="05" label="05">05</option>
+                      <option value="06" label="06" selected>06</option>
+                      <option value="07" label="07">07</option>
+                      <option value="08" label="08">08</option>
+                      <option value="09" label="09">09</option>
+                      <option value="10" label="10">10</option>
+                      <option value="11" label="11">11</option>
+                      <option value="12" label="12">12</option>
                     </select>
-                    <select name="year" id="">
+                    <select name="year" id="expired_year">
                       <option value="" label="2023">2023</option>
                       <option value="" label="2024">2024</option>
                       <option value="" label="2025">2025</option>
@@ -200,7 +200,7 @@
                 <input type="radio" name="payment" id="atm_account">
                 ATM 虛擬帳號（僅適用於台灣）
                 <div class="atm_account">
-                  <input type="text" class="atm">
+                  <span class="atm">國泰(013)12345678911285</span>
                 </div>
               </label>
             </div>
