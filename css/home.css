@@ -130,7 +130,6 @@ header nav ul .subscribe {
   padding: 0px;
   border: 1px solid transparent;
   position: relative;
-  margin-top: 30px;
 }
 header nav ul .subscribe:hover {
   background-color: rgba(242, 240, 234, 0.6470588235);
@@ -190,7 +189,6 @@ header nav ul a:hover::after {
   left: 0;
 }
 header nav ul .share {
-  margin: 40px 5px;
   text-align: center;
   font-weight: 700;
 }

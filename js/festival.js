@@ -25,8 +25,9 @@ tab.addEventListener('click', (e) => {
 });
 
 const tab_select = document.querySelector('.select_title');
-const now_area = document.querySelector('.current_area');
+const now_area = document.querySelector('.area_selection');
 const tab_option = document.querySelector('.option');
+const tab_span = document.querySelectorAll('.option span');
 const arrow = document.querySelector('.select_title .arrow');
 tab_select.onclick = function() {
   if(tab_option.style.display === 'block') {
@@ -40,7 +41,14 @@ tab_select.onclick = function() {
 
 tab_option.addEventListener('click', (e) => {
   let txt = e.target.textContent;
-  now_area.textContent = `${txt}音樂祭`;
+  now_area.textContent = `${txt}`;
+  tab_span.forEach(item => {
+    if(e.target === item) {
+      e.target.style.display = 'none';
+    } else {
+      item.style.display = 'block';
+    }
+  })
   festival.forEach((item) => {
     if(item.dataset.id === txt) {
       item.style.display = 'block';

@@ -253,10 +253,6 @@ body {
           flex-direction: column;
           justify-content: center;
           .pic {
-            height: 300px;
-            img {
-              
-            }
           }
         }
         .intro_txt {
@@ -322,6 +318,9 @@ body {
         .poster {
           width: 30%;
           padding: 0 60px 0 0;
+          .pic {
+            height: 500px;
+          }
         }
         .intro_txt {
           width: 70%;
