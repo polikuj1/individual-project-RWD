@@ -105,7 +105,7 @@ header nav {
   right: -300px;
   transition: 0.5s ease-in;
   background-color: #FAF9F5;
-  z-index: 10;
+  z-index: 998;
 }
 header nav ul {
   height: 100%;
@@ -148,7 +148,7 @@ header nav ul .subscribe::after {
   display: block;
   z-index: -1;
 }
-header nav ul .subscribe button {
+header nav ul .subscribe a {
   background-color: transparent;
   border: none;
   padding: 10px 40px;

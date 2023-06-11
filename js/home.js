@@ -143,13 +143,14 @@ const random_img = document.querySelector('.random_pic img');
 // console.log(hashtag);
 // console.log(random_img);
 $('.one_hashtag span').mousemove(function(e) {
-  let x = e.clientX;
-  let y = e.clientY;
+  // let x = w
+  // let x = e.clientX;
+  // let y = e.clientY;
   let id = $(this).attr('data-id');
   console.log(x,y);
   $('.random_pic').show().css({
     left: x + 10,
-    top: y + 350,
+    top: y ,
   })
   $('.random_pic img').attr('src', `../image/${id}.jpg`);
 }).mouseout(function() {

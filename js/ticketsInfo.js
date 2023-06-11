@@ -75,7 +75,7 @@ next_btn.onclick = function() {
     })
     document.querySelector('.warn_txt').textContent = '';
     policy.checked = false;
-    next_btn.textContent = '查詢空位中，請勿關閉頁面...';
+    next_btn.textContent = '查詢空位中...';
     setTimeout(function() {
       location.href= "ticketsForm.html";
     },1000)
