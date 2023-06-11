@@ -132,15 +132,22 @@ function formFinish() {
   }
 }
 
+// 載入完成，渲染票券資料
 window.onload = function() {
+  // 先將字串轉成物件
   let allCount = JSON.parse(localStorage.getItem('allCount'));
   let ticketType = JSON.parse(localStorage.getItem('ticketType'));
   console.log(allCount, ticketType);
   let total = 0;
+  // 判斷這個票券是否有購買
   let type = [];
+  // 將有購買的票券名稱存入陣列
   let tkName = [];
+  // 將票券的購買數量，跑迴圈分別存入陣列
   let count = [];
+  // 按照順序建立票券金額陣列
   let price = [2800, 2200, 1800];
+  // 計算票券總金額
   let sum = 0;
   for (const key in ticketType) {
     // console.log(ticketType[key]);
@@ -167,8 +174,10 @@ window.onload = function() {
   }
   console.log(count);
   console.log(type);
+  // 組HTML渲染用的結構
   let str = '';
   for (let index = 0; index < 3; index++) {
+    // 先確定這個票券是否有購買，再去串接字串
     if(tkName[index] !== '') {
       str += `<li>
         <span>${tkName[index]}</span>
@@ -192,10 +201,16 @@ window.onload = function() {
       sum += 1800 * count[2];
     }
   })
+  // 創立空元素
   let newElement = document.createElement('div');
+  // 改寫結構
   newElement.innerHTML = str;
+  // 取得父節點
   let ul = document.querySelector('.totalPrice').parentNode.parentNode;
+  // 將創立的元素插入到父節點
   ul.insertBefore(newElement, document.querySelector('.totalPrice').parentNode);
   document.querySelector('.totalPrice').textContent = `TWD$${sum}`;
+
+  localStorage.setItem('price', sum.toString());
 }
 

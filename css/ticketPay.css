@@ -331,4 +331,66 @@ body {
   .ticket_pay .order .pay_method .credit_card .user_data select {
     height: 50px;
   }
+}
+.success_modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 100vh;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.success_modal .success_info {
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+  background-color: #FAF9F5;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.success_modal .close_btn {
+  position: absolute;
+  right: 20px;
+  top: 0px;
+}
+.success_modal .close_btn button {
+  color: #0F0F0F;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+.success_modal .icon {
+  margin: auto;
+  padding-bottom: 30px;
+}
+.success_modal i {
+  font-size: 3rem;
+  background-color: #52bc07;
+  padding: 10px;
+  border-radius: 50%;
+}
+.success_modal span {
+  display: block;
+  padding-bottom: 10px;
+  font-size: 1rem;
+}
+.success_modal button {
+  width: 50%;
+  padding: 5px 0;
+  font-size: 1.2rem;
+  background-color: rgb(128, 207, 128);
+  color: #FAF9F5;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .success_modal .success_info {
+    width: 30%;
+  }
 }/*# sourceMappingURL=ticketPay.css.map */

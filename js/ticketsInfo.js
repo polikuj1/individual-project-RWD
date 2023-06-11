@@ -40,6 +40,7 @@ buttons.forEach((item,index) => {
   let count = 0;
   item.addEventListener('click', (e) => {
     let ticketType = e.target.parentNode.parentNode.firstElementChild.textContent;
+    // 將點到的票券名稱放到物件中
     switch (ticketType) {
       case '預售票':
         tkType.one = ticketType;
@@ -56,6 +57,7 @@ buttons.forEach((item,index) => {
         if(id === index) {
           count++
           item.value = count;
+          // 點票券數量時，將數量放到物件
           switch (ticketType) {
             case '預售票':
               allCount.one = count;
@@ -76,6 +78,17 @@ buttons.forEach((item,index) => {
           if( count === 0) return;
           count--
           item.value = count;
+          switch (ticketType) {
+            case '預售票':
+              allCount.one = count;
+              break;
+            case '早鳥票':
+              allCount.two = count;
+              break;
+            case '愛心票':
+              allCount.three = count;
+              break;
+          }
         }
       })
     }
@@ -83,6 +96,7 @@ buttons.forEach((item,index) => {
       document.querySelector('.warn_txt').textContent = '';
     }
     console.log(allCount);
+    // 將票券、數量物件存放到本地端的暫存，但是要全部轉字串
     localStorage.setItem('allCount', JSON.stringify(allCount));
     localStorage.setItem('ticketType', JSON.stringify(tkType));
   })

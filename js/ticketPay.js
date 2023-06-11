@@ -88,9 +88,54 @@ card_radio.addEventListener('click', () => {
   confirm_btn.style.cursor = 'not-allowed';
 })
 
+
+const modal = document.querySelector('.success_modal');
+const close_btn = document.querySelector('.success_info .close_btn');
+const btn = document.querySelector('.success_info > button');
 // 確認繳費按鈕
 confirm_btn.addEventListener('click', (e) => {
   credit_lastNum.value = '';
   credit_number.value = '';
+  modal.style.display = 'block';
   // location.href = 'tickets.html';
 })
+
+close_btn.onclick = function() {
+  modal.style.display = 'none';
+  location.href = 'tickets.html';
+}
+btn.onclick = function() {
+  modal.style.display = 'none';
+  location.href = 'tickets.html';
+}
+
+
+// 將票種、總數量、金額渲染在畫面
+window.onload = function() {
+  let price = localStorage.getItem('price');
+  let allCount = JSON.parse(localStorage.getItem('allCount'));
+  let ticketType = JSON.parse(localStorage.getItem('ticketType'));
+  document.querySelector('.price').textContent = `TWD$${price}`;
+  document.querySelector('.total').textContent = `TWD$${price}`;
+  console.log(allCount, ticketType);
+  // 取得購買的票券名稱，將它全部組成字串
+  let str = '';
+  for (const key in ticketType) {
+    if(ticketType[key] !== '') {
+      str += `${ticketType[key]}、`
+    }
+  }
+  let newStr = str.substr(0, str.length-1);
+  console.log(newStr);
+  document.querySelector('.type').textContent = newStr;
+  // 算出總購票的張數
+  let num = 0;
+  for (const key in allCount) {
+    console.log(typeof allCount[key]);
+    if(allCount[key] !== '') {
+      num += allCount[key];
+    }
+  }
+  console.log(num);
+  document.querySelector('.num').textContent = `X ${num}`;
+}

@@ -51,7 +51,7 @@
       <h2># TICKETS</h2>
       <div class="login">
         <!-- <a href="">註冊</a> -->
-        <a href="">登入</a>
+        <a href="login.html">登入</a>
       </div>
     </div>
   </div>
@@ -115,15 +115,15 @@
           <div class="ticket_detail">
             <div class="ticket_content">
               <span>票種</span>
-              <span>預售票</span>
+              <span class="type">預售票</span>
             </div>
             <div class="ticket_content">
-              <span>數量</span>
-              <span>TWD$300 X 1</span>
+              <span>總數量</span>
+              <span class="num">X 1</span>
             </div>
             <div class="ticket_content">
               <span>金額</span>
-              <span>TWD$300</span>
+              <span class="price">TWD$300</span>
             </div>
           </div>
           <div class="ticket_title">
@@ -215,7 +215,7 @@
             <span>總金額</span>
           </div>
           <div class="ticket_detail">
-            <span>TWD$300</span>
+            <span class="total">TWD$300</span>
           </div>
         </div>
       </div>
@@ -223,8 +223,18 @@
       <button class="confirm_pay" disabled>確認訂單並繳費</button>
     </div>
   </section>
-
-
+  <!-- 訂票成功彈窗 -->
+  <div class="success_modal">
+    <div class="success_info">
+      <div class="close_btn"><button>X</button></div>
+      <div class="icon">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <span>付款成功</span>
+      <span>訂單詳情將寄送到你的信箱</span>
+      <button type="button">確認</button>
+    </div>
+  </div>
   <!-- footer -->
   <footer>
     <div class="footer_wrap">
