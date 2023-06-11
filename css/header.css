@@ -97,7 +97,7 @@ header nav ul .subscribe {
   padding: 0px;
   border: 1px solid transparent;
   position: relative;
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
 header nav ul .subscribe:hover {
   background-color: rgba(242, 240, 234, 0.6470588235);
@@ -135,7 +135,7 @@ header nav ul .border_image {
   border-radius: 50%;
 }
 header nav ul a {
-  padding: 18px 18px 18px 0;
+  padding: 10px 18px 10px 0;
   display: inline-block;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
@@ -157,13 +157,12 @@ header nav ul a:hover::after {
   left: 0;
 }
 header nav ul .share {
-  margin: 40px 5px;
   text-align: center;
   font-weight: 700;
 }
 header nav ul .share span {
   display: block;
-  margin: 0px 30px 20px;
+  padding-bottom: 10px;
 }
 header nav ul .share .social_icon {
   padding: 0px;

@@ -167,7 +167,7 @@ header nav ul .border_image {
   border-radius: 50%;
 }
 header nav ul a {
-  padding: 18px 18px 18px 0;
+  padding: 10px 18px 10px 0;
   display: inline-block;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
@@ -194,7 +194,7 @@ header nav ul .share {
 }
 header nav ul .share span {
   display: block;
-  margin: 0px 30px 20px;
+  padding-bottom: 10px;
 }
 header nav ul .share .social_icon {
   padding: 0px;
@@ -929,6 +929,7 @@ header .banner .scroll {
     transform-origin: top left;
   }
   .timetable .wrap table tr td {
+    width: 33.3%;
     font-weight: 400;
     line-height: 31px;
     position: relative;
@@ -942,9 +943,11 @@ header .banner .scroll {
   .timetable .wrap table tr td a:focus {
     color: red;
   }
+  .timetable .wrap table tr td:nth-of-type(1) {
+    width: 25%;
+  }
   .timetable .wrap table tr td:nth-of-type(2) {
-    width: 300px;
-    flex-shrink: 0;
+    flex-grow: 1;
     padding: 0;
   }
   .timetable .wrap table tr .soon {
