@@ -1168,7 +1168,7 @@ header .banner .scroll {
 }
 .interview .interview_card_column .pic {
   width: 100%;
-  height: 400px;
+  height: 300px;
   position: relative;
 }
 .interview .interview_card_column .pic img {
@@ -1301,7 +1301,7 @@ header .banner .scroll {
     line-height: 100px;
   }
   .interview .interview_card_column .pic {
-    height: 450px;
+    height: 600px;
   }
   .interview .interview_card_column .pic::before {
     content: "";

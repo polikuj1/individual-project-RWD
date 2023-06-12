@@ -26,7 +26,6 @@ const login_btn = userPsw.nextElementSibling.nextElementSibling;
 const modal = document.querySelector('.login_success');
 const social_btns = document.querySelectorAll('.social_login button');
 const close_btn = modal.firstElementChild.firstElementChild.nextElementSibling;
-const sign_btn = document.querySelector('.sign_wrap form button');
 const txt = document.querySelector('.login_success .txt');
 
 let span = document.createElement('span');
@@ -37,6 +36,8 @@ function checkForm() {
   if(userName.value === '' || userPsw.value === '') {
     span.textContent = '請填寫信箱和密碼';
   } else {
+    userName.value = '';
+    userPsw.value = '';
     span.textContent = '';
     modal.style.left = '0%';
   }
@@ -63,7 +64,30 @@ close_btn.addEventListener('click', (e) => {
 })
 
 // 註冊表單驗證
+const signName = document.querySelector('.sign_wrap input[type="text"]');
+const signEmail = document.querySelector('.sign_wrap input[type="email"]');
+const signPsw = document.querySelector('.sign_wrap input[type="password"]');
+const signDoublePsw = signPsw.parentNode.children[4];
+const sign_btn = document.querySelector('.sign_wrap form button');
+let hint_txt = document.createElement('span');
+hint_txt.style.color = 'red';
+hint_txt.style.padding = '0px';
+sign_btn.parentNode.insertBefore(hint_txt, sign_btn);
+
 sign_btn.addEventListener('click', () => {
-  txt.textContent = '註冊成功';
-  modal.style.left = '0%';
+  if(signName.value === '' && signEmail.value === '' && signPsw.value === '' && signDoublePsw.value === '') {
+    hint_txt.textContent = '有欄位未填寫';
+    return;
+  }
+  if(signPsw.value !== signDoublePsw.value) {
+    hint_txt.textContent = '兩次密碼不一致';
+  } else {
+    hint_txt.textContent = '';
+    txt.textContent = '註冊成功';
+    modal.style.left = '0%';
+    signName.value = '';
+    signEmail.value = '';
+    signPsw.value = '';
+    signDoublePsw.value = '';
+  }
 })
