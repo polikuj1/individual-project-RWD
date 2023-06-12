@@ -781,7 +781,10 @@ header .banner .scroll {
   position: relative;
   display: flex;
 }
-.timetable .wrap table tr:nth-of-type(1)::before {
+.timetable .wrap table tr:last-child td {
+  border-bottom: none;
+}
+.timetable .wrap table tr:last-child::before {
   width: 0;
 }
 .timetable .wrap table tr td {

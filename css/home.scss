@@ -834,7 +834,10 @@ header {
         //   position: absolute;
         //   background-color: $main_txt_color;
         // }
-        &:nth-of-type(1) {
+        &:last-child {
+          td {
+            border-bottom: none;
+          }
           &::before {
             width: 0;
           }
