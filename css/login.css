@@ -183,4 +183,34 @@ body {
 }
 .login_container .sign_wrap form button {
   margin-bottom: 30px;
+}
+
+.login_success {
+  width: 100%;
+  height: 40vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.621);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: -100%;
+  transition: 0.5s;
+}
+.login_success div {
+  color: #FAF9F5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+}
+.login_success span {
+  padding-right: 50px;
+}
+.login_success button {
+  background-color: transparent;
+  border: none;
+  font-size: 3rem;
+  color: #FAF9F5;
+  cursor: pointer;
 }/*# sourceMappingURL=login.css.map */
