@@ -824,14 +824,16 @@ header {
         width: 100%;
         font-size: 0.8rem;
         position: relative;
-        &::before {
-          content: '';
-          width: 100%;
-          height: 1px;
-          display: block;
-          position: absolute;
-          background-color: $main_txt_color;
-        }
+        display: flex;
+        // border-bottom: 1px solid #FAF9F5;
+        // &::before {
+        //   content: '';
+        //   width: 100%;
+        //   height: 1px;
+        //   display: block;
+        //   position: absolute;
+        //   background-color: $main_txt_color;
+        // }
         &:nth-of-type(1) {
           &::before {
             width: 0;
@@ -844,6 +846,7 @@ header {
           line-height: 2rem;
           position: relative;
           z-index: 2;
+          border-bottom: 1px solid #FAF9F5;
           a {
             display: block;
             color: $main_txt_color;
@@ -864,7 +867,7 @@ header {
   }
 }
 
-@media screen and (min-width:600px) {
+@media screen and (min-width:610px) {
   .timetable {
     .wrap {
       table {
@@ -913,7 +916,6 @@ header {
       .title {
         display: block;
         position: relative;
-        margin: 30px;
         h2 {
           font-family: $main_text_font;
           font-weight: 700;
@@ -964,7 +966,6 @@ header {
       }
       table {
         width: 60%;
-        margin-right: 30px;
         caption {
           display: none;
           &:after {
@@ -972,26 +973,26 @@ header {
           }
         }
         tr {
-          &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background-color: $main_bg_color;
-            z-index: 1;
-            transform: scaleX(0);
-            transform-origin: top right;
-            transition: transform 0.5s ease;
-          }
-          &:hover {
-            &::after {
-              transform: scaleX(1);
-              transform-origin: top left;
-            }
-          }
+          // &::after {
+          //   content: '';
+          //   display: block;
+          //   position: absolute;
+          //   width: 100%;
+          //   height: 100%;
+          //   top: -1px;
+          //   left: 0;
+          //   background-color: $main_bg_color;
+          //   z-index: 1;
+          //   transform: scaleX(0);
+          //   transform-origin: top right;
+          //   transition: transform 0.5s ease;
+          // }
+          // &:hover {
+          //   &::after {
+          //     transform: scaleX(1);
+          //     transform-origin: top left;
+          //   }
+          // }
           td {
             width: 33.3%;
             font-weight: 400;

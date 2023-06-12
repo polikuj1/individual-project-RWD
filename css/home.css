@@ -779,14 +779,7 @@ header .banner .scroll {
   width: 100%;
   font-size: 0.8rem;
   position: relative;
-}
-.timetable .wrap table tr::before {
-  content: "";
-  width: 100%;
-  height: 1px;
-  display: block;
-  position: absolute;
-  background-color: #FAF9F5;
+  display: flex;
 }
 .timetable .wrap table tr:nth-of-type(1)::before {
   width: 0;
@@ -798,6 +791,7 @@ header .banner .scroll {
   line-height: 2rem;
   position: relative;
   z-index: 2;
+  border-bottom: 1px solid #FAF9F5;
 }
 .timetable .wrap table tr td a {
   display: block;
@@ -811,7 +805,7 @@ header .banner .scroll {
   display: none;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 610px) {
   .timetable .wrap table tr {
     display: flex;
   }
@@ -851,7 +845,6 @@ header .banner .scroll {
   .timetable .wrap .title {
     display: block;
     position: relative;
-    margin: 30px;
   }
   .timetable .wrap .title h2 {
     font-family: "Montserrat", sans-serif;
@@ -902,31 +895,12 @@ header .banner .scroll {
   }
   .timetable .wrap table {
     width: 60%;
-    margin-right: 30px;
   }
   .timetable .wrap table caption {
     display: none;
   }
   .timetable .wrap table caption:after {
     display: none;
-  }
-  .timetable .wrap table tr::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: #0F0F0F;
-    z-index: 1;
-    transform: scaleX(0);
-    transform-origin: top right;
-    transition: transform 0.5s ease;
-  }
-  .timetable .wrap table tr:hover::after {
-    transform: scaleX(1);
-    transform-origin: top left;
   }
   .timetable .wrap table tr td {
     width: 33.3%;
