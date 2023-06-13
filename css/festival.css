@@ -94,7 +94,7 @@ body {
 .festival .area_tab .tab_list {
   display: none;
 }
-.festival .area_tab button {
+.festival .area_tab .tab_list button {
   cursor: pointer;
   color: #FAF9F5;
   font-size: 24px;
@@ -107,11 +107,14 @@ body {
   justify-content: center;
   border: none;
   background-color: rgb(0, 85, 97);
-  box-shadow: 2px 2px 5px #414141;
+  box-shadow: 3px 8px #414141;
 }
-.festival .area_tab .active {
+.festival .area_tab .tab_list button:active {
+  transform: translateY(8px);
+  box-shadow: 0 5px #414141;
+}
+.festival .area_tab .tab_list .active {
   background-color: #A3A31E;
-  box-shadow: 0 0 0;
 }
 .festival .current_area {
   display: block;

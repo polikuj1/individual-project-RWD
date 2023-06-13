@@ -104,25 +104,28 @@ body {
     }
     .tab_list {
       display: none;
-    }
-    button {
-      cursor: pointer;
-      color: $txt_color;
-      font-size: 24px;
-      font-weight: 700;
-      width: 180px;
-      height: 50px;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: none;
-      background-color: rgba(0, 85, 97, 1);
-      box-shadow: 2px 2px 5px #414141;
-    }
-    .active {
-      background-color: #A3A31E;
-      box-shadow: 0 0 0;
+      button {
+        cursor: pointer;
+        color: $txt_color;
+        font-size: 24px;
+        font-weight: 700;
+        width: 180px;
+        height: 50px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background-color: rgba(0, 85, 97, 1);
+        box-shadow: 3px 8px #414141;
+        &:active {
+          transform: translateY(8px);
+          box-shadow: 0 5px #414141;
+        }
+      }
+      .active {
+        background-color: #A3A31E;
+      }
     }
   }
   .current_area {
