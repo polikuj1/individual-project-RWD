@@ -211,3 +211,21 @@ subBtn.addEventListener('click', () => {
   subscribe.value = '';
   subscribe.placeholder = '填寫信箱';
 })
+
+
+// 開場動畫
+const container = document.querySelector('.container');
+console.log(window.innerWidth);
+let windowWidth = window.innerWidth;
+window.addEventListener('resize', () => {
+  windowWidth = window.innerWidth;
+})
+if(windowWidth > 768) {
+  openAnimation();
+}
+function openAnimation() {
+  container.style.display = 'block';
+  setTimeout(function() {
+    container.style.transform = `scale(0)`;
+  },2200)
+}
