@@ -1109,11 +1109,9 @@ header {
       background-color: $second_bg_color;
       table {
         tr {
-          display: grid;
-          grid-template-columns: 2fr 3fr;
-          grid-template-rows: 1fr;
+          display: flex;
+          flex-direction: column;
           column-gap: 20px;
-          text-align: center;
           padding: 35px 10px;
           cursor: pointer;
           position: relative;
@@ -1135,6 +1133,7 @@ header {
           position: relative;
           z-index: 2;
           color: $main_txt_color;
+          text-align: left;
           &:nth-of-type(1) {
             display: none;
           }
@@ -1192,6 +1191,9 @@ header {
       .news_box {
         table {
           tr {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            grid-template-rows: 1fr;
             text-align: left;
           }
           td {
@@ -1218,7 +1220,6 @@ header {
       }
       .news_box {
         .more_news {
-          // margin-right: 60px;
         }
       }
     }
@@ -1308,6 +1309,7 @@ header {
         &:nth-of-type(2) {
           span {
             font-size: 1rem;
+            text-align: left;
           }
         }
       }
@@ -1369,6 +1371,7 @@ header {
           &:nth-of-type(2) {
             span {
               font-size: 1rem;
+              text-align: left;
             }
           }
         }

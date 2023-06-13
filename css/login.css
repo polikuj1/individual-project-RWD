@@ -139,7 +139,7 @@ body {
   width: 100%;
   text-align: center;
   font-size: 1.3rem;
-  padding: 10px;
+  padding: 15px 10px;
   margin-bottom: 30px;
   border-radius: 10px;
   color: #FAF9F5;
@@ -157,6 +157,8 @@ body {
 }
 .login_container .social_login span {
   font-size: 1rem;
+  flex-grow: 1;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 1024px) {

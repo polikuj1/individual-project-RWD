@@ -144,7 +144,7 @@ let scrollTop = 0;
 $(function () {
   $(window).scroll(function () {
     scrollTop = $(this).scrollTop();
-    console.log(scrollTop);
+    // console.log(scrollTop);
   });
 });
 $('.one_hashtag span').mousemove(function(e) {

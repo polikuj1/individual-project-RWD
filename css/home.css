@@ -1037,12 +1037,10 @@ header .banner .scroll {
   background-color: #201F21;
 }
 .latest_news .news_wrap .news_box table tr {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  grid-template-rows: 1fr;
+  display: flex;
+  flex-direction: column;
   -moz-column-gap: 20px;
        column-gap: 20px;
-  text-align: center;
   padding: 35px 10px;
   cursor: pointer;
   position: relative;
@@ -1064,6 +1062,7 @@ header .banner .scroll {
   position: relative;
   z-index: 2;
   color: #FAF9F5;
+  text-align: left;
 }
 .latest_news .news_wrap .news_box table td:nth-of-type(1) {
   display: none;
@@ -1109,6 +1108,9 @@ header .banner .scroll {
     bottom: -10px;
   }
   .latest_news .news_wrap .news_box table tr {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr;
     text-align: left;
   }
   .latest_news .news_wrap .news_box table td:nth-of-type(1) {
@@ -1201,6 +1203,7 @@ header .banner .scroll {
 }
 .interview .interview_card_column .txt a:nth-of-type(2) span {
   font-size: 1rem;
+  text-align: left;
 }
 .interview .interview_card_column .txt span {
   display: inline-block;
@@ -1249,6 +1252,7 @@ header .banner .scroll {
 }
 .interview .interview_card_row .txt .interview_title a:nth-of-type(2) span {
   font-size: 1rem;
+  text-align: left;
 }
 .interview .interview_card_row .txt .interview_title span {
   display: block;
