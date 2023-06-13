@@ -155,7 +155,7 @@ $('.one_hashtag span').mousemove(function(e) {
     left: x + 10,
     top: y + scrollTop ,
   })
-  $('.random_pic img').attr('src', `../image/${id}.jpg`);
+  $('.random_pic img').attr('src', `./image/${id}.jpg`);
 }).mouseout(function() {
   $('.random_pic').hide();
 })
