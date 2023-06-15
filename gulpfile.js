@@ -109,10 +109,10 @@ exports.template = html;
 // 圖片搬家
 
 function img() {
-  return src('src/images/*.*')
-  .pipe(dest('dist/images'))
+  return src('src/image/*.*')
+  .pipe(dest('dist/image'))
 }
-
+exports.imgMove = img;
 
 // 監看所有變動
 
