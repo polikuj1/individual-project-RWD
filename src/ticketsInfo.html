@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>購票資訊</title>
+  <link rel="stylesheet" href="./css/ticketsInfo.css">
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <input type="checkbox" id="menu" style="display: none;">
+    <div class="hamburger_menu">
+      <div class="menu_btn_wrap">
+        <label for="menu" class="menu_btn"></label>
+        <span>M</span>
+        <span>E</span>
+        <span>N</span>
+        <span>U</span>
+      </div>
+      <h2>search your music</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="text_linear">HOME</a></li>
+        <li><a href="about.html" class="text_linear">ABOUT</a></li>
+        <li><a href="festival.html" class="text_linear">MUSIC FESTIVAL</a></li>
+        <li><a href="artists.html" class="text_linear">ARTISTS</a></li>
+        <li><a href="playlist.html" class="text_linear">PLAYLIST</a></li>
+        <li><a href="tickets.html" class="text_linear">TICKETS</a></li>
+        <li><a href="faq.html" class="text_linear">FAQ</a></li>
+        <li class="subscribe"><a href="login.html" class="text_linear">LOGIN</a></li>
+        <li class="share">
+          <span class="text_linear">share</span>
+          <div class="social_icon">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- 分頁標題 -->
+  <div class="about_wrap">
+    <a href="index.html" class="logo">
+      <img src="image/logo.png" alt="">
+    </a>
+    <div class="about_title">
+      <h2># TICKETS</h2>
+      <div class="login">
+        <!-- <a href="tickets.html">&lt 返回</a> -->
+        <!-- <a href="">註冊</a> -->
+        <a href="login.html">登入</a>
+      </div>
+    </div>
+  </div>
+  <!-- banner橫幅圖 -->
+  <section class="banner">
+    <div class="pic">
+      <img src="./ticketsInfo/info1.jpg" alt="">
+    </div>
+  </section>
+  <!-- 票券資訊 -->
+  <section class="tickets_info">
+    <div class="info_wrap">
+      <h3>浪人季</h3>
+      <div class="info_detail">
+        <ul>
+          <li>
+            <h4>活動時間</h4>
+            <span>2023/10/13 15:00 ~ 2023/10/15 22:00</span>
+          </li>
+          <li>
+            <h4>活動地點</h4>
+            <span>觀夕平台旁大草皮 (台南安平遙控飛機場) / 台南市安平區金城里洲安三街</span>
+            <a href="https://goo.gl/maps/svJYnyfptwmqDZCg8" target="_blank"><i class="fa-solid fa-location-dot"></i>檢視地圖</a>
+          </li>
+          <li>
+            <h4>主辦單位</h4>
+            <span>笨道策展有限公司</span>
+          </li>
+          <li>
+            <h4>票券種類</h4>
+            <span>電子票券</span>
+          </li>
+          <li>
+            <h4>付款方式</h4>
+            <span>ATM 虛擬帳號、信用卡、全家 FamiPort 代碼繳費</span>
+          </li>
+          <li>
+            <h4>退款政策</h4>
+            <span>
+              本活動之退票期限為演出日前 10 日（不含演出日），但若您於退、換票時限屆至前購買，迄於時限屆至後始收受票券或於開演前仍未收受票券者，亦得退票。退票時由music travel收取票價 10% 之退票手續費。請參考
+              <a href="">《music travel 退換票辦法》</a>
+            </span>
+          </li>
+        </ul>
+        <div class="ticketing_process">
+          <button class="active">
+            <span>1</span>
+            <span>選擇票種</span>
+          </button>
+          <button>
+            <span>2</span>
+            <span>填寫表單</span>
+          </button>
+          <button>
+            <span>3</span>
+            <span>取票繳費</span>
+          </button>
+        </div>
+        <div class="ticket_type">
+          <div class="title">
+            <span>票種</span>
+            <span>票價</span>
+          </div>
+          <div class="content">
+            <span>預售票</span>
+            <span>TWD$2800</span>
+            <span>
+              <button class="minus">-</button>
+              <input type="text" value="0">
+              <button class="plus">+</button>
+            </span>
+          </div>
+          <div class="content">
+            <span>早鳥票</span>
+            <span>TWD$2200</span>
+            <span>
+              <button class="minus">-</button>
+              <input type="text" value="0">
+              <button class="plus">+</button>
+            </span>
+          </div>
+          <div class="content">
+            <span>愛心票</span>
+            <span>TWD$1800</span>
+            <span>
+              <button class="minus">-</button>
+              <input type="text" value="0">
+              <button class="plus">+</button>
+            </span>
+          </div>
+          <div class="warn_txt"></div>
+        </div>
+        <div class="policy">
+          <input type="checkbox" id="policy">
+          <label for="policy"><span>我已經閱讀並同意 <a href="">服務條款</a> 與 <a href="">隱私權政策</a> </span></label>
+        </div>
+        <a href="tickets.html" class="pre_btn" disabled>返回</a>
+        <button class="next_btn" disabled>下一步</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <div class="footer_wrap">
+      <a href="index.html" class="footer_logo">
+        <img src="image/logo.png" alt="">
+      </a>
+      <div class="footer_nav">
+        <span><a href="index.html">HOME</a></span>
+        <span><a href="about.html">ABOUT</a></span>
+        <span><a href="festival.html">MUSIC FESTIVAL</a></span>
+        <span><a href="artists.html">ARTISTS</a></span>
+        <span><a href="" >CONTACT</a></span>
+        <span><a href="tickets.html">TICKETS</a></span>
+        <span><a href="faq.html">FAQ</a></span>
+        <span><a href="playlist.html">PLAYLIST</a></span>
+        <span><a href="" class="subscribe">SUBSCRIBE</a></span>
+        <span><input type="text" placeholder="輸入信箱"><button class="submit">送出</button></span>
+      </div>
+    </div>
+    <div class="footer_copy">
+      <a href="playlist.html">探索屬於你的音樂</a>
+      <span>© 2023 Copyright - 前端練習股份有限公司 - made by musictravel。 網站純屬練習使用，並無任何商業用途。</span>
+    </div>
+  </footer>
+  <!-- 訂閱彈窗 -->
+  <div class="subscribe_modal">
+    <div class="success_info">
+      <div class="close_btn"><button>X</button></div>
+      <div class="icon">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <span>訂閱成功</span>
+      <span>你將接受到最新的音樂活動資訊</span>
+    </div>
+  </div>
+
+  <script src="js/ticketsInfo.js"></script>
+  <script src="js/subModal.js"></script>
+  <script src="https://kit.fontawesome.com/10662d5b44.js" crossorigin="anonymous"></script>
+</body>
+</html>

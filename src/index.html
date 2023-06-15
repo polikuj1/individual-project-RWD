@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Travel</title>
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.css">	
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>  	
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
+</head>
+<body>
+  <!-- 開場動畫 -->
+  <div class="container">
+    <div class="cover"></div>
+   <h1> 
+     <span class="txt">探索專屬你的美好音樂！</span>
+     <span class="left"></span>
+     <span class="mask"></span>
+    </h1>
+   </div>
+  @@include('layout/subModal.html')
+  <div class="go_top">
+    <a href="#main_header"><img src="./image/gotop.png" alt=""></a>
+  </div>
+  <div class="random_pic">
+    <img src="./image/1.jpg">
+  </div>
+  <div class="modal">
+    <div class="youtube">
+      <button type="button">X</button>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Qq4P2kGs9QA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+  <!-- header -->
+  <header id="main_header">
+    <input type="checkbox" id="menu" style="display: none;">
+    <div class="hamburger_menu">
+      <div class="menu_btn_wrap">
+        <label for="menu" class="menu_btn"></label>
+        <span>M</span>
+        <span>E</span>
+        <span>N</span>
+        <span>U</span>
+      </div>
+      <h2>search your music</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="text_linear">HOME</a></li>
+        <li><a href="about.html" class="text_linear">ABOUT</a></li>
+        <li><a href="festival.html" class="text_linear">MUSIC FESTIVAL</a></li>
+        <li><a href="artists.html" class="text_linear">ARTISTS</a></li>
+        <li><a href="playlist.html" class="text_linear">PLAYLIST</a></li>
+        <li><a href="tickets.html" class="text_linear">TICKETS</a></li>
+        <li><a href="faq.html" class="text_linear">FAQ</a></li>
+        <li class="subscribe"><a href="login.html" class="text_linear">LOGIN</a></li>
+        <li class="share">
+          <span class="text_linear">share</span>
+          <div class="social_icon">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div class="banner">
+      <a href="index.html" class="website_logo">
+        <img src="image/logo.png" alt="">
+      </a>
+      <div class="banner_pic">
+        <img src="image/4.jpg" alt="">
+      </div>
+      <div class="banner_logo">
+        <div class="logo">
+          <div class="title">
+            <span>人生</span>
+            <span>音樂</span>
+          </div>
+          <span class="side_logo">
+            <span>#ROCK</span><span>#BLUE</span><span>#RAP</span><span>#POP</span>
+          </span>
+          <span class="side_logo">
+            <span>#JAZZ</span><span>#FOLK</span><span>#DANCE</span><span>#EDM</span>
+          </span>
+          <span class="decoration"></span>
+          <span class="decoration1"></span>
+        </div>
+      </div>
+      <div class="blue_mask"></div>
+      <div class="scroll">
+        <a href="#poster">SCROLL</a>
+        <span></span>
+      </div>
+    </div>
+  </header>
+  <!-- marquee -->
+  <section class="marquee">
+    <div class="marquee_pic">
+      <div class="pic_list first">
+        <div class="pic">
+          <img src="image/7.jpg" alt="">
+        </div>
+        <div class="pic">
+          <img src="image/8.jpg" alt="">
+        </div>
+        <div class="pic">
+          <img src="image/9.jpg" alt="">
+        </div>
+        <div class="pic">
+          <img src="image/10.jpg" alt="">
+        </div>
+        <div class="pic">
+          <img src="image/11.jpg" alt="">
+        </div>
+      </div>
+      <div class="pic_list two">
+        <div class="pic">
+          <img src="image/12.jpg" alt="">
+        </div>
+        <div class="pic">
+          <img src="image/13.jpg" alt="">
+        </div>
+        <div class="pic">
+          <img src="image/14.jpg" alt="">
+        </div>
+        <div class="pic">
+          <img src="image/15.jpg" alt="">
+        </div>
+        <div class="pic">
+          <img src="image/16.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="marquee_hashtag">
+      <div class="hashtag_wrap">
+        <div class="one_hashtag hashtag">
+          <span data-id="1">#啤酒、音樂、露營</span>
+          <span data-id="2">#怕胖團有夠胖</span>
+          <span data-id="3">#告五人好讚</span>
+          <span data-id="4">#浪人情歌</span>
+          <span data-id="5">#我是沒有用的年輕人</span>
+          <span data-id="6">#康士坦變化球</span>
+          <span data-id="7">#溫室雜草</span>
+          <span data-id="8">#血肉果汁機</span>
+          <span data-id="9">#地心竄出</span>
+          <span data-id="10">#最愛滅火器</span>
+          <span data-id="11">#心悶</span>
+          <span data-id="12">#愛情你比我想的閣較偉大</span>
+          <span data-id="13">#獨立音樂</span>
+          <span data-id="13">#獨立音樂</span>
+          <span data-id="13">#獨立音樂</span>
+          <span data-id="13">#獨立音樂</span>
+          <span data-id="13">#獨立音樂</span>
+        </div>
+        <div class="one_hashtag re_hashtag">
+          <span data-id="1">#啤酒、音樂、露營</span>
+          <span data-id="2">#怕胖團有夠胖</span>
+          <span data-id="3">#告五人好讚</span>
+          <span data-id="4">#浪人情歌</span>
+          <span data-id="5">#我是沒有用的年輕人</span>
+          <span data-id="6">#康士坦變化球</span>
+          <span data-id="7">#溫室雜草</span>
+          <span data-id="8">#血肉果汁機</span>
+          <span data-id="9">#地心竄出</span>
+          <span data-id="10">#最愛滅火器</span>
+          <span data-id="11">#心悶</span>
+          <span data-id="12">#愛情你比我想的閣較偉大</span>
+          <span data-id="13">#獨立音樂</span>
+          <span data-id="13">#獨立音樂</span>
+          <span data-id="13">#獨立音樂</span>
+          <span data-id="13">#獨立音樂</span>
+          <span data-id="13">#獨立音樂</span>
+        </div>
+      </div>
+      <div class="hashtag_wrap">
+        <div class="one_hashtag hashtag1">
+          <span data-id="1">#草地、野餐</span>
+          <span data-id="2">#世界第一</span>
+          <span data-id="3">#我沒有用</span>
+          <span data-id="4">#無妄社會</span>
+          <span data-id="5">#至少我們還有音樂</span>
+          <span data-id="6">#人生的音樂祭</span>
+          <span data-id="7">#切板好累</span>
+          <span data-id="8">#賽博台客</span>
+          <span data-id="9">#浪人祭</span>
+          <span data-id="10">#浮現祭</span>
+          <span data-id="11">#放生</span>
+          <span data-id="12">#美好的事可不可以發生在我身上</span>
+          <span data-id="13">#關閉太陽</span>
+          <span data-id="7">#快點點我吧</span>
+          <span data-id="9">#快點點我吧</span>
+          <span data-id="10">#快點點我吧</span>
+          <span data-id="1">#快點點我吧</span>
+          <span data-id="2">#快點點我吧</span>
+          <span data-id="3">#快點點我吧</span>
+        </div>
+        <div class="one_hashtag re_hashtag1">
+          <span data-id="1">#草地、野餐</span>
+          <span data-id="1">#世界第一</span>
+          <span data-id="1">#我沒有用</span>
+          <span data-id="1">#無妄社會</span>
+          <span data-id="1">#至少我們還有音樂</span>
+          <span data-id="1">#人生的音樂祭</span>
+          <span data-id="1">#切板好累</span>
+          <span data-id="1">#賽博台客</span>
+          <span data-id="1">#浪人祭</span>
+          <span data-id="1">#浮現祭</span>
+          <span data-id="1">#放生</span>
+          <span data-id="1">#美好的事可不可以發生在我身上</span>
+          <span data-id="1">#關閉太陽</span>
+          <span data-id="1">#快點點我吧</span>
+          <span data-id="1">#快點點我吧</span>
+          <span data-id="1">#快點點我吧</span>
+          <span data-id="1">#快點點我吧</span>
+          <span data-id="1">#快點點我吧</span>
+          <span data-id="1">#快點點我吧</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- poster -->
+  <section class="poster" id="poster">
+    <div class="poster_wrap">
+        <div class="poster_list">
+          <a href="tickets.html" class="pic">
+          </a>
+          <a href="tickets.html" class="pic">
+          </a>
+        </div>
+    </div>
+  </section>
+  <!-- timetable -->
+  <section class="timetable">
+    <div class="wrap">
+      <div class="title">
+        <h2>TIMETABLE</h2>
+        <strong>赤聲躁動音樂祭倒數</strong>
+        <span class="countdown_day"></span>
+        <span class="countdown_hour"></span>
+        <span class="countdown_minutes"></span>
+        <span class="countdown_seconds"></span>
+      </div>
+      <table>
+        <caption>timetable</caption>
+        <tbody>
+          <tr>
+            <td>2023.01.14</td>
+            <td><a href="tickets.html">霓虹綠洲音樂祭 NEON OASIS FEST.</a></td>
+            <td class="tag"><span>已結束</span></td>
+          </tr>
+          <tr>
+            <td>2023.02.11</td>
+            <td><a href="tickets.html">烏藝祭 OUI FESTIVAL.</a></td>
+            <td class="tag"><span>已結束</span></td>
+          </tr>
+          <tr>
+            <td>2023.02.25</td>
+            <td><a href="tickets.html">浮現祭.</a></td>
+            <td class="tag"><span>已結束</span></td>
+          </tr>
+          <tr>
+            <td>2023.04.01</td>
+            <td><a href="tickets.html">大港開唱.</a></td>
+            <td class="tag"><span>已結束</span></td>
+          </tr>
+          <tr>
+            <td>2023.04.01</td>
+            <td><a href="tickets.html">台灣祭.</a></td>
+            <td class="tag"><span>已結束</span></td>
+          </tr>
+          <tr>
+            <td>2023.04.07</td>
+            <td><a href="tickets.html">屏東三大日音樂節.</a></td>
+            <td class="tag"><span>已結束</span></td>
+          </tr>
+          <tr>
+            <td>2023.04.22</td>
+            <td><a href="tickets.html">台中山線春浪.</a></td>
+            <td class="tag"><span>已結束</span></td>
+          </tr>
+          <tr>
+            <td>2023.05.27</td>
+            <td><a href="tickets.html">赤聲躁動.</a></td>
+            <td class="tag soon"><span>Coming Soon</span></td>
+          </tr>
+          <tr>
+            <td>2023.08.12</td>
+            <td><a href="tickets.html">爛泥發芽.</a></td>
+            <td class="tag soon"><span>Coming Soon</span></td>
+          </tr>
+          <tr>
+            <td>2023.07.15</td>
+            <td><a href="tickets.html">貢寮國際海洋音樂祭.</a></td>
+            <td class="tag soon"><span>Coming Soon</span></td>
+          </tr>
+          <tr>
+            <td>2023.09.22</td>
+            <td><a href="tickets.html">Road to Ultra Taiwan.</a></td>
+            <td class="tag soon"><span>Coming Soon</span></td>
+          </tr>
+          <tr>
+            <td>2023.??</td>
+            <td><a href="tickets.html">超犀利趴.</a></td>
+            <td class="tag notyet"><span>尚未決定日期</span></td>
+          </tr>
+          <tr>
+            <td>2023.??</td>
+            <td><a href="tickets.html">艋舺青山祭.</a></td>
+            <td class="tag notyet"><span>尚未決定日期</span></td>
+          </tr>
+          <tr>
+            <td>2023.??</td>
+            <td><a href="tickets.html">世界音樂節.</a></td>
+            <td class="tag notyet"><span>尚未決定日期</span></td>
+          </tr>
+          <tr>
+            <td>2023.??</td>
+            <td><a href="tickets.html">搖滾台中.</a></td>
+            <td class="tag notyet"><span>尚未決定日期</span></td>
+          </tr>
+          <tr>
+            <td>2023.??</td>
+            <td><a href="tickets.html">臺中爵士音樂節.</a></td>
+            <td class="tag notyet"><span>尚未決定日期</span></td>
+          </tr>
+          <tr>
+            <td>2023.??</td>
+            <td><a href="tickets.html">黑熊部落 KUMA TRIBE.</a></td>
+            <td class="tag notyet"><span>尚未決定日期</span></td>
+          </tr>
+          <tr>
+            <td>2023.??</td>
+            <td><a href="tickets.html">諸羅祭.</a></td>
+            <td class="tag notyet"><span>尚未決定日期</span></td>
+          </tr>
+          <tr>
+            <td>2023.??</td>
+            <td><a href="tickets.html">浪人祭.</a></td>
+            <td class="tag notyet"><span>尚未決定日期</span></td>
+          </tr>
+          <tr>
+            <td>2023.??</td>
+            <td><a href="tickets.html">FireBall Fest. 火球祭.</a></td>
+            <td class="tag notyet"><span>尚未決定日期</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <!-- latestNews -->
+  <section class="latest_news">
+    <div class="news_wrap">
+      <div class="news_group">
+        <h2>LATEST NEWS</h2>
+        <div class="news_card_list owl-carousel owl-theme">
+          <div class="news_card item">
+            <div class="pic">
+              <img src="./image/news1.jpg" alt="">
+            </div>
+            <div class="txt">
+              <span>快訊</span>
+              <span>赤子之聲樂團選拔開始，熱烈報名中</span>
+            </div>
+          </div>
+          <div class="news_card item">
+            <div class="pic">
+              <img src="./image/news2.png" alt="">
+            </div>
+            <div class="txt">
+              <span>快訊</span>
+              <span>台中小浪人音樂祭，開唱時間決定</span>
+            </div>
+          </div>
+          <div class="news_card item">
+            <div class="pic">
+              <img src="./image/news3.jpg" alt="">
+            </div>
+            <div class="txt">
+              <span>快訊</span>
+              <span>大港開唱公布第二波歌手演出名單</span>
+            </div>
+          </div>
+        </div>
+        <div class="news_box">
+          <table>
+            <tbody>
+              <tr>
+                <td><span>重要</span></td>
+                <td>2023.04.20</td>
+                <td>
+                  <a href="#">春浪山線｜首波陣容強勢公開。伍佰 ＆ China Blue等大團登場</a>
+                </td>
+              </tr>
+              <tr>
+                <td><span>重要</span></td>
+                <td>2023.03.28</td>
+                <td>
+                  <a href="#">預售雙日票【加價購】春浪山粉胖胖毛巾NTD3100元</a>
+                </td>
+              </tr>
+              <tr>
+                <td><span>活動</span></td>
+                <td>2023.03.20</td>
+                <td>
+                  <a href="#">City Roars Festival 2023 城市巨响音樂節全陣容公開</a>
+                </td>
+              </tr>
+            </tbody>
+            
+          </table>
+          <a href="" class="more_news">
+            <span>VIEW MORE</span> 
+            <div><img src="./image/right.png" alt=""></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- interview -->
+  <section class="interview">
+    <div class="interview_wrap">
+      <h2>ARTISTS INTERVIEW</h2>
+      <div class="interview_list">
+        <div class="interview_card_column">
+          <div class="pic">
+            <img src="./image/decajoins.jpg" alt="deca joins">
+          </div>
+          <div class="txt">
+            <div class="interview_title">
+              <a href="https://meet.eslite.com/tw/tc/article/202209020004
+              " target="_blank"><span>專訪 | Deca joins</span></a>
+              <a href="https://meet.eslite.com/tw/tc/article/202209020004
+" target="_blank"><span>以音樂代謝你的負面心情</span></a>
+            </div>
+            <div class="edit">音旅編輯部</div>
+          </div>
+        </div>
+        <div class="interview_card_row">
+          <div class="pic">
+            <div class="decoration">
+              <img src="./image/guitarist.png" alt="">
+            </div>
+            <img src="./image/oldwang.jpg" alt="老王樂團">
+          </div>
+          <div class="txt">
+            <div class="interview_title">
+              <a href="https://crossing.cw.com.tw/article/13651" target="_blank"><span>專訪 | 老王樂團</span></a>
+              <a href="https://crossing.cw.com.tw/article/13651" target="_blank"><span>從〈我還年輕〉到〈這樣就好〉，用音樂陪年輕世代「轉大人」</span></a>
+            </div>
+            <div class="edit">音旅編輯部</div>
+          </div>
+        </div>
+      </div>
+      <div class="interview_list">
+        <div class="interview_card_row card_row">
+          <div class="pic">
+            <div class="decoration">
+              <img src="./image/keyboard.png" alt="">
+            </div>
+            <img src="./image/Crispy1.jpg" alt="脆樂團">
+          </div>
+          <div class="txt">
+            <div class="interview_title">
+              <a href="https://www.thenewslens.com/article/179014" target="_blank"><span>專訪 | 脆樂團</span></a>
+              <a href="https://www.thenewslens.com/article/179014" target="_blank"><span>愛終究要回歸到「自己」，這是《愛是我們必經的辛苦》教會我們的事</span></a>
+            </div>
+            <div class="edit">音旅編輯部</div>
+          </div>
+        </div>
+        <div class="interview_card_column card_column">
+          <div class="pic">
+            <img src="./image/mesyo.jpg" alt="美秀集團">
+          </div>
+          <div class="txt">
+            <div class="interview_title">
+              <a href="https://blow.streetvoice.com/57638/" target="_blank"><span>專訪 | 美秀集團</span></a>
+              <a href="https://blow.streetvoice.com/57638/" target="_blank"><span>拼貼千禧世代的賽博台客談《多色寶山大王》：我們絕對不會停止冒險</span></a>
+            </div>
+            <div class="edit">音旅編輯部</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- MEDIA -->
+  <section class="media">
+    <div class="media_wrap">
+      <h2>MEDIA</h2>
+      <div class="photo_marquee">
+        <div class="photo_box tr">
+          <div><img src="image/1.jpg" alt=""></div>
+          <div><img src="image/2.jpg" alt=""></div>
+          <div><img src="image/3.jpg" alt=""></div>
+          <div><img src="image/4.jpg" alt=""></div>
+          <div><img src="image/5.jpg" alt=""></div>
+        </div>
+        <div class="photo_box photo_re tr">
+          <div><img src="image/6.jpg" alt=""></div>
+          <div><img src="image/7.jpg" alt=""></div>
+          <div><img src="image/8.jpg" alt=""></div>
+          <div><img src="image/9.jpg" alt=""></div>
+          <div><img src="image/10.jpg" alt=""></div>
+        </div>
+      </div>
+      <div class="video_area">
+        <div class="video">
+          <video autoplay muted>
+            <source src="./image/video_area.mp4" type="video/mp4">
+            <source src="./image/video_area.hevc" type="video/hevc">
+            Your browser does not support the video tag.
+          </video>
+          <!-- <video src="./image/video_area.mp4" autoplay muted></video> -->
+        </div>
+        <div class="video_txt">
+          <h2>MEDIA</h2>
+          <span>為你提供各樂團最新發行專輯影片，以及每場音樂祭的活動集錦，隨時隨地關注最新動態</span>
+          <span>We will deliver music videos
+            and live films</span>
+          <button type="button">
+            <a href="playlist.html">LATEST VIDEO</a>
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="photo_marquee">
+        <div class="photo_box tr" id="photo_marquee">
+          <div><img src="image/6.jpg" alt=""></div>
+          <div><img src="image/7.jpg" alt=""></div>
+          <div><img src="image/8.jpg" alt=""></div>
+          <div><img src="image/9.jpg" alt=""></div>
+          <div><img src="image/10.jpg" alt=""></div>
+        </div>
+        <div class="photo_box tr" id="photo_marquee1">
+          <div><img src="image/1.jpg" alt=""></div>
+          <div><img src="image/2.jpg" alt=""></div>
+          <div><img src="image/3.jpg" alt=""></div>
+          <div><img src="image/4.jpg" alt=""></div>
+          <div><img src="image/5.jpg" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ad slogan區 -->
+  <section class="ad_slogan">
+    <div class="black_mask"></div>
+    <div class="ad_wrap">
+      <span>EXPLORE YOUR OWN MUSIC</span>
+    </div>
+  </section>
+  <!-- social media -->
+  <section class="social_media">
+    <div class="social_wrap">
+      <ul>
+        <li><a href="#"><i class="fa-brands fa-twitter"></i><span>follow me</span></a></li>
+        <li><a href="#"><i class="fa-brands fa-instagram"></i><span>follow me</span></a></li>
+        <li><a href="#"><i class="fa-brands fa-youtube"></i><span>follow me</span></a></li>
+        <li><a href="#"><i class="fa-brands fa-line"></i><span>follow me</span></a></li>
+        <li><a href="#"><i class="fa-brands fa-facebook-f"></i><span>follow me</span></a></li>
+      </ul>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer>
+    <div class="footer_wrap">
+      <a href="index.html" class="footer_logo">
+        <img src="image/logo.png" alt="">
+      </a>
+      <div class="footer_nav">
+        <span><a href="index.html">HOME</a></span>
+        <span><a href="about.html">ABOUT</a></span>
+        <span><a href="festival.html">MUSIC FESTIVAL</a></span>
+        <span><a href="artists.html">ARTISTS</a></span>
+        <span><a href="" >CONTACT</a></span>
+        <span><a href="tickets.html">TICKETS</a></span>
+        <span><a href="faq.html">FAQ</a></span>
+        <span><a href="playlist.html">PLAYLIST</a></span>
+        <span><a href="" class="subscribe">SUBSCRIBE</a></span>
+        <span><input type="text" placeholder="輸入信箱"><button class="submit">送出</button></span>
+      </div>
+    </div>
+    <div class="footer_copy">
+      <a href="playlist.html">探索屬於你的音樂</a>
+      <span>© 2023 Copyright - 前端練習股份有限公司 - made by musictravel。 網站純屬練習使用，並無任何商業用途。</span>
+    </div>
+  </footer>
+  
+
+  <script>
+    $(document).ready(function(){
+      // $(".owl-carousel").draggable(function(){
+      //   $(".owl-carousel").unbind();
+      // });
+      $(".owl-carousel").owlCarousel({
+          loop:false,
+          margin:10,
+          nav:false,
+          responsiveClass:true,
+          responsive:{
+              0:{
+                  items:1
+              },
+              600:{
+                  items:2
+              },
+              1000:{
+                  items:3
+              }
+          }
+      });
+    });
+  </script>
+  <script src="./js/home.js"></script>
+  <script src="https://kit.fontawesome.com/10662d5b44.js" crossorigin="anonymous"></script>
+</body>
+</html>

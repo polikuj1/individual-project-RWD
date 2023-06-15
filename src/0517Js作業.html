@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <span style="color: rgb(red, green, blue)"></span>
+  <script>
+    // 作業14
+    // const arr = [];
+    // let maxNum = 0;
+    // let minNum = 100
+    // for (let index = 0; index < 10; index++) {
+    //   const randomNumber = Math.round(Math.random() * 100);
+    //   if(randomNumber > maxNum) {
+    //     maxNum = randomNumber;
+    //   }
+    //   if(randomNumber < minNum) {
+    //     minNum = randomNumber;
+    //   }
+    //   arr.push(randomNumber);
+    // }
+    // const randomTotal = arr.reduce((acc,current) => {
+    //   return acc + current;
+    // }, 0)
+    // console.log(arr);
+    // document.write(`作業十四<br>隨機十個數值為${arr.join('/')}<br>`);
+    // document.write(`隨機十個數的總和為${randomTotal}<br>`);
+    // document.write(`最小值${minNum}<br>`);
+    // document.write(`最大值${maxNum}<br>`);
+
+
+    // 作業15
+    // const arr = [];
+    // while (arr.length < 6) {
+    //   for (let index = 0; index < 1; index++) {
+    //     const random = Math.floor(Math.random() * 100 / 2);
+    //     if(arr.indexOf(random) === -1 && random !== 0) {
+    //       arr.push(random);
+    //     }
+    //   }
+    // }
+    // document.write(`隨機產生六個大樂透數字${arr.join()}`)
+
+    // 作業16
+    // const personData = [
+    //   {
+    //     number: 94951001,
+    //     name: '賴士元',
+    //     tel: 0911000333,
+    //     address: '中壢市忠大陸一號',
+    //   },
+    //   {
+    //     number: 94951002,
+    //     name: '彭逸軒',
+    //     tel: 0922999887,
+    //     address: '高雄市中山路二號',
+    //   },
+    //   {
+    //     number: 94951003,
+    //     name: '於鱷魚',
+    //     tel: 0933555779,
+    //     address: '台北市師大路三號',
+    //   },
+    // ]
+    // let str = `<table border=1px><tr><td>學號</td><td>姓名</td><td>電話</td><td>地址</td></tr>`;
+    // personData.forEach((item) => {
+    //   str += `<tr><td>${item.number}</td><td>${item.name}</td><td>${item.tel}</td><td>${item.address}</td></tr>`
+    // })
+    // str += `</table>`;
+    // document.write(str);
+
+
+    // 作業17
+
+    function rand(min, max) {
+      const range = max - min;
+      const ratio = 100 / range;
+      const random = (Math.round(Math.random() * 100)) / ratio;
+      // const randomNum = min + random;
+      return min + Math.round(random);
+    }
+
+
+    //作業18
+    const numTotal = rand(4,7);
+    let str = '';
+    for (let index = 0; index < numTotal; index++) {
+      const number = rand(0,9);
+      const red = rand(0,255);
+      const green = rand(0,255);
+      const blue = rand(0,255);
+      str += `<span style="color: rgb(${red}, ${green}, ${blue})">${number}</span>`; 
+    }
+    document.write(str);
+  </script>
+</body>
+</html>
