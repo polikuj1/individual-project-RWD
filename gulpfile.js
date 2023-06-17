@@ -109,7 +109,7 @@ exports.template = html;
 // 圖片搬家
 
 function img() {
-  return src('src/image/*.*')
+  return src(['src/image/*.*', 'src/image/artists/*.*', 'src/image/FESTIVAL/*.*', 'src/image/playlist/*.*', 'src/image/tickets/*.*', 'src/image/ticketsInfo/*.*', 'src/image/artists/*.*'])
   .pipe(dest('dist/image'))
 }
 exports.imgMove = img;
